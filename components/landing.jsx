@@ -20,7 +20,7 @@ const mainMenu = [
     href: 'https://facebook.com/MWITOpenHouse',
     disabled: false,
   },
-  {
+  /*{
     name: 'ระบบรับสมัครเข้าม.4',
     fa: false,
     icon: 'https://mwitophcdn.woyiswoy.com/img/admission.png',
@@ -34,7 +34,7 @@ const mainMenu = [
     icon: 'https://mwitophcdn.woyiswoy.com/img/sqlogofull.png',
     href: 'https://square.mwit.ac.th',
     disabled: false,
-  },
+  },*/
 ]
 
 export default function LandingPage({ homeRef, children, ...props }) {
@@ -79,19 +79,19 @@ export default function LandingPage({ homeRef, children, ...props }) {
             >
               <div className='flex pb-2'>
                 <div className='bg-ora text-white px-2 pt-1 pb-0.5 rounded-full text-xs md:text-sm lg:text-base'>
-                  ONLINE
+                COMEBACK ON SITE!
                 </div>
               </div>
               <div className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl'>
-                MWIT Open House 2022
+                MWIT Open House 2023 : DISCOVERY
               </div>
               <div className='text-xl md:text-2xl lg:text-3xl'>
-                22 - 28 สิงหาคม 2565
+                25 และ 26 สิงหาคม 2566 
               </div>
             </motion.div>
           </div>
           <div className='flex flex-wrap items-center justify-center gap-3'>
-            <Link href={'/tour'}>
+            <Link href={'/index'}>
               <motion.a
                 className='relative bg-ymw/50 hover:bg-ymw hover:text-black cursor-pointer transition-colors duration-200 py-1 md:py-2 px-3 md:px-4 rounded-full font-CS font-bold text-lg md:text-xl lg:text-2xl text-bmw'
                 initial={{ opacity: 0, scale: 0.7, y: 10, rotate: -10 }}
@@ -114,12 +114,12 @@ export default function LandingPage({ homeRef, children, ...props }) {
                     type: 'spring',
                   }}
                 >
-                  New
+                  NEW!
                 </motion.div>
-                <span className='whitespace-nowrap'>School Tour</span>
+                <span className='whitespace-nowrap'>Coming soon</span>
               </motion.a>
             </Link>
-            <Link href={'/biovote'}>
+            /*<Link href={'/biovote'}>
               <motion.a
                 className='relative bg-white/50 hover:bg-ymw hover:text-black cursor-pointer transition-colors duration-200 py-1 md:py-2 px-3 md:px-4 rounded-full font-CS font-bold text-lg md:text-xl lg:text-2xl text-bmw'
                 initial={{ opacity: 0, scale: 0.7, y: 10, rotate: -10 }}
@@ -148,10 +148,10 @@ export default function LandingPage({ homeRef, children, ...props }) {
                   โครงการวาดภาพและถ่ายภาพทางชีววิทยา
                 </span>
               </motion.a>
-            </Link>
+            </Link>*/
           </div>
         </div>
-        <div className='w-full max-w-4xl md:pb-4 mx-auto flex-none grid grid-flow-col gap-2 lg:gap-4'>
+        <div className='w-full max-w-2xl md:pb-4 mx-auto flex-none grid grid-flow-col gap-2 lg:gap-4'>
           {mainMenu.map((m, i) => (
             <Button
               m={m}
