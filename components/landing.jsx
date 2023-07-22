@@ -119,36 +119,6 @@ export default function LandingPage({ homeRef, children, ...props }) {
                 <span className='whitespace-nowrap'>Coming soon</span>
               </motion.a>
             </Link>
-            /*<Link href={'/biovote'}>
-              <motion.a
-                className='relative bg-white/50 hover:bg-ymw hover:text-black cursor-pointer transition-colors duration-200 py-1 md:py-2 px-3 md:px-4 rounded-full font-CS font-bold text-lg md:text-xl lg:text-2xl text-bmw'
-                initial={{ opacity: 0, scale: 0.7, y: 10, rotate: -10 }}
-                animate={{ opacity: 1, scale: 1, y: 0, rotate: 0 }}
-                transition={{
-                  duration: 0.8,
-                  delay: 1.3,
-                  bounce: 0.4,
-                  type: 'spring',
-                }}
-              >
-                <motion.div
-                  className='absolute text-xs md:text-sm text-white -right-2 -top-2 bg-oft font-semibold px-[0.35rem] md:px-2 rounded-full'
-                  initial={{ opacity: 0, scale: 0.7, y: 10, rotate: -10 }}
-                  animate={{ opacity: 1, scale: 1, y: 0, rotate: 6 }}
-                  transition={{
-                    duration: 0.8,
-                    delay: 1.9,
-                    bounce: 0.5,
-                    type: 'spring',
-                  }}
-                >
-                  Vote Now!
-                </motion.div>
-                <span className='whitespace-nowrap'>
-                  โครงการวาดภาพและถ่ายภาพทางชีววิทยา
-                </span>
-              </motion.a>
-            </Link>*/
           </div>
         </div>
         <div className='w-full max-w-2xl md:pb-4 mx-auto flex-none grid grid-flow-col gap-2 lg:gap-4'>
