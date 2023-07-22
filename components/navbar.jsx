@@ -46,7 +46,7 @@ const shareSocial = [
 ]
 
 const footerLinkRight = [
-  {
+  /*{
     name: 'Science Project',
     href: '/sciproject',
     nt: false,
@@ -60,7 +60,7 @@ const footerLinkRight = [
     name: 'MWIT Pitching 1st',
     href: '/pitching',
     nt: false,
-  },
+  },*/
   {
     name: 'ระบบรับสมัครเข้าม.4',
     href: 'https://apply.mwit.ac.th',
@@ -79,11 +79,11 @@ const footerLinkLeft = [
     href: '/',
     nt: false,
   },
-  {
+  /*{
     name: 'Virtual Lab',
     href: '/lab',
     nt: false,
-  },
+  },*/
   {
     name: 'Curriculum',
     href: '/curriculum',
@@ -118,7 +118,7 @@ export default function Navbar({
       icon: faCalendarDay,
       auth: null,
     },
-    {
+    /*{
       name: 'Exhibitions',
       href: '',
       icon: faFlag,
@@ -161,13 +161,13 @@ export default function Navbar({
           auth: null,
         },
       ],
-    },
-    {
+    },*/
+    /*{
       name: 'Booking',
       href: '/booking',
       icon: faCalendarCheck,
       auth: true,
-    },
+    },*/
     {
       name: 'Register',
       href: '/register',
@@ -348,7 +348,7 @@ export default function Navbar({
               </span>
             </div>
             <span className='text-gray-300 font-IBMPlexLoop text-xs text-center'>
-              {'Designed by Trisawan & Created by Patcharapon.'}
+              {'Designed by Trisawan, Created by Patcharapon & Adjustment by Supawattaka and Chaidit'}
             </span>
           </div>
           <div className='grow' />
