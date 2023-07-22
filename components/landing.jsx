@@ -91,7 +91,7 @@ export default function LandingPage({ homeRef, children, ...props }) {
             </motion.div>
           </div>
           <div className='flex flex-wrap items-center justify-center gap-3'>
-            <Link href={'/index'}>
+            <Link href={'/schedule'}>
               <motion.a
                 className='relative bg-ymw/50 hover:bg-ymw hover:text-black cursor-pointer transition-colors duration-200 py-1 md:py-2 px-3 md:px-4 rounded-full font-CS font-bold text-lg md:text-xl lg:text-2xl text-bmw'
                 initial={{ opacity: 0, scale: 0.7, y: 10, rotate: -10 }}
@@ -121,7 +121,7 @@ export default function LandingPage({ homeRef, children, ...props }) {
             </Link>
           </div>
         </div>
-        <div className='w-full max-w-2xl md:pb-4 mx-auto flex-none grid grid-flow-col gap-2 lg:gap-4'>
+        <div className='w-full max-w-2xl md:pb-4 mx-auto flex-none grid grid-flow-col gap-8 lg:gap-4'>
           {mainMenu.map((m, i) => (
             <Button
               m={m}
