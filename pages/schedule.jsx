@@ -20,10 +20,10 @@ import { motion } from 'framer-motion'
 import { faFacebook } from '@fortawesome/free-brands-svg-icons'
 
 const meta = {
-  title: 'Schedule | MWIT Open House 2022',
+  title: 'Schedule | MWIT Open House 2023',
   url: 'schedule',
   description:
-    'กำหนดการ Live session MWIT Open House 2022 พบกับกิจกรรมรูปแบบออนไลน์ที่ผู้เข้าร่วมจะได้สัมผัสประสบการณ์และเรียนรู้เกี่ยวกับ MWIT ด้วยตัวเอง อาทิเช่น การนำเสนอโครงงานของนักเรียน กิจกรรม Class @MWIT การแข่งขัน MWIT Square กิจกรรมสัมภาษณ์ศิษย์เก่า และ TIPs & TRICKs by MWIT students',
+    'กำหนดการกิจกรรมต่าง ๆ ภายในงาน MWIT Open House 2023 พบกับกิจกรรมรูปแบบออนไซต์ที่ผู้เข้าร่วมจะได้สัมผัสประสบการณ์และเรียนรู้เกี่ยวกับ MWIT ด้วยตัวเอง อาทิเช่น การนำเสนอโครงงานของนักเรียน กิจกรรม MWIT Challenge การแข่งขัน MWIT Square กิจกรรมคุยกับนักเรียนศิษย์ปัจจุบัน และอื่น ๆ อีกมากมาย',
   img: 'ogimage.png',
 }
 
