@@ -383,7 +383,7 @@ export default function Home({ userData }) {
             >
               All Activities
             </span>
-            <div className='w-full flex flex-wrap justify-center gap-3 pb-8'>
+            {/*<div className='w-full flex flex-wrap justify-center gap-3 pb-8'>
               {allAct.map((a, ai) => (
                 <ActCard
                   key={ai}
@@ -394,7 +394,7 @@ export default function Home({ userData }) {
                   button={a.button}
                 />
               ))}
-            </div>
+              </div>*/}
           </div>
         </div>
         <div
