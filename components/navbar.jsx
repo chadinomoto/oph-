@@ -22,6 +22,7 @@ import {
   faSchoolFlag,
   faUserGear,
   faXmark,
+  faFile
 } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { AnimatePresence, motion } from 'framer-motion'
@@ -118,6 +119,12 @@ export default function Navbar({
       icon: faCalendarDay,
       auth: null,
     },
+    {
+      name: 'Schedule',
+      href: '/eventregis',
+      icon: faFile,
+      auth: null,
+    }
     /*{
       name: 'Exhibitions',
       href: '',
@@ -168,7 +175,7 @@ export default function Navbar({
       icon: faCalendarCheck,
       auth: true,
     },*/
-    {
+    /*{
       name: 'Register',
       href: '/register',
       icon: faPenToSquare,
@@ -199,7 +206,7 @@ export default function Navbar({
           auth: true,
         },
       ],
-    },
+    },*/
   ]
   return (
     <div
