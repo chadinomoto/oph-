@@ -405,7 +405,7 @@ export default function Home({ userData }) {
             <span className='font-CS font-bold text-2xl md:text-3xl lg:text-4xl mt-5 text-white'>
               กิจกรรมตามสาขาวิชา
             </span>
-            <div className='flex flex-wrap gap-4 justify-center'>
+            {/*<div className='flex flex-wrap gap-4 justify-center'>
               {subjAct.map((s, si) => (
                 <div
                   key={si}
@@ -455,7 +455,7 @@ export default function Home({ userData }) {
                   </div>
                 </div>
               ))}
-            </div>
+              </div>*/}
           </div>
         </div>
         <div
