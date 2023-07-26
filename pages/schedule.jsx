@@ -29,22 +29,35 @@ const meta = {
 
 const timetb = [
   {
-    date: '22 - 24 สิงหาคม 2565',
+    date: '25 สิงหาคม 2566',
     slot: [
       {
-        time: '16.50 - 18.00 น.',
+        time: 'ตั้งแต่ 08.00 น. เป็นต้นไป'
+        ,act: [
+          {
+            titile: "ลงทะเบียนเข้าร่วมกิจกรรม",
+            desc: "นักเรียนทั้งที่ลงทะเบียนในระบบและนักเรียนที่เข้าร่วมกิจกรรมแบบ Walk in ลงทะเบียนที่ประตูข้างโรงเรียน"
+          }
+        ]
+      },
+      {
+        time: '09.00 - 12.00 น.',
         act: [
           {
             title: 'การนำเสนอโครงงาน',
             desc: 'รับชมการนำเสนอโครงงานของนักเรียน MWIT กว่า 90 โครงงานพร้อม Q&A session ที่เปิดโอกาสให้ผู้ชมถามข้อสงสัย',
             icon: faPersonChalkboard,
           },
+          {
+            title: 'MWIT Spelling Bee',
+            desc: 'การแข่งขันสะกดคำภาษาอังกฤษ'
+          }
         ],
       },
     ],
   },
   {
-    date: '25 สิงหาคม 2565',
+    date: '26 สิงหาคม 2565',
     head: {
       title: 'Class @MWIT',
       desc: 'เรียนรู้การจัดการเรียนการสอนของ MWIT ผ่านกิจกรรมคุณครูแต่ละสาขาวิชา',
@@ -86,92 +99,7 @@ const timetb = [
       },
     ],
   },
-  {
-    date: '26 สิงหาคม 2565',
-    slot: [
-      {
-        time: '16.50 - 17.25 น.',
-        act: [
-          {
-            title: 'Class @MWIT',
-            desc: 'เรียนรู้การจัดการเรียนการสอนของ MWIT ผ่านกิจกรรมคุณครูแต่ละสาขาวิชา',
-          },
-          {
-            title: 'กิจกรรมสาขาวิชาฟิสิกส์',
-            icon: faLightbulb,
-            desc: "Let's Learn Physics - เรียนรู้สิ่งต่าง ๆ รอบตัวที่น่าสนใจด้วยหลักฟิสิกส์",
-          },
-          {
-            title: 'กิจกรรมสาขาวิชาภาษาต่างประเทศ',
-            icon: faLightbulb,
-            desc: 'English is Fun: Jeopardy Style - Answering content-based questions using English through Jeopardy game format',
-          },
-        ],
-      },
-      {
-        time: '17.25 - 18.00 น.',
-        act: [
-          {
-            title: 'กิจกรรมสาขาวิชาชีววิทยาและวิทยาศาสตร์สุขภาพ 1 (ชีววิทยา)',
-            icon: faLightbulb,
-            desc: 'Taxo-Pokemon - กิจกรรมจัดจำแนกสิ่งมีชีวิตด้วยการ์ตูนในโปเกม่อน',
-          },
-          {
-            title: 'กิจกรรมสาขาวิชาชีววิทยาและวิทยาศาสตร์สุขภาพ 2 (พลานามัย)',
-            icon: faLightbulb,
-            desc: 'กีฬาพาเพลิน - พบตัวอย่างการเรียนรู้ในรายวิชาสุขศึกษาและพลศึกษา และเกม “แต่งกายสไตล์กีฬา” พร้อมทั้งคำแนะนำเรื่องการเรียนกับรุ่นพี่ที่น่ารัก',
-          },
-        ],
-      },
-    ],
-  },
-  {
-    date: '27 สิงหาคม 2565',
-    slot: [
-      {
-        time: '09.00 - 15.00 น.',
-        act: [
-          {
-            title: 'การแข่งขัน MWIT Square ครั้งที่ 14',
-            desc: 'การแข่งขันคณิตศาสตร์และวิทยาศาสตร์สำหรับนักเรียนมัธยมศึกษาตอนต้น ครั้งที่ 14',
-            icon: faFlag,
-          },
-        ],
-      },
-      {
-        time: '13.00 - 14.00 น.',
-        act: [
-          {
-            title: 'Interview MWIT Alumni',
-            desc: 'สัมภาษณ์ศิษย์เก่า เกี่ยวกับประสบการณ์ที่ได้รับจาก MWIT และการนำความรู้หรือทักษะเหล่านั้น ไปพัฒนาและต่อยอดในการทำงานและการใช้ชีวิต',
-            icon: faMicrophoneLines,
-            live: true,
-          },
-        ],
-      },
-      {
-        time: '14.00 - 14.55 น.',
-        act: [
-          {
-            title: 'TIPs & TRICKs by MWIT Students',
-            desc: 'สัมภาษณ์นักเรียน MWIT เกี่ยวกับเทคนิคการเตรียมตัวสอบเข้า และความน่าสนใจของ MWIT',
-            icon: faMicrophoneLines,
-            live: true,
-          },
-        ],
-      },
-      {
-        time: '15.00 - 16.00 น.',
-        act: [
-          {
-            title:
-              'พิธีปิดงาน และมอบรางวัลผลการแข่งขัน MWIT Square และ MWIT Pitching',
-            icon: faAward,
-          },
-        ],
-      },
-    ],
-  },
+  
 ]
 
 const motionProp = {
@@ -253,7 +181,7 @@ export default function Schedule() {
                               icon={a.icon}
                               className='h-[0.8em] pt-1'
                             /> */}
-                            {a.live && (
+                            {/*{a.live && (
                               <div className='flex w-fit h-fit items-center gap-1 px-2 text-white bg-gradient-to-r from-sdf1 to-sdf2 rounded-md'>
                                 <FontAwesomeIcon
                                   icon={faFacebook}
@@ -263,7 +191,7 @@ export default function Schedule() {
                                   LIVE
                                 </span>
                               </div>
-                            )}
+                            )}*/}
                             <span className='text-lg lg:text-xl text-sdtt hover:text-sdth transition-colors duration-500'>
                               {a.title}
                             </span>
