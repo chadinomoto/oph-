@@ -3,7 +3,7 @@ import { Fragment, useEffect, useRef, useState } from 'react'
 import { AnimateSharedLayout, motion, useScroll } from 'framer-motion'
 import { clamp } from 'lodash'
 import Link from 'next/link'
-import ActCard from '../components/actcard'
+import PdfCard from '../components/pdfcard'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faBook,
@@ -67,11 +67,11 @@ export default function eventregis() {
             <span
               className='font-CS font-bold text-2xl md:text-3xl lg:text-4xl pt-16'
             >
-              ALl documents
+              All documents
             </span>
             <div className='w-full flex flex-wrap justify-center gap-3 pb-8'>
               {File.map((a, ai) => (
-                <ActCard
+                <Pdfcard
                   key={ai}
                   src={a.src}
                   name={a.name}
