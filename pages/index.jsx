@@ -167,7 +167,7 @@ export default function Home({ userData }) {
         />
 
         {/* <!-- Facebook Meta Tags --> */}
-        <meta property='og:url' content='https://openhouse.mwit.ac.th' />
+        <meta property='og:url' content='https://mwit-oph-2.vercel.app/' />
         <meta property='og:type' content='website' />
         <meta property='og:title' content='MWIT Open House 2023' />
         <meta
@@ -176,13 +176,13 @@ export default function Home({ userData }) {
         />
         <meta
           property='og:image'
-          content='https://mwitophcdn.woyiswoy.com/img/ogimage.png'
+          content='https://drive.google.com/drive/folders/1XZnLPglwdzUDFJvI4jhkMrHCsWiVT7gy'
         />
 
         {/* <!-- Twitter Meta Tags --> */}
         <meta name='twitter:card' content='summary_large_image' />
-        <meta property='twitter:domain' content='openhouse.mwit.ac.th' />
-        <meta property='twitter:url' content='https://openhouse.mwit.ac.th' />
+        <meta property='twitter:domain' content='mwit-oph-2.vercel.app/' />
+        <meta property='twitter:url' content='https://mwit-oph-2.vercel.app/' />
         <meta name='twitter:title' content='MWIT Open House 2023' />
         <meta
           name='twitter:description'
@@ -190,7 +190,7 @@ export default function Home({ userData }) {
         />
         <meta
           name='twitter:image'
-          content='https://mwitophcdn.woyiswoy.com/img/ogimage.png'
+          content='https://drive.google.com/drive/folders/1XZnLPglwdzUDFJvI4jhkMrHCsWiVT7gy'
         />
       </Head>
       <div className='flex flex-col w-full'>
