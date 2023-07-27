@@ -120,7 +120,7 @@ export default function Navbar({
       auth: null,
     },
     {
-      name: 'Schedule',
+      name: 'Registration',
       href: '/eventregis',
       icon: faFile,
       auth: null,
