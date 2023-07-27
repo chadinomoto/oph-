@@ -3,7 +3,7 @@ import { Fragment, useEffect, useRef, useState } from 'react'
 import { AnimateSharedLayout, motion, useScroll } from 'framer-motion'
 import { clamp } from 'lodash'
 import Link from 'next/link'
-import PdfCard from '../components/pdfcard'
+import Pdfcard from '../components/pdfcard'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faBook,
