@@ -24,7 +24,7 @@ const File = [
     {
         name : "Google Form",
         href : "https://forms.gle/9r7ax1gAwxDK5Hov6",
-        pic: "ggform",
+        src: "ggform",
         title: "Google Form ลงทะเบียนเข้าร่วมกิจกรรม",
         desc: "ขอความกรุณาทุกท่านที่มีความประสงค์เข้าร่วมกิจกรรมร่วมมือกรอกข้อมูลลงทะเบียนเข้างานเพื่อความสะดวกในการเข้างานในวันจริง",
         button: "ฟอร์ม"
@@ -63,7 +63,7 @@ export default function eventregis() {
           content={'https://mwitophcdn.woyiswoy.com/img/' + meta.img}
         />
     </Head>
-        <main className='flex flex-col w-full'>
+        <main className='flex flex-col items-center w-full max-w-7xl px-8 py-6 gap-4 mx-auto'>
             <span
               className='font-CS font-bold text-2xl md:text-3xl lg:text-4xl pt-16'
             >
@@ -73,7 +73,7 @@ export default function eventregis() {
               {File.map((a, ai) => (
                 <ActCard
                   key={ai}
-                  src={a.pic}
+                  src={a.src}
                   name={a.name}
                   desc={a.desc}
                   href={a.href}

@@ -176,7 +176,7 @@ export default function Home({ userData }) {
         />
         <meta
           property='og:image'
-          content='https://drive.google.com/drive/folders/1XZnLPglwdzUDFJvI4jhkMrHCsWiVT7gy'
+          content='https://github.com/Chainxc/mwit-oph-2/blob/daa04fe5e208cd6b0519713e6295cc4f870da3c2/public/img/ogimage.png'
         />
 
         {/* <!-- Twitter Meta Tags --> */}
@@ -190,7 +190,7 @@ export default function Home({ userData }) {
         />
         <meta
           name='twitter:image'
-          content='https://drive.google.com/drive/folders/1XZnLPglwdzUDFJvI4jhkMrHCsWiVT7gy'
+          content='https://drive.google.com/file/d/1Zjaa6piJZHLsWdQ6CkwN2l8nSIl2_fNZ/view?usp=drive_link'
         />
       </Head>
       <div className='flex flex-col w-full'>

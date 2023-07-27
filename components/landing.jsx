@@ -27,14 +27,14 @@ const mainMenu = [
     href: 'https://apply.mwit.ac.th',
     disabled: false,
     inner: false,
-  },
+  },*/
   {
     name: 'MWIT Square',
     fa: false,
     icon: 'https://mwitophcdn.woyiswoy.com/img/sqlogofull.png',
     href: 'https://square.mwit.ac.th',
     disabled: false,
-  },*/
+  },
 ]
 
 export default function LandingPage({ homeRef, children, ...props }) {
