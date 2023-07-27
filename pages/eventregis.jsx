@@ -24,9 +24,10 @@ const File = [
     {
         name : "Google Form",
         href : "https://forms.gle/9r7ax1gAwxDK5Hov6",
-        pic: "",
+        pic: "ggform",
         title: "Google Form ลงทะเบียนเข้าร่วมกิจกรรม",
-        desc: "ขอความกรุณาทุกท่านที่มีความประสงค์เข้าร่วมกิจกรรมร่วมมือกรอกข้อมูลลงทะเบียนเข้างานเพื่อความสะดวกในการเข้างานในวันจริงa"
+        desc: "ขอความกรุณาทุกท่านที่มีความประสงค์เข้าร่วมกิจกรรมร่วมมือกรอกข้อมูลลงทะเบียนเข้างานเพื่อความสะดวกในการเข้างานในวันจริง",
+        button: "ฟอร์ม"
     },
 
 ]
@@ -63,68 +64,24 @@ export default function eventregis() {
         />
     </Head>
         <main className='flex flex-col w-full'>
-            <div style={{backgroundImage: `url(${process.env.CDN_URL + '/img/sky.webp'})`,}} className={'w-full bg-cover bg-bottom sm:bg-fixed flex items-end min-h-screen relative justify-self-center self-center space-y-2'}>
-                <div className='font-CS text-3xl md:text-4xl font-bold text-bmw text-center'>
-                    Doc
-                </div>
-            </div>
-            {/*<div className='w-full h-full max-w-7xl mx-auto flex flex-col justify-center items-center gap-6'>
-            <span className='font-CS font-bold text-2xl md:text-3xl lg:text-4xl mt-5 text-white'>
-              กิจกรรมตามสาขาวิชา
+            <span
+              className='font-CS font-bold text-2xl md:text-3xl lg:text-4xl pt-16'
+              ref={actRef}
+            >
+              ALl documents
             </span>
-            <div className='flex flex-wrap gap-4 justify-center'>
-              {subjAct.File((s, si) => (
-                <div
-                  key={si}
-                  className='flex flex-col group w-full max-w-sm overflow-hidden rounded-xl'
-                >
-                  <img
-                    src={
-                      process.env.CDN_URL + '/img/subject/' + s.img + '.webp'
-                    }
-                    className='w-full'
-                  />
-
-                  <div
-                    className={
-                      'w-full relative grid bg-black ' +
-                      (s.vl ? 'grid-cols-2' : 'grid-cols-1')
-                    }
-                  >
-                    <div className='flex flex-col absolute bottom-full right-0 left-0 px-3 py-2 bg-black/60 group-hover:bg-black/80 transition-all duration-300 backdrop-blur-md'>
-                      <span className='font-CS font-semibold text-white text-xl'>
-                        {s.name}
-                      </span>
-                      <span className='font-IBMPlex font-semibold text-blue-300 text-base'>
-                        {s.sub}
-                      </span>
-                    </div>
-                    {s.vl && (
-                      <Link href={'/lab/' + s.vl}>
-                        <a className='w-full justify-center items-center font-IBMPlex font-semibold flex gap-1 py-2 px-3 bg-ymw/20 text-ymw/40 hover:bg-ymw/30 hover:text-white/70 transition-colors duration-300'>
-                          <FontAwesomeIcon
-                            icon={faFlaskVial}
-                            className='pb-1'
-                          />
-                          <span className=''>Virtual Lab</span>
-                        </a>
-                      </Link>
-                    )}
-                    <Link href={'/curriculum/' + s.curr}>
-                      <a className='w-full justify-center items-center font-IBMPlex font-semibold flex gap-1 py-2 px-3 bg-bmw/30 text-white/40 hover:bg-bmw/50 hover:text-white/70 transition-colors duration-300'>
-                        <FontAwesomeIcon
-                          icon={faFileInvoice}
-                          className='pb-1'
-                        />
-                        <span className=''>Curriculum</span>
-                      </a>
-                    </Link>
-                  </div>
-                </div>
+            <div className='w-full flex flex-wrap justify-center gap-3 pb-8'>
+              {File.map((a, ai) => (
+                <ActCard
+                  key={ai}
+                  src={a.pic}
+                  name={a.name}
+                  desc={a.desc}
+                  href={a.href}
+                  button={a.button}
+                />
               ))}
               </div>
-                    </div>*/}
-    
         </main>
     </>
       
