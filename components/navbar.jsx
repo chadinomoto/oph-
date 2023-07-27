@@ -221,7 +221,7 @@ export default function Navbar({
                 src='https://mwitophcdn.woyiswoy.com/img/logo22.svg'
                 className='h-[1.8em]'
               />
-              <span className='whitespace-nowrap'>MWIT Open House 2022</span>
+              <span className='whitespace-nowrap'>MWIT Open House 2023</span>
             </a>
           </Link>
 
@@ -318,7 +318,7 @@ export default function Navbar({
           />
           <div className='flex flex-col w-fit max-w-lg gap-3 items-center md:items-start'>
             <span className='text-ymw font-CS font-semibold text-lg md:text-xl text-center'>
-              MWIT Open House 2022
+              MWIT Open House 2023
             </span>
             <FooterLink
               footerLink={footerLinkLeft.concat(footerLinkRight)}
