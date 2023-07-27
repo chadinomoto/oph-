@@ -160,19 +160,19 @@ export default function Home({ userData }) {
     <>
       <Head>
         {/* <!-- HTML Meta Tags --> */}
-        <title>MWIT Open House 2022</title>
+        <title>MWIT Open House 2023</title>
         <meta
           name='description'
-          content='MWIT Open House 2022 เปิดบ้านโรงเรียนมหิดลวิทยานุสรณ์ พบกับกิจกรรมและนิทรรศการมากมายตลอดวันที่ 22 - 28 สิงหาคม 2565 ในรูปแบบออนไลน์'
+          content='MWIT Open House 2023 เปิดบ้านโรงเรียนมหิดลวิทยานุสรณ์ พบกับกิจกรรมและนิทรรศการมากมายตลอดวันที่ 25 และ 26 สิงหาคม 2566 ในรูปแบบออนไซต์'
         />
 
         {/* <!-- Facebook Meta Tags --> */}
         <meta property='og:url' content='https://openhouse.mwit.ac.th' />
         <meta property='og:type' content='website' />
-        <meta property='og:title' content='MWIT Open House 2022' />
+        <meta property='og:title' content='MWIT Open House 2023' />
         <meta
           property='og:description'
-          content='MWIT Open House 2022 เปิดบ้านโรงเรียนมหิดลวิทยานุสรณ์ พบกับกิจกรรมและนิทรรศการมากมายตลอดวันที่ 22 - 28 สิงหาคม 2565 ในรูปแบบออนไลน์'
+          content='MWIT Open House 2023 เปิดบ้านโรงเรียนมหิดลวิทยานุสรณ์ พบกับกิจกรรมและนิทรรศการมากมายตลอดวันที่ 25 และ 26 สิงหาคม 2566 ในรูปแบบออนไซต์'
         />
         <meta
           property='og:image'
@@ -183,10 +183,10 @@ export default function Home({ userData }) {
         <meta name='twitter:card' content='summary_large_image' />
         <meta property='twitter:domain' content='openhouse.mwit.ac.th' />
         <meta property='twitter:url' content='https://openhouse.mwit.ac.th' />
-        <meta name='twitter:title' content='MWIT Open House 2022' />
+        <meta name='twitter:title' content='MWIT Open House 2023' />
         <meta
           name='twitter:description'
-          content='MWIT Open House 2022 เปิดบ้านโรงเรียนมหิดลวิทยานุสรณ์ พบกับกิจกรรมและนิทรรศการมากมายตลอดวันที่ 22 - 28 สิงหาคม 2565 ในรูปแบบออนไลน์'
+          content='MWIT Open House 2023 เปิดบ้านโรงเรียนมหิดลวิทยานุสรณ์ พบกับกิจกรรมและนิทรรศการมากมายตลอดวันที่ 25 และ 26 สิงหาคม 2566 ในรูปแบบออนไซต์'
         />
         <meta
           name='twitter:image'
