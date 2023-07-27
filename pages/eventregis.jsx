@@ -24,7 +24,7 @@ const File = [
     {
         name : "Google Form",
         href : "https://forms.gle/9r7ax1gAwxDK5Hov6",
-        src: "ggform",
+        src: "ggform2",
         title: "Google Form ลงทะเบียนเข้าร่วมกิจกรรม",
         desc: "ขอความกรุณาทุกท่านที่มีความประสงค์เข้าร่วมกิจกรรมร่วมมือกรอกข้อมูลลงทะเบียนเข้างานเพื่อความสะดวกในการเข้างานในวันจริง",
         button: "ฟอร์ม"
