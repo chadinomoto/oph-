@@ -66,7 +66,6 @@ export default function eventregis() {
         <main className='flex flex-col w-full'>
             <span
               className='font-CS font-bold text-2xl md:text-3xl lg:text-4xl pt-16'
-              ref={actRef}
             >
               ALl documents
             </span>
