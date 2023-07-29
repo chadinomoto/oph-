@@ -341,7 +341,7 @@ export default function Home({ userData }) {
             </div>
           </div>
         </div>
-        <div
+        {/*<div
           // style={{
           //   backgroundImage: `url(${
           //     process.env.CDN_URL + '/img/projcover.jpg'
@@ -396,8 +396,8 @@ export default function Home({ userData }) {
               ))}
               </div>*/}
           </div>
-        </div>
-        <div
+        </div>*/}
+        {/*<div
           className='w-full min-h-screen bg-black/80 px-8 py-6'
           //ref={subjRef}
         >
@@ -405,7 +405,7 @@ export default function Home({ userData }) {
             <span className='font-CS font-bold text-2xl md:text-3xl lg:text-4xl mt-5 text-white'>
               กิจกรรมตามสาขาวิชา
             </span>
-            {/*<div className='flex flex-wrap gap-4 justify-center'>
+            <div className='flex flex-wrap gap-4 justify-center'>
               {subjAct.map((s, si) => (
                 <div
                   key={si}
@@ -455,10 +455,10 @@ export default function Home({ userData }) {
                   </div>
                 </div>
               ))}
-              </div>*/}
+              </div>
           </div>
-        </div>
-        <div
+        </div>*/}
+        {/*<div
           style={{
             backgroundImage: `url(${
               process.env.CDN_URL + '/img/clubcover.webp'
@@ -491,7 +491,7 @@ export default function Home({ userData }) {
               </div>
             </div>
           </div>
-        </div>
+        </div>*/}
       </div>
 
       <footer></footer>
