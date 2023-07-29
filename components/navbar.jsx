@@ -314,7 +314,7 @@ export default function Navbar({
         <div className='py-4 px-8 w-full max-w-6xl mx-auto flex flex-col md:flex-row justify-center items-center md:items-start gap-y-4 gap-x-6'>
           <img
             src='img/2023/oph23-logo.png'
-            className='h-30 self-center'
+            className='h-24 self-center'
           />
           <div className='flex flex-col w-fit max-w-lg gap-3 items-center md:items-start'>
             <span className='text-ymw font-CS font-semibold text-lg md:text-xl text-center'>
