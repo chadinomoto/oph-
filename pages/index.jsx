@@ -139,7 +139,7 @@ export default function Home({ userData }) {
   const lifeRef = useRef(null)
   const actRef = useRef(null)
   const subjRef = useRef(null)
-  const WelcomeButton = [
+  {/*const WelcomeButton = [
     {
       name: 'LIFE at MWIT',
       icon: faPeopleRobbery,
@@ -155,7 +155,7 @@ export default function Home({ userData }) {
       icon: faBook,
       ref: subjRef,
     },
-  ]
+  ]*/}
   return (
     <>
       <Head>
@@ -355,7 +355,7 @@ export default function Home({ userData }) {
         >
           <div
             className='flex flex-col items-center w-full max-w-7xl px-8 py-6 gap-4 mx-auto'
-            ref={lifeRef}
+            //ref={lifeRef}
           >
             <span className='font-CS font-bold text-2xl md:text-3xl lg:text-4xl mt-10'>
               FACTs About MWIT
@@ -379,7 +379,7 @@ export default function Home({ userData }) {
             />
             <span
               className='font-CS font-bold text-2xl md:text-3xl lg:text-4xl pt-16'
-              ref={actRef}
+              //ref={actRef}
             >
               All Activities
             </span>
@@ -399,7 +399,7 @@ export default function Home({ userData }) {
         </div>
         <div
           className='w-full min-h-screen bg-black/80 px-8 py-6'
-          ref={subjRef}
+          //ref={subjRef}
         >
           <div className='w-full h-full max-w-7xl mx-auto flex flex-col justify-center items-center gap-6'>
             <span className='font-CS font-bold text-2xl md:text-3xl lg:text-4xl mt-5 text-white'>
