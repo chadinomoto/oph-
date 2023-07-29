@@ -207,7 +207,7 @@ export default function Home({ userData }) {
               backgroundImage: `url(${'' + '/img/welcome.webp'})`,
             }}
             className='block fixed inset-0 bg-cover -z-10'
-        />
+        >
           <div className='w-full h-full py-6 flex items-center'>
             <div className='w-full max-w-7xl grid md:grid-cols-2 gap-6 items-center justify-items-center mx-auto px-6'>
               <iframe
