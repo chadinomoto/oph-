@@ -39,7 +39,10 @@ const mainMenu = [
 
 export default function LandingPage({ homeRef, children, ...props }) {
   return (
-    <div className='w-full bg-ybg/50 absolute h-[calc(100vh-calc(100vh-100%))]'>
+    <div className='w-full bg-ybg/50 absolute h-[calc(100vh-calc(100vh-100%))]'
+    style={{
+      backgroundImage: `url(${'' + '/img/bg_starlight-8.webp'})`,
+    }}>
       <div className='p-4 flex flex-col w-full h-[calc(100vh-calc(100vh-100%))]'>
         <div className='grow flex flex-col justify-center items-center py-4 mx-auto gap-6 lg:gap-8'>
           <div className='flex flex-col sm:flex-row justify-center items-center gap-6 lg:gap-8'>

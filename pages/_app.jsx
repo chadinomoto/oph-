@@ -86,7 +86,7 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <div className=''>
-      <div className='fixed -z-10 bg-[url(\img\bg_starlight-8.png}] bg-no-repeat w-full h-screen' />
+      <div className='fixed -z-10 bg-[url("https://mwitophcdn.woyiswoy.com/img/wbg.png")] bg-no-repeat w-full h-screen' />
       {isHome && <LandingPage homeRef={homeRef} />}
       <Navbar
         userData={userData}
