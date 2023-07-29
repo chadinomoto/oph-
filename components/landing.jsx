@@ -47,7 +47,7 @@ export default function LandingPage({ homeRef, children, ...props }) {
         <div className='grow flex flex-col justify-center items-center py-4 mx-auto gap-6 lg:gap-8'>
           <div className='flex flex-col sm:flex-row justify-center items-center gap-6 lg:gap-8'>
             <motion.img
-              src='img/oph23-logo.svg'
+              src='img/oph23-logo.png'
               className='w-[180px] md:w-[220px] lg:w-[250px]'
               initial={{ opacity: 0, scale: 0.5, rotate: -10 }}
               animate={{ opacity: 1, scale: 1, rotate: 0 }}
