@@ -319,7 +319,7 @@ export default function Home({ userData }) {
                   )}
                 </AnimateSharedLayout>
                 <div className='grid grid-cols-3 gap-2 sm:gap-3 rounded-xl'>
-                  {WelcomeButton.map((w, wi) => (
+                  {/*WelcomeButton.map((w, wi) => (
                     <button
                       key={wi}
                       onClick={() =>
@@ -335,7 +335,7 @@ export default function Home({ userData }) {
                         {w.name}
                       </span>
                     </button>
-                  ))}
+                    ))*/}
                 </div>
               </div>
             </div>
