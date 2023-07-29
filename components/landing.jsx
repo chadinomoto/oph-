@@ -31,7 +31,7 @@ const mainMenu = [
   {
     name: 'MWIT Square',
     fa: false,
-    icon: 'https://mwitophcdn.woyiswoy.com/img/sqlogofull.png',
+    icon: `url(${'' + '/img/2023/SQ15-col.png'})`,
     href: 'https://square.mwit.ac.th',
     disabled: false,
   },
@@ -41,13 +41,13 @@ export default function LandingPage({ homeRef, children, ...props }) {
   return (
     <div className='w-full bg-ybg/50 absolute h-[calc(100vh-calc(100vh-100%))]'
     style={{
-      backgroundImage: `url(${'' + '/img/bg_starlight-8.webp'})`,
+      backgroundImage: `url(${'' + '/img/2023/bg_starlight-8.webp'})`,
     }}>
       <div className='p-4 flex flex-col w-full h-[calc(100vh-calc(100vh-100%))]'>
         <div className='grow flex flex-col justify-center items-center py-4 mx-auto gap-6 lg:gap-8'>
           <div className='flex flex-col sm:flex-row justify-center items-center gap-6 lg:gap-8'>
             <motion.img
-              src='img/oph23-logo.png'
+              src='img/2023/oph23-logo.png'
               className='w-[180px] md:w-[220px] lg:w-[250px]'
               initial={{ opacity: 0, scale: 0.5, rotate: -10 }}
               animate={{ opacity: 1, scale: 1, rotate: 0 }}
