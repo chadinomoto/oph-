@@ -22,13 +22,19 @@ const meta = {
   }
 const File = [
     {
-        name : "Google Form",
+        name : "Google Form ลงทะเบียนเข้าร่วม MWIT OPEN HOUSE 2023: DISCOVERY",
         href : "https://forms.gle/9r7ax1gAwxDK5Hov6",
-        src: "ggform2",
-        title: "Google Form ลงทะเบียนเข้าร่วมกิจกรรม",
+        src: "ggform",
         desc: "ขอความกรุณาทุกท่านที่มีความประสงค์เข้าร่วมกิจกรรมร่วมมือกรอกข้อมูลลงทะเบียนเข้างานเพื่อความสะดวกในการเข้างานในวันจริง",
         button: "ฟอร์ม"
     },
+    {
+        name : "Google Form ลงทะเบียนเข้าแข่งขัน MWIT SPELLING BEE",
+        href : "https://docs.google.com/forms/d/e/1FAIpQLSfKl3SQ5HzlAsrQ7BIPtD6Un0_LnH3VJBwxhOBglF0Ifd40Rw/closedform",
+        src: "ggform",
+        desc: "สำหรับผู้ที่สนใจเข้าแข่งขันในกิจกรรม Spelling bee ในวันที่ 25 สิงหาคม 2566",
+        button: "ฟอร์ม"
+    }
 
 ]
 export default function eventregis() {
