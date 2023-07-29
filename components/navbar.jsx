@@ -22,7 +22,8 @@ import {
   faSchoolFlag,
   faUserGear,
   faXmark,
-  faFile
+  faFile,
+  faCompass
 } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { AnimatePresence, motion } from 'framer-motion'
@@ -120,24 +121,30 @@ export default function Navbar({
       auth: null,
     },
     {
-      name: 'Registration',
+      name: 'Registration Form',
       href: '/eventregis',
       icon: faFile,
       auth: null,
-    }
-    /*{
+    },
+    {
       name: 'Exhibitions',
       href: '',
       icon: faFlag,
       auth: null,
       sub: [
-        {
+        /*{
           name: 'Science Project',
           href: '/sciproject',
           icon: faMicroscope,
           auth: null,
-        },
+        },*/
         {
+          name: 'Activities',
+          href: '/activity',
+          icon: faCompass,
+          auth: null,
+        },
+        /*{
           name: 'MWIT Club',
           href: '/club',
           icon: faCubes,
@@ -148,27 +155,27 @@ export default function Navbar({
           href: '/lab',
           icon: faFlaskVial,
           auth: null,
-        },
-        {
+        },*/
+        /*{
           name: 'Curriculum',
           href: '/curriculum',
           icon: faFileInvoice,
           auth: null,
-        },
+        },*/
         {
           name: 'School Tour',
           href: '/tour',
           icon: faSchoolFlag,
           auth: null,
         },
-        {
+        /*{
           name: 'MWITagram',
           href: '/mwitagram',
           icon: faCameraRetro,
           auth: null,
-        },
+        },*/
       ],
-    },*/
+    },
     /*{
       name: 'Booking',
       href: '/booking',

@@ -76,7 +76,7 @@ export default function ClubBlog({ clubContent }) {
           </Link>
           <img
             src={
-              process.env.CDN_URL +
+              '' +
               '/img/club/cover/' +
               clubContent.cover +
               '.webp'
@@ -121,7 +121,7 @@ export default function ClubBlog({ clubContent }) {
                 >
                   {clubContent.img.map((a, ai) => (
                     <img
-                      src={process.env.CDN_URL + '/img/club/act/' + a + '.webp'}
+                      src={'' + '/img/club/act/' + a + '.webp'}
                       className='w-full'
                       key={ai}
                     />
@@ -154,7 +154,7 @@ export default function ClubBlog({ clubContent }) {
             {clubContent.factimg && (
               <img
                 src={
-                  process.env.CDN_URL +
+                  '' +
                   '/img/club/fact/' +
                   clubContent.factimg +
                   '.webp'
@@ -224,7 +224,7 @@ export default function ClubBlog({ clubContent }) {
                 )}
                 <img
                   src={
-                    process.env.CDN_URL +
+                    '' +
                     '/img/club/present/' +
                     clubContent.imgpresent +
                     '.webp'

@@ -119,7 +119,7 @@ export default function LandingPage({ homeRef, children, ...props }) {
                 >
                   NEW!
                 </motion.div>
-                <span className='whitespace-nowrap'>Coming soon</span>
+                <span className='whitespace-nowrap'>Schedule</span>
               </motion.a>
             </Link>
           </div>
