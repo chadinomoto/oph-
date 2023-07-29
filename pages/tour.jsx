@@ -179,7 +179,7 @@ export default function Tour() {
           <div className='relative w-full max-w-[70vw] md:max-w-xs'>
             <img
               className='w-full'
-              src={process.env.CDN_URL + '/img/tour/bg.webp'}
+              src={ + '/img/tour/bg.webp'}
             />
             <AnimatePresence exitBeforeEnter>
               <motion.img
@@ -190,7 +190,7 @@ export default function Tour() {
                 key={selected}
                 className='w-full absolute inset-0'
                 src={
-                  process.env.CDN_URL +
+                   +
                   '/img/tour/' +
                   place[selected].img +
                   '.webp'
