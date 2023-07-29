@@ -31,7 +31,7 @@ const mainMenu = [
   {
     name: 'MWIT Square',
     fa: false,
-    icon: url('/img/2023/SQ15-col.png'),
+    icon: "url('/img/2023/SQ15-col.png')",
     href: 'https://square.mwit.ac.th',
     disabled: false,
   },
