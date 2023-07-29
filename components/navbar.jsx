@@ -218,7 +218,7 @@ export default function Navbar({
           <Link href={'/'}>
             <a className='flex gap-3 md:gap-4 items-center py-[0.35rem]'>
               <img
-                src='https://mwitophcdn.woyiswoy.com/img/logo22.svg'
+                src="url(${'' + '/img/2023/bg_starlight-8.webp'})"
                 className='h-[1.8em]'
               />
               <span className='whitespace-nowrap'>MWIT Open House 2023</span>
@@ -313,7 +313,7 @@ export default function Navbar({
       <div className='bg-gradient-to-r from-bft to-oft'>
         <div className='py-4 px-8 w-full max-w-6xl mx-auto flex flex-col md:flex-row justify-center items-center md:items-start gap-y-4 gap-x-6'>
           <img
-            src='https://mwitophcdn.woyiswoy.com/img/logo22.svg'
+            src="url(${'' + '/img/2023/bg_starlight-8.webp'})"
             className='h-20 self-center'
           />
           <div className='flex flex-col w-fit max-w-lg gap-3 items-center md:items-start'>
