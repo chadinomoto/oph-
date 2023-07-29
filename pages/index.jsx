@@ -204,7 +204,7 @@ export default function Home({ userData }) {
         >*/}
         <div
             style={{
-              backgroundImage: `url(${'' + '/img/welcome.webp'})`,
+              backgroundImage: `url(${'' + '/img/sky.webp'})`,
             }}
             className='w-full bg-cover bg-bottom sm:bg-fixed flex items-end min-h-screen relative justify-self-center self-center space-y-2'
         >
