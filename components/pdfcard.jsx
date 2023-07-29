@@ -27,9 +27,14 @@ export default function Pdfcard({
   return (
     <Link href={href}>
       <a
-        style={{
+        {/*style={{
           backgroundImage: `url(${
             process.env.CDN_URL + '/img/pdf/' + src + '.webp'
+          })`,
+        }}*/}
+        style={{
+          backgroundImage: `url(${
+            '' + '/img/pdf/' + src + '.webp'
           })`,
         }}
         onMouseEnter={() => setIsHover(true)}
