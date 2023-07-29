@@ -14,10 +14,10 @@ import {
   faPuzzlePiece,
 } from '@fortawesome/free-solid-svg-icons'
 const meta = {
-    title: 'Document | MWIT Open House 2023',
-    url: 'document',
+    title: 'Activity | MWIT Open House 2023',
+    url: 'activity',
     description:
-      'รวมเอกสารทั้งหมดที่จำเป็นสำหรับการเข้าร่วมงาน MWIT Open House 2023',
+      'รวมข้อมูลสำหรับกิจกรรมภายใน MWIT Open House 2023',
     img: 'ogimage.png',
   }
 const File = [

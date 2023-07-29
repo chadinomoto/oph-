@@ -167,7 +167,7 @@ export default function Home({ userData }) {
         />
 
         {/* <!-- Facebook Meta Tags --> */}
-        <meta property='og:url' content='https://mwit-oph-2.vercel.app/' />
+        <meta property='og:url' content='https://openhouse.mwit.ac.th/' />
         <meta property='og:type' content='website' />
         <meta property='og:title' content='MWIT Open House 2023' />
         <meta
@@ -176,13 +176,13 @@ export default function Home({ userData }) {
         />
         <meta
           property='og:image'
-          content='https://github.com/Chainxc/mwit-oph-2/blob/daa04fe5e208cd6b0519713e6295cc4f870da3c2/public/img/ogimage.png'
+          content='img/ogimage.png'
         />
 
         {/* <!-- Twitter Meta Tags --> */}
         <meta name='twitter:card' content='summary_large_image' />
-        <meta property='twitter:domain' content='mwit-oph-2.vercel.app/' />
-        <meta property='twitter:url' content='https://mwit-oph-2.vercel.app/' />
+        <meta property='twitter:domain' content='openhouse.mwit.ac.th/' />
+        <meta property='twitter:url' content='https://openhouse.mwit.ac.th/' />
         <meta name='twitter:title' content='MWIT Open House 2023' />
         <meta
           name='twitter:description'
@@ -190,7 +190,7 @@ export default function Home({ userData }) {
         />
         <meta
           name='twitter:image'
-          content='https://drive.google.com/file/d/1Zjaa6piJZHLsWdQ6CkwN2l8nSIl2_fNZ/view?usp=drive_link'
+          content='img/ogimage.png'
         />
       </Head>
       <div className='flex flex-col w-full'>
@@ -202,7 +202,7 @@ export default function Home({ userData }) {
             'w-full bg-cover bg-bottom sm:bg-fixed flex items-end min-h-screen relative justify-self-center self-center space-y-2'
           }
         >*/}
-        <div
+        {/*<div
             style={{
               backgroundImage: `url(${'' + '/img/sky.webp'})`,
             }}
@@ -318,8 +318,8 @@ export default function Home({ userData }) {
                     </div>
                   )}
                 </AnimateSharedLayout>
-                <div className='grid grid-cols-3 gap-2 sm:gap-3 rounded-xl'>
-                  {/*WelcomeButton.map((w, wi) => (
+                {/*<div className='grid grid-cols-3 gap-2 sm:gap-3 rounded-xl'>
+                  WelcomeButton.map((w, wi) => (
                     <button
                       key={wi}
                       onClick={() =>
@@ -335,12 +335,11 @@ export default function Home({ userData }) {
                         {w.name}
                       </span>
                     </button>
-                    ))*/}
+                    ))
                 </div>
               </div>
             </div>
-          </div>
-        </div>
+          </div>*/}
         {/*<div
           // style={{
           //   backgroundImage: `url(${
