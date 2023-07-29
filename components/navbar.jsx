@@ -51,13 +51,13 @@ const footerLinkRight = [
     name: 'Science Project',
     href: '/sciproject',
     nt: false,
-  },
+  },*/
   {
-    name: 'MWIT Square 14th',
+    name: 'MWIT Square 15 th',
     href: 'https://square.mwit.ac.th',
     nt: true,
   },
-  {
+  /*{
     name: 'MWIT Pitching 1st',
     href: '/pitching',
     nt: false,
@@ -90,11 +90,11 @@ const footerLinkLeft = [
     href: '/curriculum',
     nt: false,
   },
-  {
+  /*{
     name: 'MWIT Club',
     href: '/club',
     nt: false,
-  },
+  },*/
 ]
 
 export default function Navbar({
