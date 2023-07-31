@@ -95,6 +95,7 @@ export default function LandingPage({ homeRef, children, ...props }) {
           </div>
           <div className='flex flex-wrap items-center justify-center gap-3'>
             <Link href={'https://forms.gle/9r7ax1gAwxDK5Hov6'}>
+              <a>
               <motion.a
                 className='relative bg-ymw/50 hover:bg-ymw hover:text-black cursor-pointer transition-colors duration-200 py-2 md:py-2 px-5 md:px-4 rounded-full font-CS font-bold text-lg md:text-4xl lg:text-6xl text-bmw'
                 initial={{ opacity: 0, scale: 0.7, y: 10, rotate: -10 }}
@@ -121,6 +122,7 @@ export default function LandingPage({ homeRef, children, ...props }) {
                 </motion.div>
                 <span className='whitespace-nowrap'>Register Now!</span>
               </motion.a>
+              </a>
             </Link>
           </div>
         </div>
