@@ -5,7 +5,7 @@ import { clamp } from 'lodash'
 import Link from 'next/link'
 import Pdfcard from '../components/pdfcard'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import MetaHeader from '../../components/metaHeader'
+import MetaHeader from '../components/metaHeader'
 import {
   faBook,
   faCircleXmark,
