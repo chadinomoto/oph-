@@ -469,6 +469,8 @@ export default function Home({ userData }) {
               </div>
             </div>
           </div>
+          </div>
+          </div>
           <div
           // style={{
           //   backgroundImage: `url(${
@@ -518,8 +520,7 @@ export default function Home({ userData }) {
                         <FontAwesomeIcon icon={faCircle} size = 'xs'/>
                       </div>
                     ))}
-              </div>
-            </div>
+                  </div>
               </div>
               <div className='cols-span-1'>
                 <div className='font-CS font-bold text-2xl md:text-3xl lg:text-4xl mt-10 flex justify-center'>
@@ -554,7 +555,6 @@ export default function Home({ userData }) {
                     ))}
               </div>
               </div>
-            </div>
             {/*<span className='font-CS font-bold text-2xl md:text-3xl lg:text-4xl mt-10'>
               ONE DAY in MWIT
             </span>
@@ -583,6 +583,7 @@ export default function Home({ userData }) {
                 />
               ))}
               </div>*/}
+          </div>
           </div>
           </div>
         {/*<div
@@ -681,7 +682,7 @@ export default function Home({ userData }) {
         </div>*/}
         </div>
       </div>
-
+      </div>
       <footer></footer>
     </>
   )
