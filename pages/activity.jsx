@@ -78,7 +78,7 @@ export default function Activity() {
             }}
             className='w-full bg-cover bg-bottom sm:bg-fixed flex min-h-screen space-y-2'
         >
-          <div className='flex font-CS font-bold text-2xl md:text-3xl lg:text-4xl'>
+          <div className='flex justify-center items-center font-CS font-bold text-2xl md:text-3xl lg:text-4xl'>
               Activities
           </div>
           <div className='w-full h-full py-6 flex items-center'>
