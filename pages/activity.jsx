@@ -118,7 +118,7 @@ export default function Activity() {
               Activities
           </span>
           <div className='w-full h-full py-6 flex items-center'>
-            <div className='w-full max-w-7xl grid md:grid-cols-2 gap-6 mx-auto px-6'>
+            <div className='w-full max-w-7xl grid md:grid-cols-2 gap-6 mx-auto px-6 col-span-1'>
               {actdata.map((a,ai) => (
                 <div className='flex flex-col gap-3' key = {ai}>
                   <motion.img
@@ -136,23 +136,23 @@ export default function Activity() {
                   <AnimateSharedLayout type='crossfade'>
                     <motion.div
                       className='flex flex-col gap-1 bg-white/40 shadow-lg backdrop-blur-sm px-4 py-5 rounded-xl'
-                      layoutId='welcome-canvas'
+                      layoutId={'welcome-canvas' + ai.toString()}
                     >
                       <motion.span
-                        layoutId={'welcome-title'}
+                        layoutId={'welcome-title' + ai.toString()}
                         className='font-CS text-3xl md:text-4xl font-bold text-bmw'
                       >
                         {a.name}
                       </motion.span>
                       <motion.span
-                        layoutId={'welcome-desc'}
+                        layoutId={'welcome-desc' + ai.toString()}
                         className='font-CS text-base md:text-lg lg:text-xl text-blue-500'
                       >
                         {a.short}
                       </motion.span>
                       <div className='flex flex-col gap-2 mt-2'>
                         <motion.span
-                          layoutId={'welcome-ct-1'}
+                          layoutId={'welcome-ct' + ai.toString()}
                           className='font-IBMPlexLoop leading-relaxed md:leading-relaxed text-sm md:text-base text-black'
                         >
                         {a.desc}
