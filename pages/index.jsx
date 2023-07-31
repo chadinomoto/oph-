@@ -495,32 +495,32 @@ export default function Home({ userData }) {
                 <div className='font-CS font-bold text-2xl md:text-3xl lg:text-4xl mt-10 flex justify-center'>
                   text
                 </div>
-              </div>
-              <div className='cols-span-1'>
-                <div className='max-w-[640px] h-[800px] w-full m-auto py-16 px-4 relative group'>
-                  <div
-                    style={{ backgroundImage: `url(${slides1[currentIndex1].url})` }}
-                    className='w-full h-full rounded-2xl bg-center bg-cover duration-500'
-                  >
-                  </div>
-                  {/* Left Arrow */}
-                  <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
-                    <FontAwesomeIcon icon={faChevronLeft} onClick={prevSlide1} size={30} />
-                  </div>
-                  {/* Right Arrow */}
-                  <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
-                  <FontAwesomeIcon icon={faChevronRight} onClick={nextSlide1} size={30} />
-                  </div>
-                  <div className='flex top-4 justify-center py-2'>
-                    {slides1.map((slide, slideIndex) => (
-                      <div
-                        key={slideIndex}
-                        onClick={() => goToSlide1(slideIndex)}
-                        className='text-2xl cursor-pointer'
-                      >
-                        <FontAwesomeIcon icon={faCircle} size = 'xs'/>
-                      </div>
-                    ))}
+                <div>
+                  <div className='max-w-[640px] h-[800px] w-full m-auto py-16 px-4 relative group'>
+                    <div
+                      style={{ backgroundImage: `url(${slides1[currentIndex1].url})` }}
+                      className='w-full h-full rounded-2xl bg-center bg-cover duration-500'
+                    >
+                    </div>
+                    {/* Left Arrow */}
+                    <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
+                      <FontAwesomeIcon icon={faChevronLeft} onClick={prevSlide1} size={30} />
+                    </div>
+                    {/* Right Arrow */}
+                    <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
+                    <FontAwesomeIcon icon={faChevronRight} onClick={nextSlide1} size={30} />
+                    </div>
+                    <div className='flex top-4 justify-center py-2'>
+                      {slides1.map((slide, slideIndex) => (
+                        <div
+                          key={slideIndex}
+                          onClick={() => goToSlide1(slideIndex)}
+                          className='text-2xl cursor-pointer'
+                        >
+                          <FontAwesomeIcon icon={faCircle} size = 'xs'/>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -528,33 +528,36 @@ export default function Home({ userData }) {
                 <div className='font-CS font-bold text-2xl md:text-3xl lg:text-4xl mt-10 flex justify-center'>
                   text
                 </div>
-              </div>
-              <div className='cols-span-1'>
-                <div className='max-w-[640px] h-[800px] w-full m-auto py-16 px-4 relative group'>
-                  <div
-                    style={{ backgroundImage: `url(${slides2[currentIndex1].url})` }}
-                    className='w-full h-full rounded-2xl bg-center bg-cover duration-500'
-                  ></div>
-                </div>
-              </div>
-              {/* Left Arrow */}
-              <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
-                <FontAwesomeIcon icon={faChevronLeft} onClick={prevSlide2} size={30} />
-              </div>
-              {/* Right Arrow */}
-              <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
-                <FontAwesomeIcon icon={faChevronRight} onClick={nextSlide2} size={30} />
-              </div>
-              <div className='flex top-4 justify-center py-2'>
-                {slides2.map((slide, slideIndex) => (
-                  <div
-                    key={slideIndex}
-                    onClick={() => goToSlide2(slideIndex)}
-                    className='text-2xl cursor-pointer'
-                  >
-                    <FontAwesomeIcon icon={faCircle} size = 'xs'/>
+                <div>
+                  <div className='max-w-[640px] h-[800px] w-full m-auto py-16 px-4 relative group'>
+                    <div
+                      style={{ backgroundImage: `url(${slides2[currentIndex1].url})` }}
+                      className='w-full h-full rounded-2xl bg-center bg-cover duration-500'
+                    >
+
+                    </div>
+                  
                   </div>
-                ))}
+                  {/* Left Arrow */}
+                  <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
+                    <FontAwesomeIcon icon={faChevronLeft} onClick={prevSlide2} size={30} />
+                  </div>
+                  {/* Right Arrow */}
+                  <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
+                    <FontAwesomeIcon icon={faChevronRight} onClick={nextSlide2} size={30} />
+                  </div>
+                  <div className='flex top-4 justify-center py-2'>
+                    {slides2.map((slide, slideIndex) => (
+                      <div
+                        key={slideIndex}
+                        onClick={() => goToSlide2(slideIndex)}
+                        className='text-2xl cursor-pointer'
+                      >
+                        <FontAwesomeIcon icon={faCircle} size = 'xs'/>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
                   {/*<span className='font-CS font-bold text-2xl md:text-3xl lg:text-4xl mt-10'>
