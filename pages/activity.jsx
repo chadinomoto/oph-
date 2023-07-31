@@ -117,7 +117,7 @@ export default function Activity() {
           <div className='w-full h-full py-6 flex items-center'>
             <div className='w-full max-w-7xl grid md:grid-cols-2 gap-6 mx-auto px-6'>
               {actdata.map((a,ai) => (
-                <div className='flex flex-col gap-3'>
+                <div className='flex flex-col gap-3' key = {ai}>
                   <motion.img
                     { ...a.ref? (href = a.ref):(href = '')}
                     src={'img/2023/' + a.src}
@@ -131,127 +131,126 @@ export default function Activity() {
                       type: 'spring',
                     }}
                   />
-                <AnimateSharedLayout type='crossfade'>
-                  <motion.div
-                    className='flex flex-col gap-1 bg-white/40 shadow-lg backdrop-blur-sm px-4 py-5 rounded-xl'
-                    layoutId='welcome-canvas'
-                  >
-                    <motion.span
-                      layoutId={'welcome-title'}
-                      className='font-CS text-3xl md:text-4xl font-bold text-bmw'
+                  <AnimateSharedLayout type='crossfade'>
+                    <motion.div
+                      className='flex flex-col gap-1 bg-white/40 shadow-lg backdrop-blur-sm px-4 py-5 rounded-xl'
+                      layoutId='welcome-canvas'
                     >
-                      {a.name}
-                    </motion.span>
-                    <motion.span
-                      layoutId={'welcome-desc'}
-                      className='font-CS text-base md:text-lg lg:text-xl text-blue-500'
-                    >
-                      {a.short}
-                    </motion.span>
-                    <div className='flex flex-col gap-2 mt-2'>
                       <motion.span
-                        layoutId={'welcome-ct-1'}
-                        className='font-IBMPlexLoop leading-relaxed md:leading-relaxed text-sm md:text-base text-black'
+                        layoutId={'welcome-title'}
+                        className='font-CS text-3xl md:text-4xl font-bold text-bmw'
                       >
-                       {a.desc}
+                        {a.name}
                       </motion.span>
-                    </div>
-                    <button
-                      onClick={() => setShowWC(true)}
-                      className='text-sm md:text-base bg-white/30 w-fit hover:bg-white/60 hover:text-bmw transition-all duration-300 backdrop-blur-sm text-bmw/70 rounded-full px-4 py-1 mt-2 font-IBMPlex font-semibold'
-                    >
-                      ข้อมูลเพิ่มเติม
-                    </button>
-                  </motion.div>
-                  {showWC && (
-                    <div className='fixed inset-0 pt-16 px-6 pb-6 z-50 overflow-y-scroll'>
-                      <motion.div
-                        className='w-full relative max-w-2xl mx-auto flex flex-col gap-1 bg-white/80 shadow-lg backdrop-blur-md px-4 py-5 rounded-xl'
-                        layoutId='welcome-canvas'
+                      <motion.span
+                        layoutId={'welcome-desc'}
+                        className='font-CS text-base md:text-lg lg:text-xl text-blue-500'
                       >
-                        <div
-                          className='absolute right-3 top-3 cursor-pointer z-30'
-                          onClick={() => setShowWC(false)}
-                        >
-                          <FontAwesomeIcon
-                            icon={faCircleXmark}
-                            className='text-3xl text-gray-400/60 hover:text-red-500/60 transition-colors duration-300'
-                          />
-                        </div>
+                        {a.short}
+                      </motion.span>
+                      <div className='flex flex-col gap-2 mt-2'>
                         <motion.span
-                          layoutId={'welcome-title'}
-                          className='font-CS text-3xl md:text-4xl font-bold text-bmw'
+                          layoutId={'welcome-ct-1'}
+                          className='font-IBMPlexLoop leading-relaxed md:leading-relaxed text-sm md:text-base text-black'
                         >
-                          {a.name}
+                        {a.desc}
                         </motion.span>
-                        <motion.span
-                          layoutId={'welcome-desc'}
-                          className='font-CS text-base md:text-lg lg:text-xl text-blue-500'
+                      </div>
+                      <button
+                        onClick={() => setShowWC(true)}
+                        className='text-sm md:text-base bg-white/30 w-fit hover:bg-white/60 hover:text-bmw transition-all duration-300 backdrop-blur-sm text-bmw/70 rounded-full px-4 py-1 mt-2 font-IBMPlex font-semibold'
+                      >
+                        ข้อมูลเพิ่มเติม
+                      </button>
+                    </motion.div>
+                    {showWC && (
+                      <div className='fixed inset-0 pt-16 px-6 pb-6 z-50 overflow-y-scroll'>
+                        <motion.div
+                          className='w-full relative max-w-2xl mx-auto flex flex-col gap-1 bg-white/80 shadow-lg backdrop-blur-md px-4 py-5 rounded-xl'
+                          layoutId='welcome-canvas'
                         >
-                          {a.short}
-                        </motion.span>
-                        <div className='flex flex-col gap-2 mt-2'>
+                          <div
+                            className='absolute right-3 top-3 cursor-pointer z-30'
+                            onClick={() => setShowWC(false)}
+                          >
+                            <FontAwesomeIcon
+                              icon={faCircleXmark}
+                              className='text-3xl text-gray-400/60 hover:text-red-500/60 transition-colors duration-300'
+                            />
+                          </div>
                           <motion.span
-                            layoutId={'welcome-ct-1'}
-                            className='font-IBMPlexLoop leading-relaxed md:leading-relaxed text-sm md:text-base text-black'
+                            layoutId={'welcome-title'}
+                            className='font-CS text-3xl md:text-4xl font-bold text-bmw'
                           >
-                            {a.desc}
+                            {a.name}
                           </motion.span>
-                          <span
-                            className='font-IBMPlexLoop leading-relaxed md:leading-relaxed text-sm md:text-base text-black'
-                            key={ti}
+                          <motion.span
+                            layoutId={'welcome-desc'}
+                            className='font-CS text-base md:text-lg lg:text-xl text-blue-500'
                           >
-                            <div className='font-medium text-base md:text-lg text-black whitespace-nowrap'>
-                              ช่วงเวลารับสมัคร
-                            </div>
-                            <TextFormat
-                            className='whitespace-pre-wrap'
-                            content={a.date}
-                            />
-                            { 
-                              a.regisref ? 
-                              (
-                              <div href={a.regisref} className='font-CS text-xl md:text-2xl font-bold text-bmw'>
-                              ลิงก์สำหรับลงทะเบียนเข้าร่วมกิจกรรม
+                            {a.short}
+                          </motion.span>
+                          <div className='flex flex-col gap-2 mt-2'>
+                            <motion.span
+                              layoutId={'welcome-ct-1'}
+                              className='font-IBMPlexLoop leading-relaxed md:leading-relaxed text-sm md:text-base text-black'
+                            >
+                              {a.desc}
+                            </motion.span>
+                            <span
+                              className='font-IBMPlexLoop leading-relaxed md:leading-relaxed text-sm md:text-base text-black'
+                            >
+                              <div className='font-medium text-base md:text-lg text-black whitespace-nowrap'>
+                                ช่วงเวลารับสมัคร
                               </div>
-                              )
-                              :
-                              (<div href={a.regisref} className='font-CS text-xl md:text-2xl font-bold text-bmw'>
-                                กิจกรรมนี้ไม่สามารถลงทะเบียนได้
-                              </div>)
-                            }
-                            <div className='font-medium text-base md:text-lg text-black whitespace-nowrap'>
-                              จำนวนที่เปิดรับ
-                            </div>
-                            <TextFormat
-                            className='whitespace-pre-wrap'
-                            content={a.req}
-                            />
-                            <div className='font-medium text-base md:text-lg text-black whitespace-nowrap'>
-                              ข้อมูลเพิ่มเติม
-                            </div>
-                            <TextFormat
-                            className='whitespace-pre-wrap'
-                            content={a.other}
-                            />
-                          </span>
-                        </div>
-                        <button
-                          onClick={() => setShowWC(false)}
-                          className='text-sm md:text-base bg-white/30 w-fit hover:bg-white/60 hover:text-bmw transition-all duration-300 backdrop-blur-sm text-bmw/70 rounded-full px-4 py-1 mt-2 font-IBMPlex font-semibold'
-                        >
-                          Close
-                        </button>
-                      </motion.div>
-                    </div>
-                  )}
-                </AnimateSharedLayout>
-              </div>
+                              <TextFormat
+                              className='whitespace-pre-wrap'
+                              content={a.date}
+                              />
+                              { 
+                                a.regisref ? 
+                                (
+                                <div href={a.regisref} className='font-CS text-xl md:text-2xl font-bold text-bmw'>
+                                ลิงก์สำหรับลงทะเบียนเข้าร่วมกิจกรรม
+                                </div>
+                                )
+                                :
+                                (<div href='' className='font-CS text-xl md:text-2xl font-bold text-bmw'>
+                                  กิจกรรมนี้ไม่สามารถลงทะเบียนได้
+                                </div>)
+                              }
+                              <div className='font-medium text-base md:text-lg text-black whitespace-nowrap'>
+                                จำนวนที่เปิดรับ
+                              </div>
+                              <TextFormat
+                              className='whitespace-pre-wrap'
+                              content={a.req}
+                              />
+                              <div className='font-medium text-base md:text-lg text-black whitespace-nowrap'>
+                                ข้อมูลเพิ่มเติม
+                              </div>
+                              <TextFormat
+                              className='whitespace-pre-wrap'
+                              content={a.other}
+                              />
+                            </span>
+                          </div>
+                          <button
+                            onClick={() => setShowWC(false)}
+                            className='text-sm md:text-base bg-white/30 w-fit hover:bg-white/60 hover:text-bmw transition-all duration-300 backdrop-blur-sm text-bmw/70 rounded-full px-4 py-1 mt-2 font-IBMPlex font-semibold'
+                          >
+                            Close
+                          </button>
+                        </motion.div>
+                      </div>
+                    )}
+                  </AnimateSharedLayout>
+                </div>
               ))}
-              </div>
             </div>
+          </div>
         </div>
-        </div>
+      </div>
     </>
       
   )
