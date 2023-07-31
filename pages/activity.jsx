@@ -120,10 +120,10 @@ export default function Activity() {
           <div className='w-full h-full py-6 flex items-center'>
             <div className='w-full max-w-7xl grid grid-cols-1 gap-6 mx-auto px-6 col-span-1'>
               {actdata.map((a,ai) => (
-                <div className='flex flex-col gap-3 grid grid-cols-2' key = {ai}>
+                <div className='flex flex-col gap-3 grid grid-cols-3' key = {ai}>
                   <motion.img
                     src={'img/2023/' + a.src}
-                    className='w-[180px] md:w-[220px] lg:w-[250px]'
+                    className='w-[180px] md:w-[220px] lg:w-[250px] cols-span-1 '
                     initial={{ opacity: 0, scale: 0.5, rotate: -10 }}
                     animate={{ opacity: 1, scale: 1, rotate: 0 }}
                     transition={{
