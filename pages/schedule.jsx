@@ -220,7 +220,7 @@ export default function Schedule() {
         <meta property='og:description' content={meta.description} />
         <meta
           property='og:image'
-          content={'https://mwitophcdn.woyiswoy.com/img/' + meta.img}
+          content={'img/ogimage.png'}
         />
 
         {/* <!-- Twitter Meta Tags --> */}
@@ -231,7 +231,7 @@ export default function Schedule() {
         <meta name='twitter:description' content={meta.description} />
         <meta
           name='twitter:image'
-          content={'https://mwitophcdn.woyiswoy.com/img/' + meta.img}
+          content={'img/ogimage.png'}
         />
       </Head>
 

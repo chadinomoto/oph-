@@ -153,19 +153,45 @@ export default function Tour() {
       : setSelected(0)
   }, [router.query.place])
 
-  const meta = {
-    title:
-      (router.query.place ? place[selected].name + ' - ' : '') +
-      'MWIT School Tour | MWIT Open House 2022',
+const meta = {
+    title: 'MWIT School Tour | MWIT Open House 2022',
     url: 'tour',
     description:
       'MWIT School Tour เปิดบ้านให้ทุกท่านได้มาเยี่ยมชมโรงเรียนมหิดลวิทยานุสรณ์แบบออนไลน์ สามารถรับชมได้ 24 ชั่วโมงผ่านเว็บไซต์ MWIT Open House ได้เลย | MWIT Open House 2022',
-    img: 'ogimage.png',
-  }
+    img: 'img/ogimage.png',
+}
 
   return (
     <>
-      <MetaHeader meta={meta} />
+      <Head>
+        {/* <!-- HTML Meta Tags --> */}
+        <title>{meta.title}</title>
+        <meta name='description' content={meta.description} />
+
+        {/* <!-- Facebook Meta Tags --> */}
+        <meta
+          property='og:url'
+          content={'https://openhouse.mwit.ac.th/' + meta.url}
+        />
+        <meta property='og:type' content='website' />
+        <meta property='og:title' content={meta.title} />
+        <meta property='og:description' content={meta.description} />
+        <meta
+          property='og:image'
+          content={'img/ogimage.png'}
+        />
+
+        {/* <!-- Twitter Meta Tags --> */}
+        <meta name='twitter:card' content='summary_large_image' />
+        <meta property='twitter:domain' content='openhouse.mwit.ac.th' />
+        <meta property='twitter:url' content={meta.url} />
+        <meta name='twitter:title' content={meta.title} />
+        <meta name='twitter:description' content={meta.description} />
+        <meta
+          name='twitter:image'
+          content={'img/ogimage.png'}
+        />
+      </Head>
 
       <main className='w-full bg-white/20'>
         <div className='flex flex-col text-black items-center mx-auto justify-self-center w-full max-w-6xl px-6 pt-10 pb-4'>

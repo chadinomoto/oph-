@@ -95,7 +95,7 @@ export default function Activity() {
         <meta property='og:description' content={meta.description} />
         <meta
           property='og:image'
-          content={'https://mwitophcdn.woyiswoy.com/img/' + meta.img}
+          content={'img/ogimage.png'}
         />
 
         {/* <!-- Twitter Meta Tags --> */}
@@ -106,7 +106,7 @@ export default function Activity() {
         <meta name='twitter:description' content={meta.description} />
         <meta
           name='twitter:image'
-          content={'https://mwitophcdn.woyiswoy.com/img/' + meta.img}
+          content={'img/ogimage.png'}
         />
     </Head>
         <div className='flex flex-col w-full'>
