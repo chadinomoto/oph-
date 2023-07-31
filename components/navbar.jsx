@@ -86,11 +86,11 @@ const footerLinkLeft = [
     href: '/lab',
     nt: false,
   },*/
-  {
+  /*{
     name: 'Curriculum',
     href: '/curriculum',
     nt: false,
-  },
+  },*/
   /*{
     name: 'MWIT Club',
     href: '/club',

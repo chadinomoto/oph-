@@ -52,6 +52,7 @@ const actdata = [
     other : ''
   }*/
   {
+    open : false,
     name : 'MWIT Challenge',
     src : 'logo-challenge-2023.png',
     short : 'อยากได้คำอธิบายสำหรับผู้เข้าร่วม ให้คำอธิบายโดยละเอียดมาทำไมวะ',
@@ -63,6 +64,7 @@ const actdata = [
     other : 'Walk in เท่านั้น'
   },
   {
+    open : false,
     name : 'MWIT Spelling Bee',
     src : 'SpellingBee.png',
     regisref : 'https://forms.gle/pbQWEdGUUAN5L3JP9',
@@ -159,13 +161,13 @@ export default function Activity() {
                         </motion.span>
                       </div>
                       <button
-                        onClick={() => setShowWC(true)}
+                        onClick={() => a.open = !a.open}
                         className='text-sm md:text-base bg-white/30 w-fit hover:bg-white/60 hover:text-bmw transition-all duration-300 backdrop-blur-sm text-bmw/70 rounded-full px-4 py-1 mt-2 font-IBMPlex font-semibold'
                       >
                         ข้อมูลเพิ่มเติม
                       </button>
                     </motion.div>
-                    {showWC && (
+                    {a.open && (
                       <div className='fixed inset-0 pt-16 px-6 pb-6 z-50 overflow-y-scroll' layoutId={'welcome-ct' + ai.toString()}>
                         <motion.div
                           className='w-full relative max-w-2xl mx-auto flex flex-col gap-1 bg-white/80 shadow-lg backdrop-blur-md px-4 py-5 rounded-xl'
