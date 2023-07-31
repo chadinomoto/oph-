@@ -124,7 +124,6 @@ export default function Activity() {
                         className='font-CS font-bold text-xl md:text-2xl lg:text-3xl text-bmw'
                     />
                   <motion.img
-                    href = {a.ref}
                     src={'img/2023/' + a.src}
                     className='w-[180px] md:w-[220px] lg:w-[250px]'
                     initial={{ opacity: 0, scale: 0.5, rotate: -10 }}
