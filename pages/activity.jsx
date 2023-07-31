@@ -6,7 +6,7 @@ import Link from 'next/link'
 import Pdfcard from '../components/pdfcard'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import MetaHeader from '../components/metaHeader'
-import TextFormat from '../../components/textformat'
+import TextFormat from '../components/textformat'
 import {
   faBook,
   faCircleXmark,
