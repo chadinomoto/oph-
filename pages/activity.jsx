@@ -6,6 +6,7 @@ import Link from 'next/link'
 import Pdfcard from '../components/pdfcard'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import MetaHeader from '../components/metaHeader'
+import TextFormat from '../../components/textformat'
 import {
   faBook,
   faCircleXmark,
@@ -55,6 +56,7 @@ const actdata = [
     src : 'logo-challenge-2023.png',
     short : 'อยากได้คำอธิบายสำหรับผู้เข้าร่วม ให้คำอธิบายโดยละเอียดมาทำไมวะ',
     desc : 'อยากได้คำอธิบายสำหรับผู้เข้าร่วม ให้คำอธิบายโดยละเอียดมาทำไมวะ',
+    ref : '',
     req : 'สำหรับนักเรียนระดับชั้นมัธยมศึกษาปีที่ 1-3 รอบละ 30 ทีม ทีมละ 30 คน',
     date: 'วันที่จัดกิจกรรม : 26/08/2023 09.00 - 12.00 น.',
     other : 'Walk in เท่านั้น'
@@ -118,8 +120,11 @@ export default function Activity() {
             <div className='w-full max-w-7xl grid md:grid-cols-2 gap-6 mx-auto px-6'>
               {actdata.map((a,ai) => (
                 <div className='flex flex-col gap-3' key = {ai}>
+                    <TextFormat
+                        className='font-CS font-bold text-xl md:text-2xl lg:text-3xl text-bmw'
+                    />
                   <motion.img
-                    { ...a.ref? (href = a.ref):(href = '')}
+                    href = {a.ref}
                     src={'img/2023/' + a.src}
                     className='w-[180px] md:w-[220px] lg:w-[250px]'
                     initial={{ opacity: 0, scale: 0.5, rotate: -10 }}
