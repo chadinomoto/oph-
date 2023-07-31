@@ -177,6 +177,42 @@ export default function Home({ userData }) {
       url: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2671&q=80',
     },
   ];
+  const slides1 = [
+    {
+      url: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2620&q=80',
+    },
+    {
+      url: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80',
+    },
+    {
+      url: 'https://images.unsplash.com/photo-1661961112951-f2bfd1f253ce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2672&q=80',
+    },
+
+    {
+      url: 'https://images.unsplash.com/photo-1512756290469-ec264b7fbf87?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2253&q=80',
+    },
+    {
+      url: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2671&q=80',
+    },
+  ];
+  const slides2 = [
+    {
+      url: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2620&q=80',
+    },
+    {
+      url: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80',
+    },
+    {
+      url: 'https://images.unsplash.com/photo-1661961112951-f2bfd1f253ce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2672&q=80',
+    },
+
+    {
+      url: 'https://images.unsplash.com/photo-1512756290469-ec264b7fbf87?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2253&q=80',
+    },
+    {
+      url: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2671&q=80',
+    },
+  ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -196,6 +232,41 @@ export default function Home({ userData }) {
     setCurrentIndex(slideIndex);
   };
 
+  const [currentIndex1, setCurrentIndex1] = useState(0);
+
+  const prevSlide1 = () => {
+    const isFirstSlide = currentIndex1 === 0;
+    const newIndex = isFirstSlide ? slides1.length - 1 : currentIndex1 - 1;
+    setCurrentIndex1(newIndex);
+  };
+
+  const nextSlide1 = () => {
+    const isLastSlide = currentIndex === slides1.length - 1;
+    const newIndex = isLastSlide ? 0 : currentIndex + 1;
+    setCurrentIndex1(newIndex);
+  };
+
+  const goToSlide1 = (slideIndex) => {
+    setCurrentIndex1(slideIndex);
+  };
+
+  const [currentIndex2, setCurrentIndex2] = useState(0);
+
+  const prevSlide2 = () => {
+    const isFirstSlide = currentIndex2 === 0;
+    const newIndex = isFirstSlide ? slides2.length - 1 : currentIndex2 - 1;
+    setCurrentIndex2(newIndex);
+  };
+
+  const nextSlide2 = () => {
+    const isLastSlide = currentIndex === slides2.length - 1;
+    const newIndex = isLastSlide ? 0 : currentIndex + 1;
+    setCurrentIndex2(newIndex);
+  };
+
+  const goToSlide2 = (slideIndex) => {
+    setCurrentIndex2(slideIndex);
+  };
   return (
     <>
       <Head>
@@ -249,8 +320,8 @@ export default function Home({ userData }) {
             className='w-full bg-cover bg-bottom sm:bg-fixed flex items-end min-h-screen relative justify-self-center self-center space-y-2'
         >
           <div className='w-full h-full py-6 flex items-center'>
-            <div className='w-full max-w-7xl grid md:grid-cols-2 gap-6 items-center justify-items-center mx-auto px-6'>
-            <div className='max-w-[640 px] h-[800] w-full m-auto py-16 px-4 relative group'>
+            <div className='w-full max-w-7xl grid grid-cols-2 gap-6 items-center justify-items-center mx-auto px-6'>
+            <div className='max-w-[640px] h-[800px] w-full m-auto py-16 px-4 relative group'>
               <div
                 style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
                 className='w-full h-full rounded-2xl bg-center bg-cover duration-500'
@@ -270,7 +341,7 @@ export default function Home({ userData }) {
                     onClick={() => goToSlide(slideIndex)}
                     className='text-2xl cursor-pointer'
                   >
-                    <FontAwesomeIcon icon={faCircle} size = 'sm'/>
+                    <FontAwesomeIcon icon={faCircle} size = 'xs'/>
                   </div>
                 ))}
               </div>
@@ -421,23 +492,70 @@ export default function Home({ userData }) {
             </span>
             <div className='grid grid-cols-2'>
               <div className='cols-span-1'>
-                <div>
+                <div className='font-CS font-bold text-2xl md:text-3xl lg:text-4xl mt-10 flex justify-center'>
                   text
                 </div>
-                <div>
-                  vid
-                </div>
-              </div>
-              <div className='cols-span-1'>
-                <div>
-                  text
-                </div>
-                <div>
-                  vid
-                </div>
+                <div className='max-w-[640px] h-[800px] w-full m-auto py-16 px-4 relative group'>
+                  <div
+                    style={{ backgroundImage: `url(${slides1[currentIndex1].url})` }}
+                    className='w-full h-full rounded-2xl bg-center bg-cover duration-500'
+                  ></div>
+                  {/* Left Arrow */}
+                  <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
+                    <FontAwesomeIcon icon={faChevronLeft} onClick={prevSlide1} size={30} />
+                  </div>
+                  {/* Right Arrow */}
+                  <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
+                  <FontAwesomeIcon icon={faChevronRight} onClick={nextSlide1} size={30} />
+                  </div>
+                  <div className='flex top-4 justify-center py-2'>
+                    {slides1.map((slide, slideIndex) => (
+                      <div
+                        key={slideIndex}
+                        onClick={() => goToSlide1(slideIndex)}
+                        className='text-2xl cursor-pointer'
+                      >
+                        <FontAwesomeIcon icon={faCircle} size = 'xs'/>
+                      </div>
+                    ))}
               </div>
             </div>
-            <span className='font-CS font-bold text-2xl md:text-3xl lg:text-4xl mt-10'>
+              </div>
+              <div className='cols-span-1'>
+                <div className='font-CS font-bold text-2xl md:text-3xl lg:text-4xl mt-10 flex justify-center'>
+                  text
+                </div>
+                <div className='cols-span-1'>
+                <div className='font-CS font-bold text-2xl md:text-3xl lg:text-4xl mt-10 flex justify-center'>
+                  text
+                </div>
+                <div className='max-w-[640px] h-[800px] w-full m-auto py-16 px-4 relative group'>
+                  <div
+                    style={{ backgroundImage: `url(${slides2[currentIndex1].url})` }}
+                    className='w-full h-full rounded-2xl bg-center bg-cover duration-500'
+                  ></div>
+                  {/* Left Arrow */}
+                  <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
+                    <FontAwesomeIcon icon={faChevronLeft} onClick={prevSlide2} size={30} />
+                  </div>
+                  {/* Right Arrow */}
+                  <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
+                  <FontAwesomeIcon icon={faChevronRight} onClick={nextSlide2} size={30} />
+                  </div>
+                  <div className='flex top-4 justify-center py-2'>
+                    {slides2.map((slide, slideIndex) => (
+                      <div
+                        key={slideIndex}
+                        onClick={() => goToSlide2(slideIndex)}
+                        className='text-2xl cursor-pointer'
+                      >
+                        <FontAwesomeIcon icon={faCircle} size = 'xs'/>
+                      </div>
+                    ))}
+              </div>
+              </div>
+            </div>
+            {/*<span className='font-CS font-bold text-2xl md:text-3xl lg:text-4xl mt-10'>
               ONE DAY in MWIT
             </span>
             <iframe
@@ -446,13 +564,13 @@ export default function Home({ userData }) {
               src='https://www.youtube.com/embed/NL83Ginirbc?modestbranding=1&color=white&iv_load_policy=3'
               frameBorder='0'
               allowFullScreen
-            />
-            <span
+            />*/}
+            {/*<span
               className='font-CS font-bold text-2xl md:text-3xl lg:text-4xl pt-16'
               //ref={actRef}
             >
               All Activities
-            </span>
+            </span>*/}
             {/*<div className='w-full flex flex-wrap justify-center gap-3 pb-8'>
               {allAct.map((a, ai) => (
                 <ActCard
