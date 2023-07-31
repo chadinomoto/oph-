@@ -133,7 +133,7 @@ export default function Activity() {
                       type: 'spring',
                     }}
                   />
-                  <AnimateSharedLayout type='crossfade'>
+                  <AnimateSharedLayout type='crossfade' layoutId = {'Animate' + ai.toString()}>
                     <motion.div
                       className='flex flex-col gap-1 bg-white/40 shadow-lg backdrop-blur-sm px-4 py-5 rounded-xl'
                       layoutId={'welcome-canvas' + ai.toString()}

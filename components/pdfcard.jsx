@@ -41,7 +41,7 @@ export default function Pdfcard({
         onMouseLeave={() => setIsHover(false)}
         ref={cardRef}
         className='flex flex-col justify-end bg-cover bg-center aspect-[3/2] w-full max-w-sm rounded-xl relative overflow-hidden'
-      >
+      > 
         <motion.div
           className='flex flex-col bg-white/60 backdrop-blur-md px-3 py-2'
           layout
