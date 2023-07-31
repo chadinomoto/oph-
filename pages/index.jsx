@@ -250,7 +250,7 @@ export default function Home({ userData }) {
         >
           <div className='w-full h-full py-6 flex items-center'>
             <div className='w-full max-w-7xl grid md:grid-cols-2 gap-6 items-center justify-items-center mx-auto px-6'>
-            <div className='max-w-[1400px] h-[780px] w-full m-auto py-16 px-4 relative group'>
+            <div className='max-w-[ px] h-[780px] w-full m-auto py-16 px-4 relative group'>
               <div
                 style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
                 className='w-full h-full rounded-2xl bg-center bg-cover duration-500'
@@ -270,7 +270,7 @@ export default function Home({ userData }) {
                     onClick={() => goToSlide(slideIndex)}
                     className='text-2xl cursor-pointer'
                   >
-                    <FontAwesomeIcon icon={faCircle}/>
+                    <FontAwesomeIcon icon={faCircle} size = 'sm'/>
                   </div>
                 ))}
               </div>
@@ -404,26 +404,39 @@ export default function Home({ userData }) {
           //     process.env.CDN_URL + '/img/projcover.jpg'
           //   })`,
           // }}
+          *}
+
           className={
             'w-full flex bg-cover ' +
             'bg-bottom' +
             ' bg-no-repeat sm:bg-fixed relative justify-self-center self-center'
           }
-        >
-          <div
+        >*/}
+        <div
             className='flex flex-col items-center w-full max-w-7xl px-8 py-6 gap-4 mx-auto'
             //ref={lifeRef}
           >
             <span className='font-CS font-bold text-2xl md:text-3xl lg:text-4xl mt-10'>
-              FACTs About MWIT
+              SNEAK PEEK กิจกรรมต่าง ๆ
             </span>
-            <iframe
-              type='text/html'
-              className='w-full max-w-3xl aspect-video rounded-xl'
-              src='https://www.youtube.com/embed/sBPFl6MWh9M?modestbranding=1&color=white&iv_load_policy=3'
-              frameBorder='0'
-              allowFullScreen
-            />
+            <div className='grid grid-cols-2'>
+              <div className='cols-span-1'>
+                <span>
+                  text
+                </span>
+                <span>
+                  vid
+                </span>
+              </div>
+              <div className='cols-span-1'>
+                <span>
+                    text
+                </span>
+                <span>
+                  vid
+                </span>
+              </div>
+            </div>
             <span className='font-CS font-bold text-2xl md:text-3xl lg:text-4xl mt-10'>
               ONE DAY in MWIT
             </span>
