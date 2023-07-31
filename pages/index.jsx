@@ -164,7 +164,7 @@ export default function Home({ userData }) {
       url : 'img/2023/slide/slide1/ch1.jpeg'
     },
     {
-      url : 'img/2023/slide/slide1/2.jpeg'
+      url : 'img/2023/slide/slide1/ch2.jpeg'
     },
     {
       url : 'img/2023/slide/slide1/ch3.jpeg'
