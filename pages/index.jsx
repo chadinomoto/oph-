@@ -321,31 +321,30 @@ export default function Home({ userData }) {
         >
           <div className='w-full h-full py-6 flex items-center'>
             <div className='w-full max-w-7xl grid grid-cols-2 gap-6 items-center justify-items-center mx-auto px-6'>
-            <div className='max-w-[640px] h-[800px] w-full m-auto py-16 px-4 relative group'>
-              <div
-                style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
-                className='w-full h-full rounded-2xl bg-center bg-cover duration-500'
-              ></div>
-              {/* Left Arrow */}
-              <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
-                <FontAwesomeIcon icon={faChevronLeft} onClick={prevSlide} size={30} />
+              <div className='max-w-[640px] h-[800px] w-full m-auto py-16 px-4 relative group'>
+                <div
+                  style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
+                  className='w-full h-full rounded-2xl bg-center bg-cover duration-500'
+                >
+                </div>
+                <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
+                  <FontAwesomeIcon icon={faChevronLeft} onClick={prevSlide} size={30} />
+                </div>
+                <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
+                  <FontAwesomeIcon icon={faChevronRight} onClick={nextSlide} size={30} />
+                </div>
+                <div className='flex top-4 justify-center py-2'>
+                  {slides.map((slide, slideIndex) => (
+                    <div
+                      key={slideIndex}
+                      onClick={() => goToSlide(slideIndex)}
+                      className='text-2xl cursor-pointer'
+                    >
+                      <FontAwesomeIcon icon={faCircle} size = 'xs'/>
+                    </div>
+                  ))}
+                </div>
               </div>
-              {/* Right Arrow */}
-              <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
-              <FontAwesomeIcon icon={faChevronRight} onClick={nextSlide} size={30} />
-              </div>
-              <div className='flex top-4 justify-center py-2'>
-                {slides.map((slide, slideIndex) => (
-                  <div
-                    key={slideIndex}
-                    onClick={() => goToSlide(slideIndex)}
-                    className='text-2xl cursor-pointer'
-                  >
-                    <FontAwesomeIcon icon={faCircle} size = 'xs'/>
-                  </div>
-                ))}
-              </div>
-            </div>
               <div className='flex flex-col gap-3'>
                 <AnimateSharedLayout type='crossfade'>
                   <motion.div
@@ -439,16 +438,16 @@ export default function Home({ userData }) {
                         </div>
                         <button
                           onClick={() => setShowWC(false)}
-                          className='text-sm md:text-base bg-white/30 w-fit hover:bg-white/60 hover:text-bmw transition-all duration-300 backdrop-blur-sm text-bmw/70 rounded-full px-4 py-1 mt-2 font-IBMPlex font-semibold'
-                        >
-                          Close
+                          className='text-sm md:text-base bg-white/30 w-fit hover:bg-white/60 hover:text-bmw transition-all duration-300 backdrop-blur-sm text-bmw/70 rounded-full px-4 py-1 mt-2 font-IBMPlex font-semibold'>
+                                Close
                         </button>
                       </motion.div>
                     </div>
                   )}
                 </AnimateSharedLayout>
-                {/*<div className='grid grid-cols-3 gap-2 sm:gap-3 rounded-xl'>
-                  WelcomeButton.map((w, wi) => (
+              </div>
+                      {/*<div className='grid grid-cols-3 gap-2 sm:gap-3 rounded-xl'>
+                      WelcomeButton.map((w, wi) => (
                     <button
                       key={wi}
                       onClick={() =>
@@ -469,9 +468,8 @@ export default function Home({ userData }) {
               </div>
             </div>
           </div>
-          </div>
-          </div>
-          <div
+
+        <div
           // style={{
           //   backgroundImage: `url(${
           //     process.env.CDN_URL + '/img/projcover.jpg'
@@ -485,7 +483,7 @@ export default function Home({ userData }) {
             ' bg-no-repeat sm:bg-fixed relative justify-self-center self-center'
           }
         >
-        <div
+          <div
             className='flex flex-col items-center w-full max-w-7xl px-8 py-6 gap-4 mx-auto'
             //ref={lifeRef}
           >
@@ -497,11 +495,14 @@ export default function Home({ userData }) {
                 <div className='font-CS font-bold text-2xl md:text-3xl lg:text-4xl mt-10 flex justify-center'>
                   text
                 </div>
+              </div>
+              <div className='cols-span-1'>
                 <div className='max-w-[640px] h-[800px] w-full m-auto py-16 px-4 relative group'>
                   <div
                     style={{ backgroundImage: `url(${slides1[currentIndex1].url})` }}
                     className='w-full h-full rounded-2xl bg-center bg-cover duration-500'
-                  ></div>
+                  >
+                  </div>
                   {/* Left Arrow */}
                   <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
                     <FontAwesomeIcon icon={faChevronLeft} onClick={prevSlide1} size={30} />
@@ -521,76 +522,74 @@ export default function Home({ userData }) {
                       </div>
                     ))}
                   </div>
+                </div>
               </div>
               <div className='cols-span-1'>
                 <div className='font-CS font-bold text-2xl md:text-3xl lg:text-4xl mt-10 flex justify-center'>
                   text
                 </div>
-                <div className='cols-span-1'>
-                <div className='font-CS font-bold text-2xl md:text-3xl lg:text-4xl mt-10 flex justify-center'>
-                  text
-                </div>
+              </div>
+              <div className='cols-span-1'>
                 <div className='max-w-[640px] h-[800px] w-full m-auto py-16 px-4 relative group'>
                   <div
                     style={{ backgroundImage: `url(${slides2[currentIndex1].url})` }}
                     className='w-full h-full rounded-2xl bg-center bg-cover duration-500'
                   ></div>
-                  {/* Left Arrow */}
-                  <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
-                    <FontAwesomeIcon icon={faChevronLeft} onClick={prevSlide2} size={30} />
+                </div>
+              </div>
+              {/* Left Arrow */}
+              <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
+                <FontAwesomeIcon icon={faChevronLeft} onClick={prevSlide2} size={30} />
+              </div>
+              {/* Right Arrow */}
+              <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
+                <FontAwesomeIcon icon={faChevronRight} onClick={nextSlide2} size={30} />
+              </div>
+              <div className='flex top-4 justify-center py-2'>
+                {slides2.map((slide, slideIndex) => (
+                  <div
+                    key={slideIndex}
+                    onClick={() => goToSlide2(slideIndex)}
+                    className='text-2xl cursor-pointer'
+                  >
+                    <FontAwesomeIcon icon={faCircle} size = 'xs'/>
                   </div>
-                  {/* Right Arrow */}
-                  <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
-                  <FontAwesomeIcon icon={faChevronRight} onClick={nextSlide2} size={30} />
-                  </div>
-                  <div className='flex top-4 justify-center py-2'>
-                    {slides2.map((slide, slideIndex) => (
-                      <div
-                        key={slideIndex}
-                        onClick={() => goToSlide2(slideIndex)}
-                        className='text-2xl cursor-pointer'
-                      >
-                        <FontAwesomeIcon icon={faCircle} size = 'xs'/>
-                      </div>
+                ))}
+              </div>
+            </div>
+                  {/*<span className='font-CS font-bold text-2xl md:text-3xl lg:text-4xl mt-10'>
+                    ONE DAY in MWIT
+                  </span>
+                  <iframe
+                    type='text/html'
+                    className='w-full max-w-3xl aspect-video rounded-xl'
+                    src='https://www.youtube.com/embed/NL83Ginirbc?modestbranding=1&color=white&iv_load_policy=3'
+                    frameBorder='0'
+                    allowFullScreen
+                  />*/}
+                  {/*<span
+                    className='font-CS font-bold text-2xl md:text-3xl lg:text-4xl pt-16'
+                    //ref={actRef}
+                  >
+                    All Activities
+                  </span>*/}
+                  {/*<div className='w-full flex flex-wrap justify-center gap-3 pb-8'>
+                    {allAct.map((a, ai) => (
+                      <ActCard
+                        key={ai}
+                        src={a.src}
+                        name={a.name}
+                        desc={a.desc}
+                        href={a.href}
+                        button={a.button}
+                      />
                     ))}
-              </div>
-              </div>
-            {/*<span className='font-CS font-bold text-2xl md:text-3xl lg:text-4xl mt-10'>
-              ONE DAY in MWIT
-            </span>
-            <iframe
-              type='text/html'
-              className='w-full max-w-3xl aspect-video rounded-xl'
-              src='https://www.youtube.com/embed/NL83Ginirbc?modestbranding=1&color=white&iv_load_policy=3'
-              frameBorder='0'
-              allowFullScreen
-            />*/}
-            {/*<span
-              className='font-CS font-bold text-2xl md:text-3xl lg:text-4xl pt-16'
-              //ref={actRef}
+                    </div>*/}
+            {/*<div
+              className='w-full min-h-screen bg-black/80 px-8 py-6'
+              //ref={subjRef}
             >
-              All Activities
-            </span>*/}
-            {/*<div className='w-full flex flex-wrap justify-center gap-3 pb-8'>
-              {allAct.map((a, ai) => (
-                <ActCard
-                  key={ai}
-                  src={a.src}
-                  name={a.name}
-                  desc={a.desc}
-                  href={a.href}
-                  button={a.button}
-                />
-              ))}
-              </div>*/}
-          </div>
-          </div>
-          </div>
-        {/*<div
-          className='w-full min-h-screen bg-black/80 px-8 py-6'
-          //ref={subjRef}
-        >
-          <div className='w-full h-full max-w-7xl mx-auto flex flex-col justify-center items-center gap-6'>
+            <div className='w-full h-full max-w-7xl mx-auto flex flex-col justify-center items-center gap-6'>
             <span className='font-CS font-bold text-2xl md:text-3xl lg:text-4xl mt-5 text-white'>
               กิจกรรมตามสาขาวิชา
             </span>
@@ -645,45 +644,46 @@ export default function Home({ userData }) {
                 </div>
               ))}
               </div>
-          </div>
-                    </div>*/}
-        {/*<div
-          style={{
-            backgroundImage: `url(${
-              process.env.CDN_URL + '/img/clubcover.webp'
-            })`,
-          }}
-          className={
-            'w-full flex items-end h-screen bg-cover ' +
-            'bg-bottom' +
-            ' bg-no-repeat bg-fixed relative justify-self-center self-center space-y-2'
-          }
-        >
-          <div className='w-full h-full bg-black/70'>
-            <div className='w-full h-full max-w-5xl flex flex-col gap-2 justify-center mx-auto px-8'>
-              <span className='font-CS text-4xl md:text-5xl font-bold text-purple-300'>
-                MWIT Club
-              </span>
-              <span className='text-base md:text-lg lg:text-xl font-IBMPlex text-white leading-relaxed md:leading-relaxed'>
-                Online Exhibition การนำเสนอกิจกรรมชุมนุมที่จัดทำโดยนักเรียน MWIT
-                สู่สายตาบุคคลภายนอกในรูปแบบ Blog โดยนักเรียนใน MWIT
-                ทุกคนสามารถเปิดชุมนุมเพื่อรวมกลุ่มบุคคลที่มีความสนใจด้านเดียวกันมาทำกิจกรรมร่วมกัน
-                ซึ่งในภาคเรียนนี้โรงเรียนของเราก็มีชุมนุมให้นักเรียนทุกคนได้เลือกเข้าถึง
-                56 ชุมนุม!
-              </span>
-              <div className='flex gap-2 mt-2'>
-                <Link href={'/club'}>
-                  <a className='bg-white/20 hover:bg-white/60 hover:text-purple-700 transition-all duration-300 backdrop-blur-sm text-purple-200/80 rounded-full px-4 py-2 font-IBMPlex font-semibold'>
-                    Online Exhibiton
-                  </a>
-                </Link>
-              </div>
             </div>
-        </div>*/}
+            </div>*/}
+            {/*<div
+              style={{
+                backgroundImage: `url(${
+                  process.env.CDN_URL + '/img/clubcover.webp'
+                })`,
+              }}
+              className={
+                'w-full flex items-end h-screen bg-cover ' +
+                'bg-bottom' +
+                ' bg-no-repeat bg-fixed relative justify-self-center self-center space-y-2'
+              }
+            >
+            <div className='w-full h-full bg-black/70'>
+              <div className='w-full h-full max-w-5xl flex flex-col gap-2 justify-center mx-auto px-8'>
+                <span className='font-CS text-4xl md:text-5xl font-bold text-purple-300'>
+                  MWIT Club
+                </span>
+                <span className='text-base md:text-lg lg:text-xl font-IBMPlex text-white leading-relaxed md:leading-relaxed'>
+                  Online Exhibition การนำเสนอกิจกรรมชุมนุมที่จัดทำโดยนักเรียน MWIT
+                  สู่สายตาบุคคลภายนอกในรูปแบบ Blog โดยนักเรียนใน MWIT
+                  ทุกคนสามารถเปิดชุมนุมเพื่อรวมกลุ่มบุคคลที่มีความสนใจด้านเดียวกันมาทำกิจกรรมร่วมกัน
+                  ซึ่งในภาคเรียนนี้โรงเรียนของเราก็มีชุมนุมให้นักเรียนทุกคนได้เลือกเข้าถึง
+                  56 ชุมนุม!
+                </span>
+                <div className='flex gap-2 mt-2'>
+                  <Link href={'/club'}>
+                    <a className='bg-white/20 hover:bg-white/60 hover:text-purple-700 transition-all duration-300 backdrop-blur-sm text-purple-200/80 rounded-full px-4 py-2 font-IBMPlex font-semibold'>
+                      Online Exhibiton
+                    </a>
+                  </Link>
+                </div>
+              </div>
+            </div>*/}
+          </div>
         </div>
       </div>
-      </div>
-      <footer></footer>
+      <footer>
+      </footer>
     </>
   )
 }
