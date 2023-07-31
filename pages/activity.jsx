@@ -135,7 +135,7 @@ export default function Activity() {
                   />
                   <AnimateSharedLayout type='crossfade' layoutId = {'Animate' + ai.toString()}>
                     <motion.div
-                      className='flex flex-col gap-1 bg-white/40 shadow-lg backdrop-blur-sm px-4 py-5 rounded-xl'
+                      className='flex flex-col gap-1 cols-span-2 bg-white/40 shadow-lg backdrop-blur-sm px-4 py-5 rounded-xl'
                       layoutId={'welcome-canvas' + ai.toString()}
                     >
                       <motion.span
@@ -166,7 +166,7 @@ export default function Activity() {
                       </button>
                     </motion.div>
                     {showWC && (
-                      <div className='fixed inset-0 pt-16 px-6 pb-6 z-50 overflow-y-scroll'>
+                      <div className='fixed inset-0 pt-16 px-6 pb-6 z-50 overflow-y-scroll' layoutId={'welcome-ct' + ai.toString()}>
                         <motion.div
                           className='w-full relative max-w-2xl mx-auto flex flex-col gap-1 bg-white/80 shadow-lg backdrop-blur-md px-4 py-5 rounded-xl'
                           layoutId='welcome-canvas'
