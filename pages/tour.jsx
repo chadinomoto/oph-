@@ -198,7 +198,7 @@ const meta = {
         <div className='flex flex-col text-black items-center mx-auto justify-self-center w-full max-w-6xl px-6 pt-10 pb-4'>
           <Link scroll={false} href={'/tour'}>
             <a className='font-CS font-bold text-bmw text-3xl md:text-4xl lg:text-5xl'>
-              School Tour
+              Virtual School Tour
             </a>
           </Link>
         </div>
