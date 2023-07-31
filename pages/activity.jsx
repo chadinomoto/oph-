@@ -74,7 +74,7 @@ export default function Activity() {
         <main style={{
               backgroundImage: `url(${'' + '/img/sky.webp'})`,
             }}
-            className='flex flex-col items-center w-full max-w-7xl px-8 py-6 gap-4 mx-auto bg-cover bg-bottom sm:bg-fixed min-h-screen space-y-2'
+            className='w-full flex flex-col items-center w-full max-w-7xl px-8 py-6 gap-4 mx-auto bg-cover bg-bottom sm:bg-fixed min-h-screen space-y-2'
         >
           <span
               className='font-CS font-bold text-2xl md:text-3xl lg:text-4xl pt-16'
