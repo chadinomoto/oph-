@@ -30,7 +30,7 @@ const File = [
     },
     {
         name : "Google Form ลงทะเบียนเข้าแข่งขัน MWIT SPELLING BEE",
-        href : "https://docs.google.com/forms/d/e/1FAIpQLSfKl3SQ5HzlAsrQ7BIPtD6Un0_LnH3VJBwxhOBglF0Ifd40Rw/closedform",
+        href : "https://forms.gle/pbQWEdGUUAN5L3JP9",
         src: "SpellingBee",
         desc: "สำหรับผู้ที่สนใจเข้าแข่งขันในกิจกรรม Spelling bee ในวันที่ 25 สิงหาคม 2566",
         button: "ฟอร์ม"

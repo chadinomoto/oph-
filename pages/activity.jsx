@@ -44,27 +44,31 @@ const actdata = [
     src : '',
     regisref : '',
     ref : '',
+    short : '',
     desc : '',
     req : '',
+    date: '',
     other : ''
   }*/
   {
-    name : '',
-    src : '',
-    regisref : '',
-    ref : '',
-    desc : '',
-    req : '',
-    other : ''
+    name : 'MWIT Challenge',
+    src : 'logo-challenge-2023.png',
+    short : 'อยากได้คำอธิบายสำหรับผู้เข้าร่วม ให้คำอธิบายโดยละเอียดมาทำไมวะ',
+    desc : 'อยากได้คำอธิบายสำหรับผู้เข้าร่วม ให้คำอธิบายโดยละเอียดมาทำไมวะ',
+    req : 'สำหรับนักเรียนระดับชั้นมัธยมศึกษาปีที่ 1-3 รอบละ 30 ทีม ทีมละ 30 คน',
+    date: 'วันที่จัดกิจกรรม : 26/08/2023 09.00 - 12.00 น.',
+    other : 'Walk in เท่านั้น'
   },
   {
-    name : '',
-    src : '',
-    regisref : '',
-    ref : '',
-    desc : '',
-    req : '',
-    other : ''
+    name : 'MWIT Spelling Bee',
+    src : 'SpellingBee.png',
+    regisref : 'https://forms.gle/pbQWEdGUUAN5L3JP9',
+    ref : 'https://forms.gle/pbQWEdGUUAN5L3JP9',
+    short : 'การแข่งขันสะกดคำภาษาอังกฤษ',
+    desc : 'เพื่อให้นักเรียนผู้เข้าร่วมกิจกรรมได้เข้าถึงกิจกรรมที่เกิดขึ้นในโรงเรียน (Spelling Bee) และวัดความสามารถภาษาอังกฤษผ่านการแข่งขัน',
+    req : 'ลงทะเบียนล่วงหน้าเท่านั้น รับสมัคร 1-20 สิงหาคม \n - ประเภทเดี่ยว ส่งได้โรงเรียนละไม่เกิน 3 คน ',
+    date: 'แข่งวันที่ 25 สิงหาคม 2566 9.00-12.00 \n เวลาลงทะเบียน : 8.00-9.00 น.',
+    other : 'สถานที่จัดการแข่งขัน ห้องฉายภาพยนตร์สามมิติ (อาคาร 2 ชั้น 4) โรงเรียนมหิดลวิทยานุสรณ์ \n <b>อุปกรณ์ที่ผู้เข้าแข่งขันต้องเตรียม<b> \n บัตรนักเรียน/บัตรประชาชน เครื่องเขียน (ปากกา ดินสอ2B ยางลบ) \n <b>รูปแบบการแข่ง : แข่ง 3 รอบ เพื่อหาผู้ชนะ<b> \n รอบที่ 1 : ได้คะแนนเกิน 80% จะผ่านเข้าสู่รอบถัดไป \n รอบที่ 2 : คัดเหลือเพียง 5 คนสุดท้าย \n รอบที่ 3 : หาผู้ชนะการแข่งขัน'
   }
 ]
 export default function Activity() {
@@ -112,14 +116,21 @@ export default function Activity() {
           </span>
           <div className='w-full h-full py-6 flex items-center'>
             <div className='w-full max-w-7xl grid md:grid-cols-2 gap-6 mx-auto px-6'>
-              <iframe
-                type='text/html'
-                className='w-full max-w-xl aspect-video rounded-xl'
-                src='https://www.youtube.com/embed/NPT5ljzqJr4?modestbranding=1&color=white&iv_load_policy=3'
-                frameBorder='0'
-                allowFullScreen
-              />
-              <div className='flex flex-col gap-3'>
+              {actdata.map((a,ai) => (
+                <div className='flex flex-col gap-3'>
+                  <motion.img
+                    { ...a.ref? (href = a.ref):(href = '')}
+                    src={'img/2023/' + a.src}
+                    className='w-[180px] md:w-[220px] lg:w-[250px]'
+                    initial={{ opacity: 0, scale: 0.5, rotate: -10 }}
+                    animate={{ opacity: 1, scale: 1, rotate: 0 }}
+                    transition={{
+                      duration: 0.8,
+                      delay: 0.5,
+                      bounce: 0.4,
+                      type: 'spring',
+                    }}
+                  />
                 <AnimateSharedLayout type='crossfade'>
                   <motion.div
                     className='flex flex-col gap-1 bg-white/40 shadow-lg backdrop-blur-sm px-4 py-5 rounded-xl'
@@ -129,33 +140,27 @@ export default function Activity() {
                       layoutId={'welcome-title'}
                       className='font-CS text-3xl md:text-4xl font-bold text-bmw'
                     >
-                      Welcome Message
+                      {a.name}
                     </motion.span>
                     <motion.span
                       layoutId={'welcome-desc'}
                       className='font-CS text-base md:text-lg lg:text-xl text-blue-500'
                     >
-                      สาส์นจากผู้อำนวยการโรงเรียนมหิดลวิทยานุสรณ์
+                      {a.short}
                     </motion.span>
                     <div className='flex flex-col gap-2 mt-2'>
-                      {wcText.split('\n\n').map(
-                        (t, ti) =>
-                          ti < 2 && (
-                            <motion.span
-                              key={ti}
-                              layoutId={'welcome-ct-' + ti.toString()}
-                              className='font-IBMPlexLoop leading-relaxed md:leading-relaxed text-sm md:text-base text-black'
-                            >
-                              {t}
-                            </motion.span>
-                          ),
-                      )}
+                      <motion.span
+                        layoutId={'welcome-ct-1'}
+                        className='font-IBMPlexLoop leading-relaxed md:leading-relaxed text-sm md:text-base text-black'
+                      >
+                       {a.desc}
+                      </motion.span>
                     </div>
                     <button
                       onClick={() => setShowWC(true)}
                       className='text-sm md:text-base bg-white/30 w-fit hover:bg-white/60 hover:text-bmw transition-all duration-300 backdrop-blur-sm text-bmw/70 rounded-full px-4 py-1 mt-2 font-IBMPlex font-semibold'
                     >
-                      Read full text
+                      ข้อมูลเพิ่มเติม
                     </button>
                   </motion.div>
                   {showWC && (
@@ -177,38 +182,59 @@ export default function Activity() {
                           layoutId={'welcome-title'}
                           className='font-CS text-3xl md:text-4xl font-bold text-bmw'
                         >
-                          Welcome Message
+                          {a.name}
                         </motion.span>
                         <motion.span
                           layoutId={'welcome-desc'}
                           className='font-CS text-base md:text-lg lg:text-xl text-blue-500'
                         >
-                          สาส์นจากผู้อำนวยการโรงเรียนมหิดลวิทยานุสรณ์
+                          {a.short}
                         </motion.span>
                         <div className='flex flex-col gap-2 mt-2'>
-                          {wcText.split('\n\n').map((t, ti) =>
-                            ti < 2 ? (
-                              <motion.span
-                                key={ti}
-                                layoutId={'welcome-ct-' + ti.toString()}
-                                className='font-IBMPlexLoop leading-relaxed md:leading-relaxed text-sm md:text-base text-black'
-                              >
-                                {t}
-                              </motion.span>
-                            ) : (
-                              <span
-                                className='font-IBMPlexLoop leading-relaxed md:leading-relaxed text-sm md:text-base text-black'
-                                key={ti}
-                              >
-                                {t.split('\n').map((tn, tni) => (
-                                  <Fragment key={tni}>
-                                    {tn}
-                                    <br />
-                                  </Fragment>
-                                ))}
-                              </span>
-                            ),
-                          )}
+                          <motion.span
+                            layoutId={'welcome-ct-1'}
+                            className='font-IBMPlexLoop leading-relaxed md:leading-relaxed text-sm md:text-base text-black'
+                          >
+                            {a.desc}
+                          </motion.span>
+                          <span
+                            className='font-IBMPlexLoop leading-relaxed md:leading-relaxed text-sm md:text-base text-black'
+                            key={ti}
+                          >
+                            <div className='font-medium text-base md:text-lg text-black whitespace-nowrap'>
+                              ช่วงเวลารับสมัคร
+                            </div>
+                            <TextFormat
+                            className='whitespace-pre-wrap'
+                            content={a.date}
+                            />
+                            { 
+                              a.regisref ? 
+                              (
+                              <div href={a.regisref} className='font-CS text-xl md:text-2xl font-bold text-bmw'>
+                              ลิงก์สำหรับลงทะเบียนเข้าร่วมกิจกรรม
+                              </div>
+                              )
+                              :
+                              (<div href={a.regisref} className='font-CS text-xl md:text-2xl font-bold text-bmw'>
+                                กิจกรรมนี้ไม่สามารถลงทะเบียนได้
+                              </div>)
+                            }
+                            <div className='font-medium text-base md:text-lg text-black whitespace-nowrap'>
+                              จำนวนที่เปิดรับ
+                            </div>
+                            <TextFormat
+                            className='whitespace-pre-wrap'
+                            content={a.req}
+                            />
+                            <div className='font-medium text-base md:text-lg text-black whitespace-nowrap'>
+                              ข้อมูลเพิ่มเติม
+                            </div>
+                            <TextFormat
+                            className='whitespace-pre-wrap'
+                            content={a.other}
+                            />
+                          </span>
                         </div>
                         <button
                           onClick={() => setShowWC(false)}
@@ -221,6 +247,7 @@ export default function Activity() {
                   )}
                 </AnimateSharedLayout>
               </div>
+              ))}
               </div>
             </div>
         </div>
