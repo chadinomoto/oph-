@@ -466,7 +466,6 @@ export default function Home({ userData }) {
               ))}
               </div>
           </div>
-        </div>*/}
         {/*<div
           className='w-full min-h-screen bg-black/80 px-8 py-6'
           //ref={subjRef}
