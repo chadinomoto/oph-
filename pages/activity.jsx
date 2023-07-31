@@ -78,12 +78,12 @@ export default function Activity() {
             }}
             className='w-full bg-cover bg-bottom sm:bg-fixed flex min-h-screen space-y-2'
         >
-          <div className='flex font-CS font-bold text-2xl md:text-3xl lg:text-4xl items-center justify-center'>
+          <div className='flex font-CS font-bold text-2xl md:text-3xl lg:text-4xl'>
               Activities
           </div>
           <div className='w-full h-full py-6 flex items-center'>
           
-            <div className='w-full max-w-7xl grid md:grid-cols-2 gap-6 items-center justify-items-center mx-auto px-6'>
+            <div className='w-full max-w-7xl grid md:grid-cols-2 gap-6 mx-auto px-6'>
               <iframe
                 type='text/html'
                 className='w-full max-w-xl aspect-video rounded-xl'
