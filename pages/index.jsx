@@ -139,7 +139,7 @@ export default function Home({ userData }) {
   const lifeRef = useRef(null)
   const actRef = useRef(null)
   const subjRef = useRef(null)
-  {/*const WelcomeButton = [
+  /*const WelcomeButton = [
     {
       name: 'LIFE at MWIT',
       icon: faPeopleRobbery,
@@ -155,7 +155,26 @@ export default function Home({ userData }) {
       icon: faBook,
       ref: subjRef,
     },
-  ]*/}
+  ]*/
+  let slideIndex = [1,1];
+  let slideId = ["mySlides1", "mySlides2"]
+  showSlides(1, 0);
+  showSlides(1, 1);
+
+  function plusSlides(n, no) {
+    showSlides(slideIndex[no] += n, no);
+  }
+
+  function showSlides(n, no) {
+    let i;
+    let x = document.getElementsByClassName(slideId[no]);
+    if (n > x.length) {slideIndex[no] = 1}    
+    if (n < 1) {slideIndex[no] = x.length}
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";  
+    }
+    x[slideIndex[no]-1].style.display = "block";  
+  }
   return (
     <>
       <Head>
@@ -202,7 +221,7 @@ export default function Home({ userData }) {
             'w-full bg-cover bg-bottom sm:bg-fixed flex items-end min-h-screen relative justify-self-center self-center space-y-2'
           }
         >*/}
-        {/*<div
+        <div
             style={{
               backgroundImage: `url(${'' + '/img/sky.webp'})`,
             }}
@@ -210,13 +229,22 @@ export default function Home({ userData }) {
         >
           <div className='w-full h-full py-6 flex items-center'>
             <div className='w-full max-w-7xl grid md:grid-cols-2 gap-6 items-center justify-items-center mx-auto px-6'>
-              <iframe
-                type='text/html'
-                className='w-full max-w-xl aspect-video rounded-xl'
-                src='https://www.youtube.com/embed/NPT5ljzqJr4?modestbranding=1&color=white&iv_load_policy=3'
-                frameBorder='0'
-                allowFullScreen
-              />
+            <div class="slideshow-container">
+              <div class="mySlides1">
+                    <img src="img/subject/bio.webp" style="width:100%"/>
+                  </div>
+
+                  <div class="mySlides1">
+                    <img src="img/subject/bio167.webp" style="width:100%"/>
+                  </div>
+
+                  <div class="mySlides1">
+                    <img src="img/subject/bio169.webp.jpg" style="width:100%"/>
+                  </div>
+
+                  <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+                  <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+            </div>
               <div className='flex flex-col gap-3'>
                 <AnimateSharedLayout type='crossfade'>
                   <motion.div
@@ -336,11 +364,11 @@ export default function Home({ userData }) {
                       </span>
                     </button>
                     ))
-                </div>
+                    </div>*/}
               </div>
             </div>
-          </div>*/}
-        {/*<div
+          </div>
+          {/*<div
           // style={{
           //   backgroundImage: `url(${
           //     process.env.CDN_URL + '/img/projcover.jpg'
@@ -382,7 +410,7 @@ export default function Home({ userData }) {
             >
               All Activities
             </span>
-            {/*<div className='w-full flex flex-wrap justify-center gap-3 pb-8'>
+            <div className='w-full flex flex-wrap justify-center gap-3 pb-8'>
               {allAct.map((a, ai) => (
                 <ActCard
                   key={ai}
@@ -456,7 +484,7 @@ export default function Home({ userData }) {
               ))}
               </div>
           </div>
-        </div>*/}
+                    </div>*/}
         {/*<div
           style={{
             backgroundImage: `url(${
@@ -489,8 +517,8 @@ export default function Home({ userData }) {
                 </Link>
               </div>
             </div>
-          </div>
         </div>*/}
+        </div>
       </div>
 
       <footer></footer>

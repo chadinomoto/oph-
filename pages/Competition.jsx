@@ -108,6 +108,7 @@ export default function Competition() {
           name='twitter:image'
           content={'img/ogimage.png'}
         />
+        
     </Head>
         <div className='flex flex-col w-full'>
         <div
