@@ -237,7 +237,7 @@ export default function Schedule() {
 
       <main className='w-full bg-sdbg/75'>
         <div className='flex flex-col text-white gap-6 items-center mx-auto justify-self-center w-full max-w-6xl px-8 py-10'>
-          <span className='font-CS font-bold text-3xl md:text-4xl lg:text-5xl'>
+          <span className='flex items-center justify-center font-CS font-bold text-3xl md:text-4xl lg:text-5xl'>
             Schedule
           </span>
           <div className='flex flex-col sm:grid sm:grid-cols-fitc-2 md:grid-cols-fitc-3 gap-x-4 gap-y-4 font-IBMPlex font-medium text-lg lg:text-xl'>
