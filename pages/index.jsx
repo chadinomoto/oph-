@@ -13,7 +13,8 @@
     faPeopleRobbery,
     faPuzzlePiece,
     faChevronLeft,
-    faChevronRight
+    faChevronRight,
+    faCircle
   } from '@fortawesome/free-solid-svg-icons'
 
 const wcmes =
@@ -269,7 +270,7 @@ export default function Home({ userData }) {
                     onClick={() => goToSlide(slideIndex)}
                     className='text-2xl cursor-pointer'
                   >
-                    <RxDotFilled />
+                    <FontAwesomeIcon icon={faCircle}/>
                   </div>
                 ))}
               </div>
