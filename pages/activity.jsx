@@ -76,13 +76,11 @@ export default function Activity() {
             style={{
               backgroundImage: `url(${'' + '/img/sky.webp'})`,
             }}
-            className='w-full bg-cover bg-bottom sm:bg-fixed flex items-end min-h-screen relative justify-self-center self-center space-y-2'
+            className='w-full bg-cover bg-bottom sm:bg-fixed flex min-h-screen relative justify-self-center self-center space-y-2'
         >
-          <div
-              className='font-CS font-bold text-2xl md:text-3xl lg:text-4xl pt-16'
-            >
+          <div className='font-CS font-bold text-2xl md:text-3xl lg:text-4xl pt-16'>
               Activities
-            </div>
+          </div>
           <div className='w-full h-full py-6 flex items-center'>
           
             <div className='w-full max-w-7xl grid md:grid-cols-2 gap-6 items-center justify-items-center mx-auto px-6'>
