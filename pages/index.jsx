@@ -12,6 +12,8 @@
     faFlaskVial,
     faPeopleRobbery,
     faPuzzlePiece,
+    faChevronLeft,
+    faChevronRight
   } from '@fortawesome/free-solid-svg-icons'
 
 const wcmes =
@@ -254,11 +256,11 @@ export default function Home({ userData }) {
               ></div>
               {/* Left Arrow */}
               <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
-                <BsChevronCompactLeft onClick={prevSlide} size={30} />
+                <FontAwesomeIcon icon={faChevronLeft} onClick={prevSlide} size={30} />
               </div>
               {/* Right Arrow */}
               <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
-                <BsChevronCompactRight onClick={nextSlide} size={30} />
+              <FontAwesomeIcon icon={faChevronRight} onClick={nextSlide} size={30} />
               </div>
               <div className='flex top-4 justify-center py-2'>
                 {slides.map((slide, slideIndex) => (
