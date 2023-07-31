@@ -7,7 +7,6 @@ import Pdfcard from '../components/pdfcard'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import MetaHeader from '../components/metaHeader'
 import TextFormat from '../components/textformat'
-import Image from 'next/image'
 import {
   faBook,
   faCircleXmark,
@@ -124,9 +123,9 @@ export default function Activity() {
                     <TextFormat
                         className='font-CS font-bold text-xl md:text-2xl lg:text-3xl text-bmw'
                     />
-                  <motion.Image
+                  <motion.img
                     href = {a.ref}
-                    src={'2023/' + a.src}
+                    src={'img/2023/' + a.src}
                     className='w-[180px] md:w-[220px] lg:w-[250px]'
                     initial={{ opacity: 0, scale: 0.5, rotate: -10 }}
                     animate={{ opacity: 1, scale: 1, rotate: 0 }}
