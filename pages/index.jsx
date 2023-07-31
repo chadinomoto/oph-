@@ -229,21 +229,21 @@ export default function Home({ userData }) {
         >
           <div className='w-full h-full py-6 flex items-center'>
             <div className='w-full max-w-7xl grid md:grid-cols-2 gap-6 items-center justify-items-center mx-auto px-6'>
-            <div class="slideshow-container">
-              <div class="mySlides1">
-                    <img src="img/subject/bio.webp" style="width:100%"/>
+            <div className="slideshow-container">
+              <div className="mySlides1">
+                    <img src="img/subject/bio.webp" alt = '' style="width:100%"/>
                   </div>
 
-                  <div class="mySlides1">
-                    <img src="img/subject/bio167.webp" style="width:100%"/>
+                  <div className="mySlides1">
+                    <img src="img/subject/bio167.webp" alt = '' style="width:100%"/>
                   </div>
 
-                  <div class="mySlides1">
-                    <img src="img/subject/bio169.webp.jpg" style="width:100%"/>
+                  <div className="mySlides1">
+                    <img src="img/subject/bio169.webp.jpg" alt = '' style="width:100%"/>
                   </div>
 
-                  <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
-                  <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+                  <a className="prev" onclick={plusSlides(-1, 0)}>&#10094;</a>
+                  <a className="next" onClick={plusSlides(1, 0)}>&#10095;</a>
             </div>
               <div className='flex flex-col gap-3'>
                 <AnimateSharedLayout type='crossfade'>
