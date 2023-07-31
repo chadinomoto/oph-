@@ -94,9 +94,9 @@ export default function LandingPage({ homeRef, children, ...props }) {
             </motion.div>
           </div>
           <div className='flex flex-wrap items-center justify-center gap-3'>
-            <Link href={'/schedule'}>
+            <Link href={'/eventregis'}>
               <motion.a
-                className='relative bg-ymw/50 hover:bg-ymw hover:text-black cursor-pointer transition-colors duration-200 py-1 md:py-2 px-3 md:px-4 rounded-full font-CS font-bold text-lg md:text-xl lg:text-2xl text-bmw'
+                className='relative bg-ymw/50 hover:bg-ymw hover:text-black cursor-pointer transition-colors duration-200 py-1 md:py-2 px-3 md:px-4 rounded-full font-CS font-bold text-lg md:text-4xl lg:text-6xl text-bmw'
                 initial={{ opacity: 0, scale: 0.7, y: 10, rotate: -10 }}
                 animate={{ opacity: 1, scale: 1, y: 0, rotate: 0 }}
                 transition={{
@@ -119,7 +119,7 @@ export default function LandingPage({ homeRef, children, ...props }) {
                 >
                   NEW!
                 </motion.div>
-                <span className='whitespace-nowrap'>Schedule</span>
+                <span className='whitespace-nowrap'>Registration</span>
               </motion.a>
             </Link>
           </div>
