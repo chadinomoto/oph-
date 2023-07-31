@@ -23,7 +23,8 @@ import {
   faUserGear,
   faXmark,
   faFile,
-  faCompass
+  faCompass,
+  faFlagCheckered
 } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { AnimatePresence, motion } from 'framer-motion'
@@ -139,9 +140,9 @@ export default function Navbar({
           auth: null,
         },*/
         {
-          name: 'Activities',
-          href: '/activity',
-          icon: faCompass,
+          name: 'Competition',
+          href: '/Competition',
+          icon: faFlagCheckered,
           auth: null,
         },
         /*{
