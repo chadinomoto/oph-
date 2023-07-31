@@ -71,6 +71,9 @@ export default function Activity() {
           content={'https://mwitophcdn.woyiswoy.com/img/' + meta.img}
         />
     </Head>
+        <div className='flex flex-col w-full'>
+          
+        
         <main style={{
               backgroundImage: `url(${'' + '/img/sky.webp'})`,
             }}
@@ -196,6 +199,7 @@ export default function Activity() {
               </div>
             </div>
         </main>
+        </div>
     </>
       
   )
