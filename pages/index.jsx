@@ -490,7 +490,7 @@ export default function Home({ userData }) {
             <span className='font-CS font-bold text-2xl md:text-3xl lg:text-4xl mt-10'>
               SNEAK PEEK กิจกรรมต่าง ๆ
             </span>
-            <div className='grid grid-cols-2'>
+            <div className='w-full max-w-7xl grid grid-cols-2 gap-6 items-center justify-items-center mx-auto px-6'>
               <div className='cols-span-1'>
                 <div className='font-CS font-bold text-2xl md:text-3xl lg:text-4xl mt-10 flex justify-center'>
                   text
