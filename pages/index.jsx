@@ -501,7 +501,7 @@ export default function Home({ userData }) {
                   SQUARE และ CHALLENGE
                 </div>
                 <div>
-                  <div className='max-w-[640px] max-h-[480px] w-full m-auto py-16 px-4 relative group'>
+                  <div className='max-w-[640px] max-h-[480px] h-fit w-full m-auto py-16 px-4 relative group'>
                     <div
                       style={{ backgroundImage: `url(${slides1[currentIndex1].url})` }}
                       className='w-full h-full rounded-2xl bg-center bg-cover duration-100'
