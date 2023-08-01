@@ -242,7 +242,7 @@ export default function Competition() {
                               </div>
                               <TextFormat
                               className='whitespace-pre-wrap'
-                              content={'tหอประชุมพระอุบาลี (ชั้นสองของโรงอาหาร) โรงเรียนมหิดลวิทยานุสรณ์'}
+                              content={'หอประชุมพระอุบาลี (ชั้นสองของโรงอาหาร) โรงเรียนมหิดลวิทยานุสรณ์'}/>
                               <div className='font-medium text-base md:text-lg text-black whitespace-nowrap'>
                                 ข้อมูลเพิ่มเติม
                               </div>
