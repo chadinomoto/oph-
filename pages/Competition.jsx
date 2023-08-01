@@ -269,7 +269,7 @@ export default function Competition() {
               </div>
             </div>
 
-            <div className='w-full max-w-7xl gap-6 mx-auto px-6 col-span-1'>
+            <div className='w-full max-w-7xl gap-6 mx-auto px-6'>
               <div className='flex flex-col gap-3 grid grid-cols-3'>
                 <Link href={'https://forms.gle/pbQWEdGUUAN5L3JP9'}>
                   <motion.img
