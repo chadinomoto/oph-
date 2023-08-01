@@ -176,12 +176,6 @@ export default function Competition() {
                       >
                         การแข่งขันคณิตศาสตร์และวิทยาศาสตร์ระดับมัธยมศึกษาตอนต้น
                       </motion.span>
-                      <motion.span
-                        layoutId={'welcome-descript' + '1'}
-                        className='font-CS text-base md:text-lg lg:text-xl text-black'
-                      >
-                        การสอบแข่งขันคณิตศาสตร์และวิทยาศาสตร์ระหว่างโรงเรียนประจำปี พ.ศ. 2566 เปิดโอกาสให้ผู้เข้าร่วมได้แสดงความสามารถด้านวิชาการและทดลองข้อสอบสไตล์ MWIT ที่ออกโดยรุ่นพี่ตัวตึง!
-                      </motion.span>
                       <button
                         onClick={() => setOpen(true)}
                         className='text-sm md:text-base bg-white/30 w-fit hover:bg-white/60 hover:text-bmw transition-all duration-300 backdrop-blur-sm text-bmw/70 rounded-full px-4 py-1 mt-2 font-IBMPlex font-semibold'
@@ -300,12 +294,6 @@ export default function Competition() {
                       >
                         การแข่งขันสะกดคำภาษาอังกฤษระดับมัธยมศึกษาตอนต้น
                       </motion.span>
-                      <motion.span
-                        layoutId={'welcome-descript' + '2'}
-                        className='font-CS text-base md:text-lg lg:text-xl text-black'
-                      >
-                        การแข่งขันสะกดคำภาษาอังกฤษระหว่างโรงเรียนประจำปี พ.ศ. 2566เพื่อวัดความสามารถด้านภาษาอังกฤษผ่านการแข่งขันชิงทุนการศึกษา และมีโอกาสได้สัมผัสบรรยากาศกิจกรรมที่เกิดขึ้นในโรงเรียน (การแข่งขัน Spelling Bee)
-                      </motion.span>
                       <button
                         onClick={() => setbeeOpen(true)}
                         className='text-sm md:text-base bg-white/30 w-fit hover:bg-white/60 hover:text-bmw transition-all duration-300 backdrop-blur-sm text-bmw/70 rounded-full px-4 py-1 mt-2 font-IBMPlex font-semibold'
@@ -344,6 +332,10 @@ export default function Competition() {
                             <span
                               className='font-IBMPlexLoop leading-relaxed md:leading-relaxed text-sm md:text-base text-black'
                             >
+                              <TextFormat
+                              className='whitespace-pre-wrap'
+                              content={'การแข่งขันสะกดคำภาษาอังกฤษระหว่างโรงเรียนประจำปี พ.ศ. 2566 เพื่อวัดความสามารถด้านภาษาอังกฤษผ่านการแข่งขันชิงทุนการศึกษา และมีโอกาสได้สัมผัสบรรยากาศกิจกรรมที่เกิดขึ้นในโรงเรียน (การแข่งขัน Spelling Bee)'}
+                              />
                               <div className='font-medium text-base md:text-lg text-black whitespace-nowrap'>
                                 ช่วงเวลารับสมัคร
                               </div>
@@ -424,12 +416,6 @@ export default function Competition() {
                         className='font-CS text-base md:text-lg lg:text-xl text-blue-500'
                       >
                         การแข่งขันแก้ปัญหาโดยนำความรู้ทางวิทยาศาสตร์และการคำนวณมาประยุกต์ใช้
-                      </motion.span>
-                      <motion.span
-                        layoutId={'welcome-descript' + '3'}
-                        className='font-CS text-base md:text-lg lg:text-xl text-black'
-                      >
-                        สัมผัสประสบการณ์การแข่งขันแก้ปัญหาและสร้างสรรค์สิ่งประดิษฐ์โดยใช้ความรู้ด้าน STEM มาประยุกต์กับสถานการณ์สุดท้าทายที่ออกแบบมาให้น้อง ๆ ได้ระดมความคิดกันเป็นทีม!
                       </motion.span>
                       <button
                         onClick={() => setchalOpen(true)}
