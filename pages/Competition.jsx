@@ -228,11 +228,14 @@ export default function Competition() {
                                 <div className='font-medium text-base md:text-lg text-black whitespace-nowrap'>
                                   ช่วงเวลารับสมัคร
                                 </div>
-                                <Link href={'https://forms.gle/B3Y3TK4QwZfBcBUCA'}>
-                                  <TextFormat
-                                  className='whitespace-pre-wrap'
-                                  content={'ลงทะเบียนผ่านทางเว็บไซต์ได้ตั้งแต่วันที่ 1 - 18 สิงหาคม - ทีมละ 3 คน โรงเรียนละไม่เกิน 2 ทีม (รับไม่เกิน 150 ทีม) '}
-                                  />
+                                <TextFormat
+                                className='whitespace-pre-wrap'
+                                content={'ลงทะเบียนผ่านทางเว็บไซต์ได้ตั้งแต่วันที่ 1 - 18 สิงหาคม - ทีมละ 3 คน โรงเรียนละไม่เกิน 2 ทีม (รับไม่เกิน 150 ทีม) '}
+                                />
+                                <Link href={'https://forms.gle/B3Y3TK4QwZfBcBUCA'} >
+                                  <div className='font-medium text-base md:text-lg text-black whitespace-nowrap hover:text-bmw'>
+                                  คลิกที่นี่ได้เลย!
+                                  </div>
                                 </Link>
                                 <div className='font-medium text-base md:text-lg text-black whitespace-nowrap'>
                                   วันที่จัดแข่งขัน
