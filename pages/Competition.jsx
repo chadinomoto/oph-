@@ -140,12 +140,12 @@ export default function Competition() {
               Competition
           </span>
           <div className='w-full h-full py-6 flex items-center'>
-            <div className='w-full max-w-7xl grid grid-cols-3 gap-6 mx-auto px-6 col-span-1'>
+            <div className='w-full max-w-7xl gap-6 mx-auto px-6 col-span-1'>
                 <div className='flex flex-col gap-3 grid grid-cols-3'>
                   <Link href={'https://forms.gle/B3Y3TK4QwZfBcBUCA'}>
                     <motion.img
                       src={'img/2023/' + 'SQ15-col.png'}
-                      className='w-[180px] md:w-[220px] lg:w-[250px] cols-span-1 '
+                      className='w-[180px] md:w-[220px] lg:w-[250px] col-span-1 '
                       initial={{ opacity: 0, scale: 0.5, rotate: -10 }}
                       animate={{ opacity: 1, scale: 1, rotate: 0 }}
                       transition={{
@@ -156,7 +156,7 @@ export default function Competition() {
                       }}
                     />
                   </Link>
-                  <div className='cols-span-2'>
+                  <div className='col-span-2'>
                     <AnimateSharedLayout type='crossfade'>
                       <motion.div
                         className='flex flex-col gap-1 bg-white/40 shadow-lg backdrop-blur-sm px-4 py-5 rounded-xl'
