@@ -205,7 +205,7 @@ export default function Competition() {
                         ข้อมูลเพิ่มเติม
                       </button>
                     </motion.div>
-                    {callopen(ai.toString()) && (
+                    {Open.open0 || Open.open1 && (
                       <div className='fixed inset-0 pt-16 px-6 pb-6 z-50 overflow-y-scroll' >
                         <motion.div
                           className='w-full relative max-w-2xl mx-auto flex flex-col gap-1 bg-white/80 shadow-lg backdrop-blur-md px-4 py-5 rounded-xl'
