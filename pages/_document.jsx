@@ -7,7 +7,7 @@ export default function Document() {
         <link rel='manifest' href='/manifest.json' />
         <link
           rel='apple-touch-icon'
-          href='https://mwitophcdn.woyiswoy.com/img/icon-512x512.png'
+          href='/favicon.ico'
         />
         <meta name='theme-color' content='#fcf4a0' />
         <link rel='icon' href='/favicon.ico' />

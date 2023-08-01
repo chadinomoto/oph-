@@ -16,8 +16,8 @@ import {
   faPuzzlePiece,
 } from '@fortawesome/free-solid-svg-icons'
 const meta = {
-    title: 'Activity | MWIT Open House 2023',
-    url: 'activity',
+    title: 'Competition | MWIT Open House 2023',
+    url: 'Competition',
     description:
       'รวมข้อมูลสำหรับกิจกรรมภายใน MWIT Open House 2023',
     img: 'ogimage.png',
@@ -90,6 +90,16 @@ export default function Competition() {
       setOpen(previousState => {
         return { ...previousState, open1: t }
       }); 
+    }
+  }
+  function callopen(a){
+    if(a == 0)
+    {
+      return Open.open0
+    }
+    else if(a == 1)
+    {
+      return Open.open1
     }
   }
   return (
@@ -189,13 +199,13 @@ export default function Competition() {
                         </motion.span>
                       </div>
                       <button
-                        onClick={() => openset(ai.toString(),true)}
+                        onClick={openset(ai.toString(),true)}
                         className='text-sm md:text-base bg-white/30 w-fit hover:bg-white/60 hover:text-bmw transition-all duration-300 backdrop-blur-sm text-bmw/70 rounded-full px-4 py-1 mt-2 font-IBMPlex font-semibold'
                       >
                         ข้อมูลเพิ่มเติม
                       </button>
                     </motion.div>
-                    {a.open && (
+                    {callopen(ai.toString()) && (
                       <div className='fixed inset-0 pt-16 px-6 pb-6 z-50 overflow-y-scroll' >
                         <motion.div
                           className='w-full relative max-w-2xl mx-auto flex flex-col gap-1 bg-white/80 shadow-lg backdrop-blur-md px-4 py-5 rounded-xl'
@@ -203,7 +213,7 @@ export default function Competition() {
                         >
                           <div
                             className='absolute right-3 top-3 cursor-pointer z-30'
-                            onClick={() => openset(ai.toString(),false)}
+                            onClick={openset(ai.toString(),false)}
                           >
                             <FontAwesomeIcon
                               icon={faCircleXmark}
@@ -280,7 +290,7 @@ export default function Competition() {
                             </span>
                           </div>
                           <button
-                            onClick={() => openset(ai.toString(),false)}
+                            onClick={openset(ai.toString(),false)}
                             className='text-sm md:text-base bg-white/30 w-fit hover:bg-white/60 hover:text-bmw transition-all duration-300 backdrop-blur-sm text-bmw/70 rounded-full px-4 py-1 mt-2 font-IBMPlex font-semibold'
                           >
                             Close
