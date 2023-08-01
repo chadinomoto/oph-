@@ -136,7 +136,7 @@ export default function Competition() {
             style={{
               backgroundImage: `url(${'' + '/img/2023/yellowfade.webp'})`,
             }}
-            className='w-full bg-cover bg-repeat sm:bg-fixed h-fit space-y-2 '
+            className='w-full bg-cover bg-repeat sm:bg-fixed h-[calc(100vh-calc(100vh-100%))] space-y-2 '
         >
           <span className='flex justify-center font-CS font-bold text-2xl md:text-3xl lg:text-4xl pt-16'>
               Competition
