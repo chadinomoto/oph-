@@ -75,7 +75,9 @@ const actdata = [
   }
 ]
 export default function Competition() {
-  const [showWC, setShowWC] = useState(false)
+  const [showWC1, setShowWC1] = useState(false)
+  const [showWC2, setShowWC2] = useState(false)
+  const [showWC0, setShowWC0] = useState(false)
   return (
     <>
     <Head>
@@ -174,7 +176,7 @@ export default function Competition() {
                         >
                           <div
                             className='absolute right-3 top-3 cursor-pointer z-30'
-                            onClick={() => setShowWC(false)}
+                            onClick={() => a.open = !a.open}
                           >
                             <FontAwesomeIcon
                               icon={faCircleXmark}
@@ -239,7 +241,7 @@ export default function Competition() {
                             </span>
                           </div>
                           <button
-                            onClick={() => setShowWC(false)}
+                            onClick={() => a.open = !a.open}
                             className='text-sm md:text-base bg-white/30 w-fit hover:bg-white/60 hover:text-bmw transition-all duration-300 backdrop-blur-sm text-bmw/70 rounded-full px-4 py-1 mt-2 font-IBMPlex font-semibold'
                           >
                             Close
