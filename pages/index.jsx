@@ -325,7 +325,7 @@ export default function Home({ userData }) {
         >
           <div className='w-full h-full py-6 flex items-center'>
             <div className='w-full max-w-7xl grid grid-cols-2 gap-6 items-center justify-items-center mx-auto px-6'>
-              <div className='max-w-[640px] h-[480px] w-full m-auto py-16 px-4 relative group'>
+              <div className='max-w-[640px] max-h-[480px] w-full m-auto py-16 px-4 relative group'>
                 <div
                   style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
                   className='w-full h-full rounded-2xl bg-center bg-cover duration-100'
@@ -497,8 +497,11 @@ export default function Home({ userData }) {
             </span>
             <div className='w-full max-w-7xl grid md:grid-cols-2 gap-6 items-center justify-items-center mx-auto px-6'>
               <div className='md:cols-span-1'>
+                <div className='font-CS font-bold text-2xl md:text-3xl lg:text-4xl mt-10 flex justify-center'>
+                  SQUARE และ CHALLENGE
+                </div>
                 <div>
-                  <div className='w-1/2 h-1/3 w-full m-auto py-16 px-4 relative group'>
+                  <div className='max-w-[640px] max-h-[480px] w-full m-auto py-16 px-4 relative group'>
                     <div
                       style={{ backgroundImage: `url(${slides1[currentIndex1].url})` }}
                       className='w-full h-full rounded-2xl bg-center bg-cover duration-100'
@@ -531,7 +534,7 @@ export default function Home({ userData }) {
                   กิจกรรมตามสาขาวิชา และ CLUB FESTIVAL
                 </div>
                 <div>
-                  <div className='w-[560px] h-[480px] w-full m-auto py-16 px-4 relative group'>
+                  <div className='max-w-[640px] max-h-[480px] w-full m-auto py-16 px-4 relative group'>
                     <div
                       style={{ backgroundImage: `url(${slides2[currentIndex2].url})` }}
                       className='w-full h-full rounded-2xl bg-center bg-cover duration-100'
