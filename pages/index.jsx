@@ -498,7 +498,7 @@ export default function Home({ userData }) {
             <div className='w-full max-w-7xl grid md:grid-cols-2 gap-6 items-center justify-items-center mx-auto px-6'>
               <div className='md:cols-span-1'>
                 <div className='font-CS font-bold text-2xl md:text-3xl lg:text-4xl mt-10 flex justify-center'>
-                  SQUARE และ CHALLENGE
+                  SQUARE&CHALLENGE
                 </div>
                 <div>
                   <div className='max-w-[640px] max-h-[480px] h-screen w-full m-auto py-16 px-4 relative group'>
@@ -531,7 +531,7 @@ export default function Home({ userData }) {
               </div>
               <div className='md:cols-span-1'>
                 <div className='font-CS font-bold text-2xl md:text-3xl lg:text-4xl mt-10 flex justify-center'>
-                  กิจกรรมตามสาขาวิชา และ CLUB FESTIVAL
+                  กิจกรรมตามสาขาวิชา&CLUBFES
                 </div>
                 <div>
                   <div className='max-w-[640px] max-h-[480px] h-screen w-full m-auto py-16 px-4 relative group'>
