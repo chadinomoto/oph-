@@ -140,7 +140,7 @@ export default function Competition() {
               Competition
           </span>
           <div className='w-full h-full py-6 flex items-center'>
-            <div className='w-full max-w-7xl grid grid-cols-1 gap-6 mx-auto px-6 col-span-1'>
+            <div className='w-full max-w-7xl grid grid-cols-3 gap-6 mx-auto px-6 col-span-1'>
                 <div className='flex flex-col gap-3 grid grid-cols-3'>
                   <Link href={'https://forms.gle/B3Y3TK4QwZfBcBUCA'}>
                     <motion.img
@@ -176,7 +176,7 @@ export default function Competition() {
                         </motion.span>
                         <motion.span
                           layoutId={'welcome-descript' + '1'}
-                          className='font-CS text-base md:text-lg lg:text-xl text-blue-500'
+                          className='font-CS text-base md:text-lg lg:text-xl text-black'
                         >
                           การสอบแข่งขันคณิตศาสตร์และวิทยาศาสตร์ระหว่างโรงเรียนประจำปี พ.ศ. 2566 เปิดโอกาสให้ผู้เข้าร่วมได้แสดงความสามารถด้านวิชาการและทดลองข้อสอบสไตล์ MWIT ที่ออกโดยรุ่นพี่ตัวตึง!
                         </motion.span>
@@ -228,19 +228,21 @@ export default function Competition() {
                                 <div className='font-medium text-base md:text-lg text-black whitespace-nowrap'>
                                   ช่วงเวลารับสมัคร
                                 </div>
-                                <TextFormat
-                                className='whitespace-pre-wrap'
-                                content={'ลงทะเบียนผ่านทางเว็บไซต์ได้ตั้งแต่วันที่ 1 - 18 สิงหาคม - ทีมละ 3 คน โรงเรียนละไม่เกิน 2 ทีม (รับไม่เกิน 150 ทีม) '}
-                                />
+                                <Link href={'https://forms.gle/B3Y3TK4QwZfBcBUCA'}>
+                                  <TextFormat
+                                  className='whitespace-pre-wrap'
+                                  content={'ลงทะเบียนผ่านทางเว็บไซต์ได้ตั้งแต่วันที่ 1 - 18 สิงหาคม - ทีมละ 3 คน โรงเรียนละไม่เกิน 2 ทีม (รับไม่เกิน 150 ทีม) '}
+                                  />
+                                </Link>
                                 <div className='font-medium text-base md:text-lg text-black whitespace-nowrap'>
-                                  จำนวนที่เปิดรับ
+                                  วันที่จัดแข่งขัน
                                 </div>
                                 <TextFormat
                                 className='whitespace-pre-wrap'
                                 content={'แข่งวันที่ 25 สิงหาคม 2566 ตั้งแต่เวลา 08.30 - 16.30 น.'}
                                 />
                                 <div className='font-medium text-base md:text-lg text-black whitespace-nowrap'>
-                                  ข้อมูลเพิ่มเติม
+                                  สถานที่จัดแข่งขัน
                                 </div>
                                 <TextFormat
                                 className='whitespace-pre-wrap'
