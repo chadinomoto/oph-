@@ -325,7 +325,7 @@ export default function Home({ userData }) {
         >
           <div className='w-full h-full py-6 flex items-center'>
             <div className='w-full max-w-7xl grid grid-cols-2 gap-6 items-center justify-items-center mx-auto px-6'>
-              <div className='max-w-[640px] max-h-[480px] w-full h-screen m-auto py-16 px-4 relative group'>
+              <div className='max-w-[640px] max-h-[480px] w-20 h-screen m-auto py-16 px-4 relative group'>
                 <div
                   style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
                   className='w-full h-full rounded-2xl bg-center bg-cover duration-100'
@@ -501,7 +501,7 @@ export default function Home({ userData }) {
                   SQUARE&CHALLENGE
                 </div>
                 <div>
-                  <div className='max-w-[640px] max-h-[480px] h-screen w-screen m-auto py-16 px-4 relative group'>
+                  <div className='max-w-[640px] max-h-[480px] h-screen w-20 m-auto py-16 px-4 relative group'>
                     <div
                       style={{ backgroundImage: `url(${slides1[currentIndex1].url})` }}
                       className='w-full h-full rounded-2xl bg-center bg-cover duration-100'
@@ -534,7 +534,7 @@ export default function Home({ userData }) {
                   กิจกรรมตามสาขาวิชา&CLUBFES
                 </div>
                 <div>
-                  <div className='max-w-[640px] max-h-[480px] h-screen w-screen m-auto py-16 px-4 relative group'>
+                  <div className='max-w-[640px] max-h-[480px] h-screen w-20 m-auto py-16 px-4 relative group'>
                     <div
                       style={{ backgroundImage: `url(${slides2[currentIndex2].url})` }}
                       className='w-full h-full rounded-2xl bg-center bg-cover duration-100'

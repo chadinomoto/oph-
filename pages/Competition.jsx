@@ -54,7 +54,7 @@ export default function Competition() {
       other : ''
     }*/
     {
-      name : 'MWIT SQUARE 15 th',
+      name : 'MWIT SQUARE 15th',
       src : 'SQ15-col.png',
       ref : 'https://forms.gle/B3Y3TK4QwZfBcBUCA',
       short : 'การแข่งขันคณิตศาสตร์และวิทยาศาสตร์ระดับมัธยมศึกษาตอนต้น',
@@ -74,10 +74,7 @@ export default function Competition() {
       other : 'สถานที่จัดการแข่งขัน ห้องฉายภาพยนตร์สามมิติ (อาคาร 2 ชั้น 4) โรงเรียนมหิดลวิทยานุสรณ์  <b>อุปกรณ์ที่ผู้เข้าแข่งขันต้องเตรียม<b>  บัตรนักเรียน/บัตรประชาชน เครื่องเขียน (ปากกา ดินสอ2B ยางลบ)  <b>รูปแบบการแข่ง : แข่ง 3 รอบ เพื่อหาผู้ชนะ<b>  รอบที่ 1 : ได้คะแนนเกิน 80% จะผ่านเข้าสู่รอบถัดไป  รอบที่ 2 : คัดเหลือเพียง 5 คนสุดท้าย  รอบที่ 3 : หาผู้ชนะการแข่งขัน'
     }
   ]
-  const [Open, setOpen] = useState({
-    open0 : false,
-    open1 : false
-  })
+  const [Open, setOpen] = useState(false)
 
   function openset(a,t){
     if(a == 0)
@@ -132,7 +129,7 @@ export default function Competition() {
         />
         
     </Head>
-        {/*<div className='flex flex-col w-full'>
+        <div className='flex flex-col w-full'>
         <div
             style={{
               backgroundImage: `url(${'' + '/img/sky.webp'})`,
@@ -140,15 +137,14 @@ export default function Competition() {
             className='w-full bg-cover bg-bottom sm:bg-fixed min-h-screen space-y-2'
         >
           <span className='flex justify-center font-CS font-bold text-2xl md:text-3xl lg:text-4xl pt-16'>
-              Activities
+              Competition
           </span>
           <div className='w-full h-full py-6 flex items-center'>
             <div className='w-full max-w-7xl grid grid-cols-1 gap-6 mx-auto px-6 col-span-1'>
-              {actdata.map((a,ai) => (
-                <div className='flex flex-col gap-3 grid grid-cols-3' key = {ai}>
-                  <Link href={a.ref}>
+                <div className='flex flex-col gap-3 grid grid-cols-3'>
+                  <Link href={'https://forms.gle/B3Y3TK4QwZfBcBUCA'}>
                     <motion.img
-                      src={'img/2023/' + a.src}
+                      src={'img/2023/' + 'SQ15-col.png'}
                       className='w-[180px] md:w-[220px] lg:w-[250px] cols-span-1 '
                       initial={{ opacity: 0, scale: 0.5, rotate: -10 }}
                       animate={{ opacity: 1, scale: 1, rotate: 0 }}
@@ -164,42 +160,42 @@ export default function Competition() {
                     <AnimateSharedLayout type='crossfade'>
                       <motion.div
                         className='flex flex-col gap-1 bg-white/40 shadow-lg backdrop-blur-sm px-4 py-5 rounded-xl'
-                        layoutId={'welcome-canvas' + ai.toString()}
+                        layoutId={'welcome-canvas' + '1'}
                       >
                         <motion.span
-                          layoutId={'welcome-title' + ai.toString()}
+                          layoutId={'welcome-title' + '1'}
                           className='font-CS text-3xl md:text-4xl font-bold text-bmw'
                         >
-                          {a.name}
+                          MWIT SQUARE 15th
                         </motion.span>
                         <motion.span
-                          layoutId={'welcome-desc' + ai.toString()}
+                          layoutId={'welcome-desc' + '1'}
                           className='font-CS text-base md:text-lg lg:text-xl text-blue-500'
                         >
-                          {a.short}
+                          'การแข่งขันคณิตศาสตร์และวิทยาศาสตร์ระดับมัธยมศึกษาตอนต้น'
                         </motion.span>
                         <motion.span
-                          layoutId={'welcome-descript' + ai.toString()}
+                          layoutId={'welcome-descript' + '1'}
                           className='font-CS text-base md:text-lg lg:text-xl text-blue-500'
                         >
-                          {a.desc}
+                          'การสอบแข่งขันคณิตศาสตร์และวิทยาศาสตร์ระหว่างโรงเรียนประจำปี พ.ศ. 2566 เปิดโอกาสให้ผู้เข้าร่วมได้แสดงความสามารถด้านวิชาการและทดลองข้อสอบสไตล์ MWIT ที่ออกโดยรุ่นพี่ตัวตึง!'
                         </motion.span>
                         <button
-                          onClick={openset(ai,true)}
+                          onClick={() => setOpen(true)}
                           className='text-sm md:text-base bg-white/30 w-fit hover:bg-white/60 hover:text-bmw transition-all duration-300 backdrop-blur-sm text-bmw/70 rounded-full px-4 py-1 mt-2 font-IBMPlex font-semibold'
                         >
                           ข้อมูลเพิ่มเติม
                         </button>
                       </motion.div>
-                      {(Open.open0 || Open.open1) && (
+                      {Open && (
                         <div className='fixed inset-0 pt-16 px-6 pb-6 z-50 overflow-y-scroll' >
                           <motion.div
                             className='w-full relative max-w-2xl mx-auto flex flex-col gap-1 bg-white/80 shadow-lg backdrop-blur-md px-4 py-5 rounded-xl'
-                            layoutId={'welcome-canvas '+ ai.toString()}
+                            layoutId={'welcome-canvas '+ '1'}
                           >
                             <div
                               className='absolute right-3 top-3 cursor-pointer z-30'
-                              onClick={openset(ai,false)}
+                              onClick={() => setOpen(false)}
                             >
                               <FontAwesomeIcon
                                 icon={faCircleXmark}
@@ -207,16 +203,16 @@ export default function Competition() {
                               />
                             </div>
                             <motion.span
-                              layoutId={'welcome-title'+ ai.toString()}
+                              layoutId={'welcome-title'+ '1'}
                               className='font-CS text-3xl md:text-4xl font-bold text-bmw'
                             >
-                              {a.name}
+                              MWIT SQUARE 15th
                             </motion.span>
                             <motion.span
-                              layoutId={'welcome-desc'+ ai.toString()}
+                              layoutId={'welcome-desc'+ '1'}
                               className='font-CS text-base md:text-lg lg:text-xl text-blue-500'
                             >
-                              {a.short}
+                              'การแข่งขันคณิตศาสตร์และวิทยาศาสตร์ระดับมัธยมศึกษาตอนต้น'
                             </motion.span>
                             <div className='flex flex-col gap-2 mt-2'>
                               <span
@@ -227,33 +223,33 @@ export default function Competition() {
                                 </div>
                                 <TextFormat
                                 className='whitespace-pre-wrap'
-                                content={a.desc}
+                                content={'การสอบแข่งขันคณิตศาสตร์และวิทยาศาสตร์ระหว่างโรงเรียนประจำปี พ.ศ. 2566 เปิดโอกาสให้ผู้เข้าร่วมได้แสดงความสามารถด้านวิชาการและทดลองข้อสอบสไตล์ MWIT ที่ออกโดยรุ่นพี่ตัวตึง!'}
                                 />
                                 <div className='font-medium text-base md:text-lg text-black whitespace-nowrap'>
                                   ช่วงเวลารับสมัคร
                                 </div>
                                 <TextFormat
                                 className='whitespace-pre-wrap'
-                                content={a.date}
+                                content={'ลงทะเบียนผ่านทางเว็บไซต์ได้ตั้งแต่วันที่ 1 - 18 สิงหาคม - ทีมละ 3 คน โรงเรียนละไม่เกิน 2 ทีม (รับไม่เกิน 150 ทีม) '}
                                 />
                                 <div className='font-medium text-base md:text-lg text-black whitespace-nowrap'>
                                   จำนวนที่เปิดรับ
                                 </div>
                                 <TextFormat
                                 className='whitespace-pre-wrap'
-                                content={a.req}
+                                content={'แข่งวันที่ 25 สิงหาคม 2566 ตั้งแต่เวลา 08.30 - 16.30 น.'}
                                 />
                                 <div className='font-medium text-base md:text-lg text-black whitespace-nowrap'>
                                   ข้อมูลเพิ่มเติม
                                 </div>
                                 <TextFormat
                                 className='whitespace-pre-wrap'
-                                content={a.other}
+                                content={'สถานที่จัดการแข่งขัน หอประชุมพระอุบาลี (ชั้นสองของโรงอาหาร) โรงเรียนมหิดลวิทยานุสรณ์'}
                                 />
                               </span>
                             </div>
                             <button
-                              onClick={openset(ai,false)}
+                              onClick={() => setOpen(false)}
                               className='text-sm md:text-base bg-white/30 w-fit hover:bg-white/60 hover:text-bmw transition-all duration-300 backdrop-blur-sm text-bmw/70 rounded-full px-4 py-1 mt-2 font-IBMPlex font-semibold'
                             >
                               Close
@@ -264,11 +260,10 @@ export default function Competition() {
                     </AnimateSharedLayout>
                   </div>
                 </div>
-              ))}
             </div>
           </div>
         </div>
-                      </div>*/}
+        </div>
     </>
       
   )
