@@ -141,8 +141,8 @@ export default function Competition() {
           <span className='flex justify-center font-CS font-bold text-2xl md:text-3xl lg:text-4xl pt-16'>
               Competition
           </span>
-          <div className='w-full h-full py-6 flex items-center grid grid-cols-1'>
-            <div className='w-full max-w-7xl gap-6 mx-auto px-6'>
+          <div className='w-full h-full py-6 flex items-center grid grid-cols-1 grid-rows-4'>
+            <div className='w-full max-w-7xl gap-6 mx-auto px-6 row-span-1'>
               <div className='flex flex-col gap-3 grid grid-cols-3'>
                 <Link href={'https://forms.gle/B3Y3TK4QwZfBcBUCA'}>
                   <motion.img
@@ -266,7 +266,7 @@ export default function Competition() {
               </div>
             </div>
 
-            <div className='w-full max-w-7xl gap-6 mx-auto px-6'>
+            <div className='w-full max-w-7xl gap-6 mx-auto px-6 row-span-1'>
               <div className='flex flex-col gap-3 grid grid-cols-3'>
                 <Link href={'https://forms.gle/pbQWEdGUUAN5L3JP9'}>
                   <motion.img
@@ -393,7 +393,7 @@ export default function Competition() {
               </div>
             </div>
 
-            <div className='w-full max-w-7xl gap-6 mx-auto px-6'>
+            <div className='w-full max-w-7xl gap-6 mx-auto px-6 row-span-1'>
               <div className='flex flex-col gap-3 grid grid-cols-3'>
                 <motion.img
                   src={'img/2023/' + 'challogo.png'}
