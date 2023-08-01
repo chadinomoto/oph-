@@ -101,7 +101,7 @@ export default function Competition() {
   
   return (
     <>
-    <Head>
+      <Head>
         {/* <!-- HTML Meta Tags --> */}
         <title>{meta.title}</title>
         <meta name='description' content={meta.description} />
@@ -130,11 +130,11 @@ export default function Competition() {
           content={'img/ogimage.png'}
         />
         
-    </Head>
-        <div className='flex flex-col w-full'>
+      </Head>
+      <div className='flex flex-col w-full'>
         <div
             style={{
-              backgroundImage: `url(${'' + '/img/2023/yellowfade.webp'})`,
+              backgroundImage: '/img/2023/yellowfade.webp',
             }}
             className='w-full bg-cover bg-repeat sm:bg-fixed min-h-[180vh] space-y-2 '
         >
@@ -510,7 +510,7 @@ export default function Competition() {
             </div>
           </div>
         </div>
-        </div>
+      </div>
     </>
       
   )

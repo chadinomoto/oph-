@@ -161,116 +161,116 @@ export default function Home({ userData }) {
   ]*/
   const slides1 = [
     {
-      url: 'img/2023/slide/slide1/ch1.jpeg'
+      url: '/img/2023/slide/slide1/ch1.jpeg'
     },
     {
-      url: 'img/2023/slide/slide1/ch2.jpeg'
+      url: '/img/2023/slide/slide1/ch2.jpeg'
     },
     {
-      url: 'img/2023/slide/slide1/ch3.jpeg'
+      url: '/img/2023/slide/slide1/ch3.jpeg'
     },
     {
-      url: 'img/2023/slide/slide1/sq1.jpeg'
+      url: '/img/2023/slide/slide1/sq1.jpeg'
     },
     {
-      url: 'img/2023/slide/slide1/sq2.jpeg'
+      url: '/img/2023/slide/slide1/sq2.jpeg'
     },
     {
-      url: 'img/2023/slide/slide1/sq3.jpeg'
+      url: '/img/2023/slide/slide1/sq3.jpeg'
     }
-  ];
+  ]
   const slides = [
     {
-      url: 'img/2023/slide/slidea/p1.jpg',
+      url: '/img/2023/slide/slidea/p1.jpg',
     },
     {
-      url: 'img/2023/slide/slidea/p2.jpg',
+      url: '/img/2023/slide/slidea/p2.jpg',
     },
     {
-      url: 'img/2023/slide/slidea/p3.jpg',
+      url: '/img/2023/slide/slidea/p3.jpg',
     },
     {
-      url: 'img/2023/slide/slidea/p4.jpg',
+      url: '/img/2023/slide/slidea/p4.jpg',
     },
     {
-      url: 'img/2023/slide/slidea/p5.jpg',
+      url: '/img/2023/slide/slidea/p5.jpg',
     },
 
-  ];
+  ]
   const slides2 = [
     {
-      url: 'img/2023/slide/slide2/cl1.jpeg',
+      url: '/img/2023/slide/slide2/cl1.jpeg',
     },
     {
-      url: 'img/2023/slide/slide2/cl4.jpeg',
+      url: '/img/2023/slide/slide2/cl4.jpeg',
     },
     {
-      url: 'img/2023/slide/slide2/cl6.jpeg',
+      url: '/img/2023/slide/slide2/cl6.jpeg',
     },
     {
-      url: 'img/2023/slide/slide2/subj1.jpeg',
+      url: '/img/2023/slide/slide2/subj1.jpeg',
     },
     {
-      url: 'img/2023/slide/slide2/subj2.jpeg',
+      url: '/img/2023/slide/slide2/subj2.jpeg',
     },
     {
-      url: 'img/2023/slide/slide2/subj3.jpeg',
+      url: '/img/2023/slide/slide2/subj3.jpeg',
     },
-  ];
+  ]
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const prevSlide = () => {
-    const isFirstSlide = currentIndex === 0;
-    const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
-    setCurrentIndex(newIndex);
-  };
+  function prevSlide() {
+    const isFirstSlide = currentIndex === 0
+    const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1
+    setCurrentIndex(newIndex)
+  }
 
-  const nextSlide = () => {
-    const isLastSlide = currentIndex === slides.length - 1;
-    const newIndex = isLastSlide ? 0 : currentIndex + 1;
-    setCurrentIndex(newIndex);
-  };
+  function nextSlide() {
+    const isLastSlide = currentIndex === slides.length - 1
+    const newIndex = isLastSlide ? 0 : currentIndex + 1
+    setCurrentIndex(newIndex)
+  }
 
-  const goToSlide = (slideIndex) => {
-    setCurrentIndex(slideIndex);
-  };
+  function goToSlide(slideIndex) {
+    setCurrentIndex(slideIndex)
+  }
 
   const [currentIndex1, setCurrentIndex1] = useState(0);
 
-  const prevSlide1 = () => {
-    const isFirstSlide = currentIndex1 === 0;
-    const newIndex = isFirstSlide ? slides1.length - 1 : currentIndex1 - 1;
-    setCurrentIndex1(newIndex);
-  };
+  function prevSlide1() {
+    const isFirstSlide = currentIndex1 === 0
+    const newIndex = isFirstSlide ? slides1.length - 1 : currentIndex1 - 1
+    setCurrentIndex1(newIndex)
+  }
 
-  const nextSlide1 = () => {
-    const isLastSlide = currentIndex1 === slides1.length - 1;
-    const newIndex = isLastSlide ? 0 : currentIndex2 + 1;
-    setCurrentIndex1(newIndex);
-  };
+  function nextSlide1() {
+    const isLastSlide = currentIndex1 === slides1.length - 1
+    const newIndex = isLastSlide ? 0 : currentIndex2 + 1
+    setCurrentIndex1(newIndex)
+  }
 
-  const goToSlide1 = (slideIndex) => {
-    setCurrentIndex1(slideIndex);
-  };
+  function goToSlide1(slideIndex) {
+    setCurrentIndex1(slideIndex)
+  }
 
   const [currentIndex2, setCurrentIndex2] = useState(0);
 
-  const prevSlide2 = () => {
-    const isFirstSlide = currentIndex2 === 0;
-    const newIndex = isFirstSlide ? slides2.length - 1 : currentIndex2 - 1;
-    setCurrentIndex2(newIndex);
-  };
+  function prevSlide2() {
+    const isFirstSlide = currentIndex2 === 0
+    const newIndex = isFirstSlide ? slides2.length - 1 : currentIndex2 - 1
+    setCurrentIndex2(newIndex)
+  }
 
-  const nextSlide2 = () => {
-    const isLastSlide = currentIndex2 === slides2.length - 1;
-    const newIndex = isLastSlide ? 0 : currentIndex2 + 1;
-    setCurrentIndex2(newIndex);
-  };
+  function nextSlide2() {
+    const isLastSlide = currentIndex2 === slides2.length - 1
+    const newIndex = isLastSlide ? 0 : currentIndex2 + 1
+    setCurrentIndex2(newIndex)
+  }
 
-  const goToSlide2 = (slideIndex) => {
-    setCurrentIndex2(slideIndex);
-  };
+  function goToSlide2(slideIndex) {
+    setCurrentIndex2(slideIndex)
+  }
   return (
     <>
       <Head>
@@ -291,7 +291,7 @@ export default function Home({ userData }) {
         />
         <meta
           property='og:image'
-          content='img/ogimage.png'
+          content='/img/ogimage.png'
         />
 
         {/* <!-- Twitter Meta Tags --> */}
@@ -305,7 +305,7 @@ export default function Home({ userData }) {
         />
         <meta
           name='twitter:image'
-          content='img/ogimage.png'
+          content='/img/ogimage.png'
         />
       </Head>
       <div className='flex flex-col w-full'>
@@ -319,18 +319,14 @@ export default function Home({ userData }) {
         >*/}
         <div
           style={{
-            backgroundImage: `url(${'' + '/img/sky.webp'})`,
+            backgroundImage: '/img/sky.webp',
           }}
           className='w-full bg-cover bg-bottom flex items-end min-h-screen relative justify-self-center self-center space-y-2'
         >
           <div className='w-full h-full py-6 flex items-center'>
             <div className='w-full max-w-7xl grid md:grid-cols-2 gap-6 items-center justify-items-center mx-auto px-6'>
               <div className='max-w-[640px] max-h-[480px] min-w-max w-[16rem] md:w-[32rem] h-screen m-auto py-16 px-4 relative group'>
-                <div
-                  style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
-                  className='w-full h-full rounded-2xl bg-center bg-cover duration-100'
-                >
-                </div>
+                <img src={slides[currentIndex].url} className='w-full h-full rounded-2xl bg-center bg-cover duration-300'/>
                 <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
                   <FontAwesomeIcon icon={faChevronLeft} onClick={prevSlide} size='sm' />
                 </div>
@@ -475,18 +471,7 @@ export default function Home({ userData }) {
         </div>
 
         <div
-          // style={{
-          //   backgroundImage: `url(${
-          //     process.env.CDN_URL + '/img/projcover.jpg'
-          //   })`,
-          // }}
-
-
-          className={
-            'w-full flex bg-cover ' +
-            'bg-bottom' +
-            ' bg-no-repeat sm:bg-fixed relative justify-self-center self-center'
-          }
+          className={'w-full flex bg-cover bg-bottom bg-no-repeat sm:bg-fixed relative justify-self-center self-center'}
         >
           <div
             className='flex flex-col items-center w-full max-w-7xl px-8 py-6 gap-4 mx-auto'
@@ -502,11 +487,7 @@ export default function Home({ userData }) {
                 </div>
                 <div>
                   <div className='max-w-[640px] max-h-[480px] h-screen min-w-max w-[16rem] md:w-[32rem] m-auto py-16 px-4 relative group'>
-                    <div
-                      style={{ backgroundImage: `url(${slides1[currentIndex1].url})` }}
-                      className='w-full h-full rounded-2xl bg-center bg-cover duration-100'
-                    >
-                    </div>
+                    <img src={slides1[currentIndex1].url} className='w-full h-full rounded-2xl bg-center bg-cover duration-300'/>
                     {/* Left Arrow */}
                     <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
                       <FontAwesomeIcon icon={faChevronLeft} onClick={prevSlide1} size='sm' />
@@ -535,11 +516,7 @@ export default function Home({ userData }) {
                 </div>
                 <div>
                   <div className='max-w-[640px] max-h-[480px] h-screen min-w-max w-[16rem] md:w-[32rem] m-auto py-16 px-4 relative group'>
-                    <div
-                      style={{ backgroundImage: `url(${slides2[currentIndex2].url})` }}
-                      className='w-full h-full rounded-2xl bg-center bg-cover duration-100'
-                    >
-                    </div>
+                    <img src={slides2[currentIndex2].url} className='w-full h-full rounded-2xl bg-center bg-cover duration-300'/>
                     {/* Left Arrow */}
                     <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
                       <FontAwesomeIcon icon={faChevronLeft} onClick={prevSlide2} size='sm' />
@@ -685,6 +662,7 @@ export default function Home({ userData }) {
                 </div>
               </div>
             </div>*/}
+
           </div>
         </div>
       </div>
