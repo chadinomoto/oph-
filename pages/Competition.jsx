@@ -172,13 +172,13 @@ export default function Competition() {
                           layoutId={'welcome-desc' + '1'}
                           className='font-CS text-base md:text-lg lg:text-xl text-blue-500'
                         >
-                          'การแข่งขันคณิตศาสตร์และวิทยาศาสตร์ระดับมัธยมศึกษาตอนต้น'
+                          การแข่งขันคณิตศาสตร์และวิทยาศาสตร์ระดับมัธยมศึกษาตอนต้น
                         </motion.span>
                         <motion.span
                           layoutId={'welcome-descript' + '1'}
                           className='font-CS text-base md:text-lg lg:text-xl text-blue-500'
                         >
-                          'การสอบแข่งขันคณิตศาสตร์และวิทยาศาสตร์ระหว่างโรงเรียนประจำปี พ.ศ. 2566 เปิดโอกาสให้ผู้เข้าร่วมได้แสดงความสามารถด้านวิชาการและทดลองข้อสอบสไตล์ MWIT ที่ออกโดยรุ่นพี่ตัวตึง!'
+                          การสอบแข่งขันคณิตศาสตร์และวิทยาศาสตร์ระหว่างโรงเรียนประจำปี พ.ศ. 2566 เปิดโอกาสให้ผู้เข้าร่วมได้แสดงความสามารถด้านวิชาการและทดลองข้อสอบสไตล์ MWIT ที่ออกโดยรุ่นพี่ตัวตึง!
                         </motion.span>
                         <button
                           onClick={() => setOpen(true)}
@@ -212,7 +212,7 @@ export default function Competition() {
                               layoutId={'welcome-desc'+ '1'}
                               className='font-CS text-base md:text-lg lg:text-xl text-blue-500'
                             >
-                              'การแข่งขันคณิตศาสตร์และวิทยาศาสตร์ระดับมัธยมศึกษาตอนต้น'
+                              การแข่งขันคณิตศาสตร์และวิทยาศาสตร์ระดับมัธยมศึกษาตอนต้น
                             </motion.span>
                             <div className='flex flex-col gap-2 mt-2'>
                               <span
