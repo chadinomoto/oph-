@@ -351,7 +351,7 @@ export default function Competition() {
                               />
                               <Link href={'https://forms.gle/pbQWEdGUUAN5L3JP9'} >
                                 <div className='font-medium text-base md:text-lg text-black whitespace-nowrap hover:text-bmw'>
-                                คลิกที่นี่ได้เลย!
+                                {">คลิกที่นี่ได้เลย"} 
                                 </div>
                               </Link>
                               <div className='font-medium text-base md:text-lg text-black whitespace-nowrap'>
@@ -491,7 +491,7 @@ export default function Competition() {
                               </div>
                               <TextFormat
                               className='whitespace-pre-wrap'
-                              content={'และรอติดตามรายละเอียดเพิ่มเติมได้เร็วๆนี้'}
+                              content={'รอติดตามรายละเอียดเพิ่มเติมได้เร็วๆนี้'}
                               />
                             </span>
                           </div>
