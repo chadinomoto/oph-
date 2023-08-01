@@ -245,38 +245,6 @@ export default function Competition() {
                                 content={a.other}
                                 />
                               </span>
-                              
-                              <motion.span
-                                layoutId={'welcome-ct'+ ai.toString()}
-                                className='font-IBMPlexLoop leading-relaxed md:leading-relaxed text-sm md:text-base text-black'
-                              >
-                                <div className='flex flex-col gap-2 mt-2'>
-                                  {a.other.split('\n\n').map((t, ti) =>
-                                    ti < 2 ? (
-                                      <motion.span
-                                        key={ti}
-                                        layoutId={'welcome-ct-' + ai.toString()+ ti.toString()}
-                                        className='font-IBMPlexLoop leading-relaxed md:leading-relaxed text-sm md:text-base text-black'
-                                      >
-                                        {t}
-                                      </motion.span>
-                                    ) : (
-                                      <span
-                                        className='font-IBMPlexLoop leading-relaxed md:leading-relaxed text-sm md:text-base text-black'
-                                        key={ti}
-                                      >
-                                        {t.split('\n').map((tn, tni) => (
-                                          <Fragment key={tni}>
-                                            {tn}
-                                            <br />
-                                          </Fragment>
-                                        ))}
-                                      </span>
-                                    ),
-                                  )}
-                                </div>
-                              </motion.span>
-                              
                             </div>
                             <button
                               onClick={openset(ai.toString(),false)}
