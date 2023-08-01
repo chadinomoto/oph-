@@ -173,7 +173,7 @@ export default function Competition() {
                         </motion.span>
                       </div>
                       <button
-                        onClick={() => a.open.setOpen(true)}
+                        onClick={() => a.open[1](true)}
                         className='text-sm md:text-base bg-white/30 w-fit hover:bg-white/60 hover:text-bmw transition-all duration-300 backdrop-blur-sm text-bmw/70 rounded-full px-4 py-1 mt-2 font-IBMPlex font-semibold'
                       >
                         ข้อมูลเพิ่มเติม
@@ -187,7 +187,7 @@ export default function Competition() {
                         >
                           <div
                             className='absolute right-3 top-3 cursor-pointer z-30'
-                            onClick={() => a.open.setOpen(true)}
+                            onClick={() => a.open[1](false)}
                           >
                             <FontAwesomeIcon
                               icon={faCircleXmark}
@@ -264,7 +264,7 @@ export default function Competition() {
                             </span>
                           </div>
                           <button
-                            onClick={() => a.open.setOpen(true)}
+                            onClick={() => a.open[1](false)}
                             className='text-sm md:text-base bg-white/30 w-fit hover:bg-white/60 hover:text-bmw transition-all duration-300 backdrop-blur-sm text-bmw/70 rounded-full px-4 py-1 mt-2 font-IBMPlex font-semibold'
                           >
                             Close
