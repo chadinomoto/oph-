@@ -534,7 +534,7 @@ export default function Home({ userData }) {
                   กิจกรรมตามสาขาวิชา&CLUBFES
                 </div>
                 <div>
-                  <div className='max-w-[640px] max-h-[480px] h-screen w-full m-auto py-16 px-4 relative group'>
+                  <div className='max-w-[640px] max-h-[480px] h-screen w-screen m-auto py-16 px-4 relative group'>
                     <div
                       style={{ backgroundImage: `url(${slides2[currentIndex2].url})` }}
                       className='w-full h-full rounded-2xl bg-center bg-cover duration-100'
