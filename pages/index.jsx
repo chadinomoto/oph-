@@ -495,13 +495,10 @@ export default function Home({ userData }) {
             <span className='font-CS font-bold text-2xl md:text-3xl lg:text-4xl mt-10'>
               SNEAK PEEK กิจกรรมต่าง ๆ
             </span>
-            <div className='w-full max-w-7xl grid grid-cols-2 gap-6 items-center justify-items-center mx-auto px-6'>
+            <div className='w-full max-w-7xl grid md:grid-cols-2 gap-6 items-center justify-items-center mx-auto px-6'>
               <div className='cols-span-1'>
-                <div className='font-CS font-bold text-2xl md:text-3xl lg:text-4xl mt-10 flex justify-center'>
-                  MWIT CHALLENGE และ MWIT SQUARE
-                </div>
                 <div>
-                  <div className='w-[540px] h-[480px] w-full m-auto py-16 px-4 relative group'>
+                  <div className='w-1/2 h-1/3 w-full m-auto py-16 px-4 relative group'>
                     <div
                       style={{ backgroundImage: `url(${slides1[currentIndex1].url})` }}
                       className='w-full h-full rounded-2xl bg-center bg-cover duration-100'
