@@ -136,13 +136,13 @@ export default function Competition() {
             style={{
               backgroundImage: `url(${'' + '/img/2023/yellowfade.webp'})`,
             }}
-            className='w-full bg-cover bg-repeat sm:bg-fixed h-[120vh] space-y-2 '
+            className='w-full bg-cover bg-repeat sm:bg-fixed min-h-[120vh] h-screen space-y-2 '
         >
           <span className='flex justify-center font-CS font-bold text-2xl md:text-3xl lg:text-4xl pt-16'>
               Competition
           </span>
-          <div className='w-full h-full py-6 flex items-center grid grid-cols-1 grid-rows-10'>
-            <div className='w-full max-w-7xl gap-6 mx-auto px-6 row-span-3'>
+          <div className='w-full h-full py-6 flex items-center grid grid-cols-1 grid-rows-3'>
+            <div className='w-full max-w-7xl gap-6 mx-auto px-6 row-span-1'>
               <div className='flex flex-col gap-3 grid grid-cols-3'>
                 <Link href={'https://forms.gle/B3Y3TK4QwZfBcBUCA'}>
                   <motion.img
@@ -158,7 +158,7 @@ export default function Competition() {
                     }}
                   />
                 </Link>
-                <div className='col-span-2'>
+                <div className='col-span-2 max-h-max'>
                   <AnimateSharedLayout type='crossfade'>
                     <motion.div
                       className='flex flex-col gap-1 bg-white/40 shadow-lg backdrop-blur-sm px-4 py-5 rounded-xl'
@@ -266,7 +266,7 @@ export default function Competition() {
               </div>
             </div>
 
-            <div className='w-full max-w-7xl gap-6 mx-auto px-6 row-span-3'>
+            <div className='w-full max-w-7xl gap-6 mx-auto px-6 row-span-1'>
               <div className='flex flex-col gap-3 grid grid-cols-3'>
                 <Link href={'https://forms.gle/pbQWEdGUUAN5L3JP9'}>
                   <motion.img
@@ -282,7 +282,7 @@ export default function Competition() {
                     }}
                   />
                 </Link>
-                <div className='col-span-2'>
+                <div className='col-span-2 max-h-max'>
                   <AnimateSharedLayout type='crossfade'>
                     <motion.div
                       className='flex flex-col gap-1 bg-white/40 shadow-lg backdrop-blur-sm px-4 py-5 rounded-xl'
@@ -393,7 +393,7 @@ export default function Competition() {
               </div>
             </div>
 
-            <div className='w-full max-w-7xl gap-6 mx-auto px-6 row-span-3'>
+            <div className='w-full max-w-7xl gap-6 mx-auto px-6 row-span-1'>
               <div className='flex flex-col gap-3 grid grid-cols-3'>
                 <motion.img
                   src={'img/2023/' + 'challogo.png'}
@@ -407,7 +407,7 @@ export default function Competition() {
                     type: 'spring',
                   }}
                 />
-                <div className='col-span-2'>
+                <div className='col-span-2 max-h-max'>
                   <AnimateSharedLayout type='crossfade'>
                     <motion.div
                       className='flex flex-col gap-1 bg-white/40 shadow-lg backdrop-blur-sm px-4 py-5 rounded-xl'
@@ -457,13 +457,13 @@ export default function Competition() {
                             layoutId={'welcome-title'+ '3'}
                             className='font-CS text-3xl md:text-4xl font-bold text-bmw'
                           >
-                            MWIT Spelling Bee
+                            MWIT CHALLENGE
                           </motion.span>
                           <motion.span
                             layoutId={'welcome-desc'+ '3'}
                             className='font-CS text-base md:text-lg lg:text-xl text-blue-500'
                           >
-                            การแข่งขันสะกดคำภาษาอังกฤษระดับมัธยมศึกษาตอนต้น
+                            การแข่งขันแก้ปัญหาโดยนำความรู้ทางวิทยาศาสตร์และการคำนวณมาประยุกต์ใช้
                           </motion.span>
                           <div className='flex flex-col gap-2 mt-2'>
                             <span
@@ -499,7 +499,7 @@ export default function Competition() {
                               </div>
                               <TextFormat
                               className='whitespace-pre-wrap'
-                              content={'อุปกรณ์ที่ผู้เข้าแข่งขันต้องเตรียม บัตรนักเรียน/บัตรประชาชน เครื่องเขียน (ปากกา ดินสอ2B ยางลบ) \nรูปแบบการแข่ง : แข่ง 3 รอบ เพื่อหาผู้ชนะ \nรอบที่ 1 : ได้คะแนนเกิน 80% จะผ่านเข้าสู่รอบถัดไป \nรอบที่ 2 : คัดเหลือเพียง 5 คนสุดท้าย \nรอบที่ 3 : หาผู้ชนะการแข่งขัน'}
+                              content={'และรอติดตามรายละเอียดเพิ่มเติมได้เร็วๆนี้'}
                               />
                             </span>
                           </div>
