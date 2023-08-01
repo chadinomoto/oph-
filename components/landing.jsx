@@ -39,7 +39,7 @@ const mainMenu = [
 
 export default function LandingPage({ homeRef, children, ...props }) {
   return (
-    <div className='w-full bg-ybg/50 absolute h-[calc(100vh-calc(100vh-100%))]'
+    <div className='w-full bg-ybg/50 absolute h-fit'
     style={{
       backgroundImage: `url(${'' + '/img/2023/bg_starlight-8.webp'})`,
     }}>
