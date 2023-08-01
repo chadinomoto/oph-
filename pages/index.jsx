@@ -195,7 +195,6 @@ export default function Home({ userData }) {
     {
       url: '/img/2023/slide/slidea/p5.jpg',
     },
-
   ]
   const slides2 = [
     {
@@ -246,7 +245,7 @@ export default function Home({ userData }) {
 
   function nextSlide1() {
     const isLastSlide = currentIndex1 === slides1.length - 1
-    const newIndex = isLastSlide ? 0 : currentIndex2 + 1
+    const newIndex = isLastSlide ? 0 : currentIndex1 + 1
     setCurrentIndex1(newIndex)
   }
 
