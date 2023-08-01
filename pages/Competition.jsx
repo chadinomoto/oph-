@@ -134,9 +134,9 @@ export default function Competition() {
         <div className='flex flex-col w-full'>
         <div
             style={{
-              backgroundImage: `url(${'' + '/img/sky.webp'})`,
+              backgroundImage: `url(${'' + '/img/2023/yellowfade.webp'})`,
             }}
-            className='w-full bg-cover bg-bottom sm:bg-fixed min-h-screen space-y-2 '
+            className='w-full bg-cover bg-repeat bg-bottom sm:bg-fixed min-h-screen space-y-2 '
         >
           <span className='flex justify-center font-CS font-bold text-2xl md:text-3xl lg:text-4xl pt-16'>
               Competition
@@ -304,7 +304,7 @@ export default function Competition() {
                         layoutId={'welcome-descript' + '2'}
                         className='font-CS text-base md:text-lg lg:text-xl text-black'
                       >
-                        การแข่งขันสะกดคำภาษาอังกฤษระหว่างโรงเรียนประจำปี พ.ศ. 2566
+                        การแข่งขันสะกดคำภาษาอังกฤษระหว่างโรงเรียนประจำปี พ.ศ. 2566เพื่อวัดความสามารถด้านภาษาอังกฤษผ่านการแข่งขันชิงทุนการศึกษา และมีโอกาสได้สัมผัสบรรยากาศกิจกรรมที่เกิดขึ้นในโรงเรียน (การแข่งขัน Spelling Bee)
                       </motion.span>
                       <button
                         onClick={() => setbeeOpen(true)}
@@ -361,14 +361,14 @@ export default function Competition() {
                               </div>
                               <TextFormat
                               className='whitespace-pre-wrap'
-                              content={'แข่งวันที่ 25 สิงหาคม 2566 ตั้งแต่เวลา 08.30 - 16.30 น.'}
+                              content={'แข่งวันที่ 25 สิงหาคม 2566 9.00-12.00'}
                               />
                               <div className='font-medium text-base md:text-lg text-black whitespace-nowrap'>
                                 สถานที่จัดแข่งขัน
                               </div>
                               <TextFormat
                               className='whitespace-pre-wrap'
-                              content={'แข่งวันที่ 25 สิงหาคม 2566 9.00-12.00 สถานที่จัดการแข่งขัน ห้องฉายภาพยนตร์สามมิติ (อาคาร 2 ชั้น 4) โรงเรียนมหิดลวิทยานุสรณ์'}
+                              content={'ห้องฉายภาพยนตร์สามมิติ (อาคาร 2 ชั้น 4) โรงเรียนมหิดลวิทยานุสรณ์'}
                               />
                               <div className='font-medium text-base md:text-lg text-black whitespace-nowrap'>
                               ข้อมูลเพิ่มเติม
@@ -392,12 +392,17 @@ export default function Competition() {
                 </div>
               </div>
             </div>
+            short : 'การแข่งขันแก้ปัญหาโดยนำความรู้ทางวิทยาศาสตร์และการคำนวณมาประยุกต์ใช้',
+    desc : 'สัมผัสประสบการณ์การแข่งขันแก้ปัญหาและสร้างสรรค์สิ่งประดิษฐ์โดยใช้ความรู้ด้าน STEM มาประยุกต์กับสถานการณ์สุดท้าทายที่ออกแบบมาให้น้อง ๆ ได้ระดมความคิดกันเป็นทีม!',
+    req : 'ลงทะเบียนหน้างาน - รอบละ 30 ทีม ทีมละไม่เกิน 3 คน (คละโรงเรียนได้)’
+    date: 'แข่งวันที่ 26 สิงหาคม 2566 จัดการแข่งขันเช้า 2 รอบ บ่าย 2 รอบ',
+    other : 'สถานที่จัดการแข่งขัน หอประชุมพระอุบาลี (ชั้นสองของโรงอาหาร) โรงเรียนมหิดลวิทยานุสรณ์
 
 
             <div className='w-full max-w-7xl gap-6 mx-auto px-6'>
               <div className='flex flex-col gap-3 grid grid-cols-3'>
                 <motion.img
-                  src={'img/2023/' + 'Challogo.png'}
+                  src={'img/2023/' + 'challogo.png'}
                   className='w-[180px] md:w-[220px] lg:w-[250px] col-span-1 '
                   initial={{ opacity: 0, scale: 0.5, rotate: -10 }}
                   animate={{ opacity: 1, scale: 1, rotate: 0 }}
@@ -418,19 +423,19 @@ export default function Competition() {
                         layoutId={'welcome-title' + '3'}
                         className='font-CS text-3xl md:text-4xl font-bold text-bmw'
                       >
-                        MWIT Spelling Bee
+                        MWIT CHALLENGE
                       </motion.span>
                       <motion.span
                         layoutId={'welcome-desc' + '3'}
                         className='font-CS text-base md:text-lg lg:text-xl text-blue-500'
                       >
-                        การแข่งขันสะกดคำภาษาอังกฤษระดับมัธยมศึกษาตอนต้น
+                        การแข่งขันแก้ปัญหาโดยนำความรู้ทางวิทยาศาสตร์และการคำนวณมาประยุกต์ใช้
                       </motion.span>
                       <motion.span
                         layoutId={'welcome-descript' + '3'}
                         className='font-CS text-base md:text-lg lg:text-xl text-black'
                       >
-                        การแข่งขันสะกดคำภาษาอังกฤษระหว่างโรงเรียนประจำปี พ.ศ. 2566
+                        สัมผัสประสบการณ์การแข่งขันแก้ปัญหาและสร้างสรรค์สิ่งประดิษฐ์โดยใช้ความรู้ด้าน STEM มาประยุกต์กับสถานการณ์สุดท้าทายที่ออกแบบมาให้น้อง ๆ ได้ระดมความคิดกันเป็นทีม!
                       </motion.span>
                       <button
                         onClick={() => setchalOpen(true)}
@@ -470,31 +475,30 @@ export default function Competition() {
                             <span
                               className='font-IBMPlexLoop leading-relaxed md:leading-relaxed text-sm md:text-base text-black'
                             >
+                              <TextFormat
+                              className='whitespace-pre-wrap'
+                              content={'สัมผัสประสบการณ์การแข่งขันแก้ปัญหาและสร้างสรรค์สิ่งประดิษฐ์โดยใช้ความรู้ด้าน STEM มาประยุกต์กับสถานการณ์สุดท้าทายที่ออกแบบมาให้น้อง ๆ ได้ระดมความคิดกันเป็นทีม!'}
+                              />
                               <div className='font-medium text-base md:text-lg text-black whitespace-nowrap'>
                                 ช่วงเวลารับสมัคร
                               </div>
                               <TextFormat
                               className='whitespace-pre-wrap'
-                              content={'ลงทะเบียนล่วงหน้า รับสมัคร 1-20 สิงหาคม เป็นการแข่งขันประเภทเดี่ยว ส่งได้โรงเรียนละไม่เกิน 3 คน'}
+                              content={'ลงทะเบียนหน้างาน - รอบละ 30 ทีม ทีมละไม่เกิน 3 คน (คละโรงเรียนได้)'}
                               />
-                              <Link href={'https://forms.gle/pbQWEdGUUAN5L3JP9'} >
-                                <div className='font-medium text-base md:text-lg text-black whitespace-nowrap hover:text-bmw'>
-                                คลิกที่นี่ได้เลย!
-                                </div>
-                              </Link>
                               <div className='font-medium text-base md:text-lg text-black whitespace-nowrap'>
                                 วันที่จัดแข่งขัน
                               </div>
                               <TextFormat
                               className='whitespace-pre-wrap'
-                              content={'แข่งวันที่ 25 สิงหาคม 2566 ตั้งแต่เวลา 08.30 - 16.30 น.'}
+                              content={'แข่งวันที่ 26 สิงหาคม 2566 จัดการแข่งขันเช้า 2 รอบ บ่าย 2 รอบ'}
                               />
                               <div className='font-medium text-base md:text-lg text-black whitespace-nowrap'>
                                 สถานที่จัดแข่งขัน
                               </div>
                               <TextFormat
                               className='whitespace-pre-wrap'
-                              content={'แข่งวันที่ 25 สิงหาคม 2566 9.00-12.00 สถานที่จัดการแข่งขัน ห้องฉายภาพยนตร์สามมิติ (อาคาร 2 ชั้น 4) โรงเรียนมหิดลวิทยานุสรณ์'}
+                              content={'สถานที่จัดการแข่งขัน หอประชุมพระอุบาลี (ชั้นสองของโรงอาหาร) โรงเรียนมหิดลวิทยานุสรณ์'}
                               />
                               <div className='font-medium text-base md:text-lg text-black whitespace-nowrap'>
                               ข้อมูลเพิ่มเติม
