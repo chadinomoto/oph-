@@ -41,7 +41,7 @@ export default function LandingPage({ homeRef, children, ...props }) {
   return (
     <div className='w-full bg-ybg/50 absolute h-[calc(100vh-calc(100vh-100%))]'
     style={{
-      backgroundImage: `url(${'' + '/img/2023/bg_starlight-8.webp'})`,
+      backgroundImage: `url(${'' + '/img/2023/yellowfade.webp'})`,
     }}>
       <div className='p-4 flex flex-col w-full h-[calc(100vh-calc(100vh-100%))]'>
         <div className='grow flex flex-col justify-center items-center py-4 mx-auto gap-6 lg:gap-8'>
