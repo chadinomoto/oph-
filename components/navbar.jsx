@@ -115,12 +115,12 @@ export default function Navbar({
       icon: faHouse,
       auth: null,
     },
-    {
+    /*{
       name: 'Schedule',
       href: '/schedule',
       icon: faCalendarDay,
       auth: null,
-    },
+    },*/
     {
       name: 'Registration Form',
       href: '/eventregis',
