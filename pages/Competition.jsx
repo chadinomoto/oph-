@@ -54,7 +54,7 @@ const actdata = [
   {
     open : false,
     name : 'MWIT SQUARE 15 th',
-    src : 'sqlogofull.png',
+    src : 'SQ15-col.png',
     ref : null,
     short : 'การแข่งขันคณิตศาสตร์และวิทยาศาสตร์ระดับมัธยมศึกษาตอนต้น',
     desc : 'การสอบแข่งขันคณิตศาสตร์และวิทยาศาสตร์ระหว่างโรงเรียนประจำปี พ.ศ. 2566 เปิดโอกาสให้ผู้เข้าร่วมได้แสดงความสามารถด้านวิชาการและทดลองข้อสอบสไตล์ MWIT ที่ออกโดยรุ่นพี่ตัวตึง!',
@@ -75,9 +75,6 @@ const actdata = [
   }
 ]
 export default function Competition() {
-  const [showWC1, setShowWC1] = useState(false)
-  const [showWC2, setShowWC2] = useState(false)
-  const [showWC0, setShowWC0] = useState(false)
   return (
     <>
     <Head>
@@ -124,21 +121,23 @@ export default function Competition() {
             <div className='w-full max-w-7xl grid grid-cols-1 gap-6 mx-auto px-6 col-span-1'>
               {actdata.map((a,ai) => (
                 <div className='flex flex-col gap-3 grid grid-cols-3' key = {ai}>
-                  <motion.img
-                    src={'img/2023/' + a.src}
-                    className='w-[180px] md:w-[220px] lg:w-[250px] cols-span-1 '
-                    initial={{ opacity: 0, scale: 0.5, rotate: -10 }}
-                    animate={{ opacity: 1, scale: 1, rotate: 0 }}
-                    transition={{
-                      duration: 0.8,
-                      delay: 0.5,
-                      bounce: 0.4,
-                      type: 'spring',
-                    }}
-                  />
-                  <AnimateSharedLayout type='crossfade' className = 'cols-span-2' layoutId = {'Animate' + ai.toString()}>
+                  <Link href={a.ref}>
+                    <motion.img
+                      src={'img/2023/' + a.src}
+                      className='w-[180px] md:w-[220px] lg:w-[250px] cols-span-1 '
+                      initial={{ opacity: 0, scale: 0.5, rotate: -10 }}
+                      animate={{ opacity: 1, scale: 1, rotate: 0 }}
+                      transition={{
+                        duration: 0.8,
+                        delay: 0.5,
+                        bounce: 0.4,
+                        type: 'spring',
+                      }}
+                    />
+                  </Link>
+                  <AnimateSharedLayout type='crossfade'  layoutId = {'Animate' + ai.toString()}>
                     <motion.div
-                      className='flex flex-col gap-1  bg-white/40 shadow-lg backdrop-blur-sm px-4 py-5 rounded-xl'
+                      className='flex flex-col gap-1 cols-span-2  bg-white/40 shadow-lg backdrop-blur-sm px-4 py-5 rounded-xl'
                       layoutId={'welcome-canvas' + ai.toString()}
                     >
                       <motion.span
@@ -158,7 +157,18 @@ export default function Competition() {
                           layoutId={'welcome-ct' + ai.toString()}
                           className='font-IBMPlexLoop leading-relaxed md:leading-relaxed text-sm md:text-base text-black'
                         >
-                        {a.desc}
+                          {a.desc.split('\n\n').map(
+                            (t, ti) =>
+                              ti < 2 && (
+                                <motion.span
+                                  key={ti}
+                                  layoutId={'welcome-ct-' + ai.toString() + ti.toString()}
+                                  className='font-IBMPlexLoop leading-relaxed md:leading-relaxed text-sm md:text-base text-black'
+                                >
+                                  {t}
+                                </motion.span>
+                              ),
+                          )}
                         </motion.span>
                       </div>
                       <button
@@ -169,10 +179,10 @@ export default function Competition() {
                       </button>
                     </motion.div>
                     {a.open && (
-                      <div className='fixed inset-0 pt-16 px-6 pb-6 z-50 overflow-y-scroll' layoutId={'welcome-ct' + ai.toString()}>
+                      <div className='fixed inset-0 pt-16 px-6 pb-6 z-50 overflow-y-scroll' >
                         <motion.div
                           className='w-full relative max-w-2xl mx-auto flex flex-col gap-1 bg-white/80 shadow-lg backdrop-blur-md px-4 py-5 rounded-xl'
-                          layoutId='welcome-canvas'
+                          layoutId={'welcome-canvas '+ ai.toString()}
                         >
                           <div
                             className='absolute right-3 top-3 cursor-pointer z-30'
@@ -184,23 +194,47 @@ export default function Competition() {
                             />
                           </div>
                           <motion.span
-                            layoutId={'welcome-title'}
+                            layoutId={'welcome-title'+ ai.toString()}
                             className='font-CS text-3xl md:text-4xl font-bold text-bmw'
                           >
                             {a.name}
                           </motion.span>
                           <motion.span
-                            layoutId={'welcome-desc'}
+                            layoutId={'welcome-desc'+ ai.toString()}
                             className='font-CS text-base md:text-lg lg:text-xl text-blue-500'
                           >
                             {a.short}
                           </motion.span>
                           <div className='flex flex-col gap-2 mt-2'>
                             <motion.span
-                              layoutId={'welcome-ct-1'}
+                              layoutId={'welcome-ct'+ ai.toString()}
                               className='font-IBMPlexLoop leading-relaxed md:leading-relaxed text-sm md:text-base text-black'
                             >
-                              {a.desc}
+                              <div className='flex flex-col gap-2 mt-2'>
+                                {a.desc.split('\n\n').map((t, ti) =>
+                                  ti < 2 ? (
+                                    <motion.span
+                                      key={ti}
+                                      layoutId={'welcome-ct-' + ai.toString()+ ti.toString()}
+                                      className='font-IBMPlexLoop leading-relaxed md:leading-relaxed text-sm md:text-base text-black'
+                                    >
+                                      {t}
+                                    </motion.span>
+                                  ) : (
+                                    <span
+                                      className='font-IBMPlexLoop leading-relaxed md:leading-relaxed text-sm md:text-base text-black'
+                                      key={ti}
+                                    >
+                                      {t.split('\n').map((tn, tni) => (
+                                        <Fragment key={tni}>
+                                          {tn}
+                                          <br />
+                                        </Fragment>
+                                      ))}
+                                    </span>
+                                  ),
+                                )}
+                              </div>
                             </motion.span>
                             <span
                               className='font-IBMPlexLoop leading-relaxed md:leading-relaxed text-sm md:text-base text-black'
