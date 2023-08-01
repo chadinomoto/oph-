@@ -78,6 +78,7 @@ export default function Competition() {
     open0 : false,
     open1 : false
   });
+
   function openset(a,t){
     if(a == 0)
     {
@@ -92,16 +93,7 @@ export default function Competition() {
       }); 
     }
   };
-  function callopen(a){
-    if(a == 0)
-    {
-      return Open.open0
-    }
-    else if(a == 1)
-    {
-      return Open.open1
-    }
-  };
+  
   return (
     <>
     <Head>
@@ -162,139 +154,141 @@ export default function Competition() {
                       }}
                     />
                   </Link>
-                  <AnimateSharedLayout type='crossfade'  layoutId = {'Animate' + ai.toString()}>
-                    <motion.div
-                      className='flex flex-col gap-1 cols-span-2  bg-white/40 shadow-lg backdrop-blur-sm px-4 py-5 rounded-xl'
-                      layoutId={'welcome-canvas' + ai.toString()}
-                    >
-                      <motion.span
-                        layoutId={'welcome-title' + ai.toString()}
-                        className='font-CS text-3xl md:text-4xl font-bold text-bmw'
+                  <div className='cols-span-2'>
+                    <AnimateSharedLayout type='crossfade'>
+                      <motion.div
+                        className='flex flex-col gap-1 bg-white/40 shadow-lg backdrop-blur-sm px-4 py-5 rounded-xl'
+                        layoutId={'welcome-canvas' + ai.toString()}
                       >
-                        {a.name}
-                      </motion.span>
-                      <motion.span
-                        layoutId={'welcome-desc' + ai.toString()}
-                        className='font-CS text-base md:text-lg lg:text-xl text-blue-500'
-                      >
-                        {a.short}
-                      </motion.span>
-                      <motion.span
-                        layoutId={'welcome-descript' + ai.toString()}
-                        className='font-CS text-base md:text-lg lg:text-xl text-blue-500'
-                      >
-                        {a.desc}
-                      </motion.span>
-                      <button
-                        onClick={openset(ai.toString(),true)}
-                        className='text-sm md:text-base bg-white/30 w-fit hover:bg-white/60 hover:text-bmw transition-all duration-300 backdrop-blur-sm text-bmw/70 rounded-full px-4 py-1 mt-2 font-IBMPlex font-semibold'
-                      >
-                        ข้อมูลเพิ่มเติม
-                      </button>
-                    </motion.div>
-                    {Open.open0 || Open.open1 && (
-                      <div className='fixed inset-0 pt-16 px-6 pb-6 z-50 overflow-y-scroll' >
-                        <motion.div
-                          className='w-full relative max-w-2xl mx-auto flex flex-col gap-1 bg-white/80 shadow-lg backdrop-blur-md px-4 py-5 rounded-xl'
-                          layoutId={'welcome-canvas '+ ai.toString()}
+                        <motion.span
+                          layoutId={'welcome-title' + ai.toString()}
+                          className='font-CS text-3xl md:text-4xl font-bold text-bmw'
                         >
-                          <div
-                            className='absolute right-3 top-3 cursor-pointer z-30'
-                            onClick={openset(ai.toString(),false)}
+                          {a.name}
+                        </motion.span>
+                        <motion.span
+                          layoutId={'welcome-desc' + ai.toString()}
+                          className='font-CS text-base md:text-lg lg:text-xl text-blue-500'
+                        >
+                          {a.short}
+                        </motion.span>
+                        <motion.span
+                          layoutId={'welcome-descript' + ai.toString()}
+                          className='font-CS text-base md:text-lg lg:text-xl text-blue-500'
+                        >
+                          {a.desc}
+                        </motion.span>
+                        <button
+                          onClick={openset(ai.toString(),true)}
+                          className='text-sm md:text-base bg-white/30 w-fit hover:bg-white/60 hover:text-bmw transition-all duration-300 backdrop-blur-sm text-bmw/70 rounded-full px-4 py-1 mt-2 font-IBMPlex font-semibold'
+                        >
+                          ข้อมูลเพิ่มเติม
+                        </button>
+                      </motion.div>
+                      {(Open.open0 || Open.open1) && (
+                        <div className='fixed inset-0 pt-16 px-6 pb-6 z-50 overflow-y-scroll' >
+                          <motion.div
+                            className='w-full relative max-w-2xl mx-auto flex flex-col gap-1 bg-white/80 shadow-lg backdrop-blur-md px-4 py-5 rounded-xl'
+                            layoutId={'welcome-canvas '+ ai.toString()}
                           >
-                            <FontAwesomeIcon
-                              icon={faCircleXmark}
-                              className='text-3xl text-gray-400/60 hover:text-red-500/60 transition-colors duration-300'
-                            />
-                          </div>
-                          <motion.span
-                            layoutId={'welcome-title'+ ai.toString()}
-                            className='font-CS text-3xl md:text-4xl font-bold text-bmw'
-                          >
-                            {a.name}
-                          </motion.span>
-                          <motion.span
-                            layoutId={'welcome-desc'+ ai.toString()}
-                            className='font-CS text-base md:text-lg lg:text-xl text-blue-500'
-                          >
-                            {a.short}
-                          </motion.span>
-                          <div className='flex flex-col gap-2 mt-2'>
-                            <span
-                              className='font-IBMPlexLoop leading-relaxed md:leading-relaxed text-sm md:text-base text-black'
+                            <div
+                              className='absolute right-3 top-3 cursor-pointer z-30'
+                              onClick={openset(ai.toString(),false)}
                             >
-                              <div className='font-medium text-base md:text-lg text-black whitespace-nowrap'>
-                              ข้อมูลเพิ่มเติม
-                              </div>
-                              <TextFormat
-                              className='whitespace-pre-wrap'
-                              content={a.desc}
+                              <FontAwesomeIcon
+                                icon={faCircleXmark}
+                                className='text-3xl text-gray-400/60 hover:text-red-500/60 transition-colors duration-300'
                               />
-                              <div className='font-medium text-base md:text-lg text-black whitespace-nowrap'>
-                                ช่วงเวลารับสมัคร
-                              </div>
-                              <TextFormat
-                              className='whitespace-pre-wrap'
-                              content={a.date}
-                              />
-                              <div className='font-medium text-base md:text-lg text-black whitespace-nowrap'>
-                                จำนวนที่เปิดรับ
-                              </div>
-                              <TextFormat
-                              className='whitespace-pre-wrap'
-                              content={a.req}
-                              />
-                              <div className='font-medium text-base md:text-lg text-black whitespace-nowrap'>
-                                ข้อมูลเพิ่มเติม
-                              </div>
-                              <TextFormat
-                              className='whitespace-pre-wrap'
-                              content={a.other}
-                              />
-                            </span>
-                            
+                            </div>
                             <motion.span
-                              layoutId={'welcome-ct'+ ai.toString()}
-                              className='font-IBMPlexLoop leading-relaxed md:leading-relaxed text-sm md:text-base text-black'
+                              layoutId={'welcome-title'+ ai.toString()}
+                              className='font-CS text-3xl md:text-4xl font-bold text-bmw'
                             >
-                              <div className='flex flex-col gap-2 mt-2'>
-                                {a.other.split('\n\n').map((t, ti) =>
-                                  ti < 2 ? (
-                                    <motion.span
-                                      key={ti}
-                                      layoutId={'welcome-ct-' + ai.toString()+ ti.toString()}
-                                      className='font-IBMPlexLoop leading-relaxed md:leading-relaxed text-sm md:text-base text-black'
-                                    >
-                                      {t}
-                                    </motion.span>
-                                  ) : (
-                                    <span
-                                      className='font-IBMPlexLoop leading-relaxed md:leading-relaxed text-sm md:text-base text-black'
-                                      key={ti}
-                                    >
-                                      {t.split('\n').map((tn, tni) => (
-                                        <Fragment key={tni}>
-                                          {tn}
-                                          <br />
-                                        </Fragment>
-                                      ))}
-                                    </span>
-                                  ),
-                                )}
-                              </div>
+                              {a.name}
                             </motion.span>
-                            
-                          </div>
-                          <button
-                            onClick={openset(ai.toString(),false)}
-                            className='text-sm md:text-base bg-white/30 w-fit hover:bg-white/60 hover:text-bmw transition-all duration-300 backdrop-blur-sm text-bmw/70 rounded-full px-4 py-1 mt-2 font-IBMPlex font-semibold'
-                          >
-                            Close
-                          </button>
-                        </motion.div>
-                      </div>
-                    )}
-                  </AnimateSharedLayout>
+                            <motion.span
+                              layoutId={'welcome-desc'+ ai.toString()}
+                              className='font-CS text-base md:text-lg lg:text-xl text-blue-500'
+                            >
+                              {a.short}
+                            </motion.span>
+                            <div className='flex flex-col gap-2 mt-2'>
+                              <span
+                                className='font-IBMPlexLoop leading-relaxed md:leading-relaxed text-sm md:text-base text-black'
+                              >
+                                <div className='font-medium text-base md:text-lg text-black whitespace-nowrap'>
+                                ข้อมูลเพิ่มเติม
+                                </div>
+                                <TextFormat
+                                className='whitespace-pre-wrap'
+                                content={a.desc}
+                                />
+                                <div className='font-medium text-base md:text-lg text-black whitespace-nowrap'>
+                                  ช่วงเวลารับสมัคร
+                                </div>
+                                <TextFormat
+                                className='whitespace-pre-wrap'
+                                content={a.date}
+                                />
+                                <div className='font-medium text-base md:text-lg text-black whitespace-nowrap'>
+                                  จำนวนที่เปิดรับ
+                                </div>
+                                <TextFormat
+                                className='whitespace-pre-wrap'
+                                content={a.req}
+                                />
+                                <div className='font-medium text-base md:text-lg text-black whitespace-nowrap'>
+                                  ข้อมูลเพิ่มเติม
+                                </div>
+                                <TextFormat
+                                className='whitespace-pre-wrap'
+                                content={a.other}
+                                />
+                              </span>
+                              
+                              <motion.span
+                                layoutId={'welcome-ct'+ ai.toString()}
+                                className='font-IBMPlexLoop leading-relaxed md:leading-relaxed text-sm md:text-base text-black'
+                              >
+                                <div className='flex flex-col gap-2 mt-2'>
+                                  {a.other.split('\n\n').map((t, ti) =>
+                                    ti < 2 ? (
+                                      <motion.span
+                                        key={ti}
+                                        layoutId={'welcome-ct-' + ai.toString()+ ti.toString()}
+                                        className='font-IBMPlexLoop leading-relaxed md:leading-relaxed text-sm md:text-base text-black'
+                                      >
+                                        {t}
+                                      </motion.span>
+                                    ) : (
+                                      <span
+                                        className='font-IBMPlexLoop leading-relaxed md:leading-relaxed text-sm md:text-base text-black'
+                                        key={ti}
+                                      >
+                                        {t.split('\n').map((tn, tni) => (
+                                          <Fragment key={tni}>
+                                            {tn}
+                                            <br />
+                                          </Fragment>
+                                        ))}
+                                      </span>
+                                    ),
+                                  )}
+                                </div>
+                              </motion.span>
+                              
+                            </div>
+                            <button
+                              onClick={openset(ai.toString(),false)}
+                              className='text-sm md:text-base bg-white/30 w-fit hover:bg-white/60 hover:text-bmw transition-all duration-300 backdrop-blur-sm text-bmw/70 rounded-full px-4 py-1 mt-2 font-IBMPlex font-semibold'
+                            >
+                              Close
+                            </button>
+                          </motion.div>
+                        </div>
+                      )}
+                    </AnimateSharedLayout>
+                  </div>
                 </div>
               ))}
             </div>
