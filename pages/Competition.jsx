@@ -52,7 +52,7 @@ const actdata = [
     other : ''
   }*/
   {
-    open : false,
+    open : [open,setOpen] = useState(false),
     name : 'MWIT SQUARE 15 th',
     src : 'SQ15-col.png',
     ref : 'https://forms.gle/B3Y3TK4QwZfBcBUCA',
@@ -63,7 +63,7 @@ const actdata = [
     other : 'สถานที่จัดการแข่งขัน หอประชุมพระอุบาลี (ชั้นสองของโรงอาหาร) โรงเรียนมหิดลวิทยานุสรณ์ '
   },
   {
-    open : false,
+    open : [open,setOpen] = useState(false),
     name : 'MWIT Spelling Bee',
     src : 'SpellingBee.png',
     ref : 'https://forms.gle/pbQWEdGUUAN5L3JP9',
@@ -172,7 +172,7 @@ export default function Competition() {
                         </motion.span>
                       </div>
                       <button
-                        onClick={() => a.open = !a.open}
+                        onClick={() => a.open.setOpen(true)}
                         className='text-sm md:text-base bg-white/30 w-fit hover:bg-white/60 hover:text-bmw transition-all duration-300 backdrop-blur-sm text-bmw/70 rounded-full px-4 py-1 mt-2 font-IBMPlex font-semibold'
                       >
                         ข้อมูลเพิ่มเติม
@@ -186,7 +186,7 @@ export default function Competition() {
                         >
                           <div
                             className='absolute right-3 top-3 cursor-pointer z-30'
-                            onClick={() => a.open = !a.open}
+                            onClick={() => a.open.setOpen(true)}
                           >
                             <FontAwesomeIcon
                               icon={faCircleXmark}
@@ -246,18 +246,6 @@ export default function Competition() {
                               className='whitespace-pre-wrap'
                               content={a.date}
                               />
-                              { 
-                                a.regisref ? 
-                                (
-                                <div href={a.regisref} className='font-CS text-xl md:text-2xl font-bold text-bmw'>
-                                ลิงก์สำหรับลงทะเบียนเข้าร่วมกิจกรรม
-                                </div>
-                                )
-                                :
-                                (<div href='' className='font-CS text-xl md:text-2xl font-bold text-bmw'>
-                                  กิจกรรมนี้ไม่สามารถลงทะเบียนได้
-                                </div>)
-                              }
                               <div className='font-medium text-base md:text-lg text-black whitespace-nowrap'>
                                 จำนวนที่เปิดรับ
                               </div>
@@ -275,7 +263,7 @@ export default function Competition() {
                             </span>
                           </div>
                           <button
-                            onClick={() => a.open = !a.open}
+                            onClick={() => a.open.setOpen(true)}
                             className='text-sm md:text-base bg-white/30 w-fit hover:bg-white/60 hover:text-bmw transition-all duration-300 backdrop-blur-sm text-bmw/70 rounded-full px-4 py-1 mt-2 font-IBMPlex font-semibold'
                           >
                             Close
