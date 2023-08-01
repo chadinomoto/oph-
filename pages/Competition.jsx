@@ -54,7 +54,6 @@ export default function Competition() {
       other : ''
     }*/
     {
-      open : [open,setOpen] = useState(false),
       name : 'MWIT SQUARE 15 th',
       src : 'SQ15-col.png',
       ref : 'https://forms.gle/B3Y3TK4QwZfBcBUCA',
@@ -65,7 +64,6 @@ export default function Competition() {
       other : 'สถานที่จัดการแข่งขัน หอประชุมพระอุบาลี (ชั้นสองของโรงอาหาร) โรงเรียนมหิดลวิทยานุสรณ์ '
     },
     {
-      open : [open,setOpen] = useState(false),
       name : 'MWIT Spelling Bee',
       src : 'SpellingBee.png',
       ref : 'https://forms.gle/pbQWEdGUUAN5L3JP9',
@@ -76,6 +74,24 @@ export default function Competition() {
       other : 'สถานที่จัดการแข่งขัน ห้องฉายภาพยนตร์สามมิติ (อาคาร 2 ชั้น 4) โรงเรียนมหิดลวิทยานุสรณ์  <b>อุปกรณ์ที่ผู้เข้าแข่งขันต้องเตรียม<b>  บัตรนักเรียน/บัตรประชาชน เครื่องเขียน (ปากกา ดินสอ2B ยางลบ)  <b>รูปแบบการแข่ง : แข่ง 3 รอบ เพื่อหาผู้ชนะ<b>  รอบที่ 1 : ได้คะแนนเกิน 80% จะผ่านเข้าสู่รอบถัดไป  รอบที่ 2 : คัดเหลือเพียง 5 คนสุดท้าย  รอบที่ 3 : หาผู้ชนะการแข่งขัน'
     }
   ]
+  const [Open, setOpen] = useState({
+    open0 : false,
+    open1 : false
+  })
+  function openset(a,t){
+    if(a == 0)
+    {
+      setOpen(previousState => {
+        return { ...previousState, open0: t }
+      }); 
+    }
+    else if(a == 1)
+    {
+      setOpen(previousState => {
+        return { ...previousState, open1: t }
+      }); 
+    }
+  }
   return (
     <>
     <Head>
@@ -173,7 +189,7 @@ export default function Competition() {
                         </motion.span>
                       </div>
                       <button
-                        onClick={() => a.open[1](true)}
+                        onClick={() => openset(ai.toString(),true)}
                         className='text-sm md:text-base bg-white/30 w-fit hover:bg-white/60 hover:text-bmw transition-all duration-300 backdrop-blur-sm text-bmw/70 rounded-full px-4 py-1 mt-2 font-IBMPlex font-semibold'
                       >
                         ข้อมูลเพิ่มเติม
@@ -187,7 +203,7 @@ export default function Competition() {
                         >
                           <div
                             className='absolute right-3 top-3 cursor-pointer z-30'
-                            onClick={() => a.open[1](false)}
+                            onClick={() => openset(ai.toString(),false)}
                           >
                             <FontAwesomeIcon
                               icon={faCircleXmark}
@@ -264,7 +280,7 @@ export default function Competition() {
                             </span>
                           </div>
                           <button
-                            onClick={() => a.open[1](false)}
+                            onClick={() => openset(ai.toString(),false)}
                             className='text-sm md:text-base bg-white/30 w-fit hover:bg-white/60 hover:text-bmw transition-all duration-300 backdrop-blur-sm text-bmw/70 rounded-full px-4 py-1 mt-2 font-IBMPlex font-semibold'
                           >
                             Close
