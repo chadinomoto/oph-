@@ -179,7 +179,7 @@ export default function Competition() {
                           {a.desc}
                         </motion.span>
                         <button
-                          onClick={openset(ai.toString(),true)}
+                          onClick={openset(ai,true)}
                           className='text-sm md:text-base bg-white/30 w-fit hover:bg-white/60 hover:text-bmw transition-all duration-300 backdrop-blur-sm text-bmw/70 rounded-full px-4 py-1 mt-2 font-IBMPlex font-semibold'
                         >
                           ข้อมูลเพิ่มเติม
