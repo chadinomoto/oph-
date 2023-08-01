@@ -132,7 +132,7 @@ export default function Competition() {
         />
         
     </Head>
-        <div className='flex flex-col w-full'>
+        {/*<div className='flex flex-col w-full'>
         <div
             style={{
               backgroundImage: `url(${'' + '/img/sky.webp'})`,
@@ -268,7 +268,7 @@ export default function Competition() {
             </div>
           </div>
         </div>
-      </div>
+                      </div>*/}
     </>
       
   )
