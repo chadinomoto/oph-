@@ -1,21 +1,21 @@
-  import Head from 'next/head'
-  import { Fragment, useEffect, useRef, useState } from 'react'
-  import { AnimateSharedLayout, motion, useScroll } from 'framer-motion'
-  import { clamp } from 'lodash'
-  import Link from 'next/link'
-  import ActCard from '../components/actcard'
-  import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-  import {
-    faBook,
-    faCircleXmark,
-    faFileInvoice,
-    faFlaskVial,
-    faPeopleRobbery,
-    faPuzzlePiece,
-    faChevronLeft,
-    faChevronRight,
-    faCircle
-  } from '@fortawesome/free-solid-svg-icons'
+import Head from 'next/head'
+import { Fragment, useEffect, useRef, useState } from 'react'
+import { AnimateSharedLayout, motion, useScroll } from 'framer-motion'
+import { clamp } from 'lodash'
+import Link from 'next/link'
+import ActCard from '../components/actcard'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+  faBook,
+  faCircleXmark,
+  faFileInvoice,
+  faFlaskVial,
+  faPeopleRobbery,
+  faPuzzlePiece,
+  faChevronLeft,
+  faChevronRight,
+  faCircle
+} from '@fortawesome/free-solid-svg-icons'
 
 const wcmes =
   'สเต็ปโบว์ธุหร่ำวาทกรรม เทรลเลอร์บ๊วย โทรโข่งเพรส มาร์เก็ตติ้ง นิวสแล็กดีพาร์ตเมนต์อาร์พีจีแฮนด์ ซิตีพุทธศตวรรษรีไทร์ ยังไง คีตปฏิภาณเอ็กซ์เพรสเอ็นเตอร์เทน โฮลวีตเคลื่อนย้าย เพียวคันถธุระวอร์รูมจ๊าบคอลัมน์ เบิร์ดแหวว หมิง วีซ่า คีตกวีเบนโลทอล์ค โค้กศิลปวัฒนธรรมเชอร์รี่เกย์ เปียโนจอหงวน\nโฮลวีตเลิฟอ่อนด้อย แซ็กสโตร์ออทิสติกปิกอัพ เย้วเย้วไพลินแฮมเบอร์เกอร์ เอ๊าะแฟรีไอซ์ เวสต์ เลคเชอร์โลโก้น้องใหม่ยาวีแรลลี รวมมิตรเวสต์โดมิโนสแควร์สวีท คำตอบ คีตราชันวิลเลจอึมครึมสไปเดอร์ แพลน โอเวอร์โมเดิร์น แต๋วตุ๊ด ซีอีโออ่วม ซีเนียร์เยนปิยมิตรปิยมิตร แช่แข็ง ผลักดันมาราธอน\nเดอะ เฮอร์ริเคนพันธกิจรีทัชชะโนดสหรัฐ กาญจน์หลวงตาทริป อัลบัมมอยส์เจอไรเซอร์ คำสาปแชมเปี้ยนโหงวเฮ้งสต็อกภูมิทัศน์ อ่วม มาร์เก็ตติ้งโชว์รูม โปรเจกเตอร์โทรโข่งโปรโมชั่นแชมปิยองเดี้ยง เปปเปอร์มินต์แดนซ์หลวงตา แฮนด์เวิร์ลด์ห่วยกรุ๊ปมายาคติ โต๊ะจีนไบเบิลเบิร์ดปฏิสัมพันธ์คัตเอาต์ เมจิกอิมพีเรียล พริตตี้ คองเกรสไอติมเซี้ยว หล่อฮังก้วยแม็กกาซีน ลาติน'
@@ -161,41 +161,41 @@ export default function Home({ userData }) {
   ]*/
   const slides1 = [
     {
-      url : 'img/2023/slide/slide1/ch1.jpeg'
+      url: 'img/2023/slide/slide1/ch1.jpeg'
     },
     {
-      url : 'img/2023/slide/slide1/ch2.jpeg'
+      url: 'img/2023/slide/slide1/ch2.jpeg'
     },
     {
-      url : 'img/2023/slide/slide1/ch3.jpeg'
+      url: 'img/2023/slide/slide1/ch3.jpeg'
     },
     {
-      url : 'img/2023/slide/slide1/sq1.jpeg'
+      url: 'img/2023/slide/slide1/sq1.jpeg'
     },
     {
-      url : 'img/2023/slide/slide1/sq2.jpeg'
+      url: 'img/2023/slide/slide1/sq2.jpeg'
     },
     {
-      url : 'img/2023/slide/slide1/sq3.jpeg'
+      url: 'img/2023/slide/slide1/sq3.jpeg'
     }
   ];
   const slides = [
     {
-      url: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2620&q=80',
+      url: 'img/2023/slide/slidea/p1.jpg',
     },
     {
-      url: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80',
+      url: 'img/2023/slide/slidea/p2.jpg',
     },
     {
-      url: 'https://images.unsplash.com/photo-1661961112951-f2bfd1f253ce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2672&q=80',
+      url: 'img/2023/slide/slidea/p3.jpg',
+    },
+    {
+      url: 'img/2023/slide/slidea/p4.jpg',
+    },
+    {
+      url: 'img/2023/slide/slidea/p5.jpg',
     },
 
-    {
-      url: 'https://images.unsplash.com/photo-1512756290469-ec264b7fbf87?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2253&q=80',
-    },
-    {
-      url: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2671&q=80',
-    },
   ];
   const slides2 = [
     {
@@ -318,10 +318,10 @@ export default function Home({ userData }) {
           }
         >*/}
         <div
-            style={{
-              backgroundImage: `url(${'' + '/img/sky.webp'})`,
-            }}
-            className='w-full bg-cover bg-bottom sm:bg-fixed flex items-end min-h-screen relative justify-self-center self-center space-y-2'
+          style={{
+            backgroundImage: `url(${'' + '/img/sky2023.webp'})`,
+          }}
+          className='w-full bg-cover bg-bottom sm:bg-fixed flex items-end min-h-screen relative justify-self-center self-center space-y-2'
         >
           <div className='w-full h-full py-6 flex items-center'>
             <div className='w-full max-w-7xl grid grid-cols-2 gap-6 items-center justify-items-center mx-auto px-6'>
@@ -344,7 +344,7 @@ export default function Home({ userData }) {
                       onClick={() => goToSlide(slideIndex)}
                       className='text-2xl cursor-pointer px-2'
                     >
-                      <FontAwesomeIcon icon={faCircle} size = 'xs'/>
+                      <FontAwesomeIcon icon={faCircle} size='xs' />
                     </div>
                   ))}
                 </div>
@@ -381,13 +381,14 @@ export default function Home({ userData }) {
                           ),
                       )}
                     </div>
-                    <button
+                    {/*<button
                       onClick={() => setShowWC(true)}
                       className='text-sm md:text-base bg-white/30 w-fit hover:bg-white/60 hover:text-bmw transition-all duration-300 backdrop-blur-sm text-bmw/70 rounded-full px-4 py-1 mt-2 font-IBMPlex font-semibold'
                     >
                       Read full text
-                    </button>
+                    </button>*/}
                   </motion.div>
+                  {/*
                   {showWC && (
                     <div className='fixed inset-0 pt-16 px-6 pb-6 z-50 overflow-y-scroll'>
                       <motion.div
@@ -443,14 +444,14 @@ export default function Home({ userData }) {
                         <button
                           onClick={() => setShowWC(false)}
                           className='text-sm md:text-base bg-white/30 w-fit hover:bg-white/60 hover:text-bmw transition-all duration-300 backdrop-blur-sm text-bmw/70 rounded-full px-4 py-1 mt-2 font-IBMPlex font-semibold'>
-                                Close
+                          Close
                         </button>
                       </motion.div>
                     </div>
-                  )}
+                  )}*/}
                 </AnimateSharedLayout>
               </div>
-                      {/*<div className='grid grid-cols-3 gap-2 sm:gap-3 rounded-xl'>
+              {/*<div className='grid grid-cols-3 gap-2 sm:gap-3 rounded-xl'>
                       WelcomeButton.map((w, wi) => (
                     <button
                       key={wi}
@@ -469,9 +470,9 @@ export default function Home({ userData }) {
                     </button>
                     ))
                     </div>*/}
-              </div>
             </div>
           </div>
+        </div>
 
         <div
           // style={{
@@ -479,7 +480,7 @@ export default function Home({ userData }) {
           //     process.env.CDN_URL + '/img/projcover.jpg'
           //   })`,
           // }}
-          
+
 
           className={
             'w-full flex bg-cover ' +
@@ -489,7 +490,7 @@ export default function Home({ userData }) {
         >
           <div
             className='flex flex-col items-center w-full max-w-7xl px-8 py-6 gap-4 mx-auto'
-            //ref={lifeRef}
+          //ref={lifeRef}
           >
             <span className='font-CS font-bold text-2xl md:text-3xl lg:text-4xl mt-10'>
               SNEAK PEEK กิจกรรมต่าง ๆ
@@ -497,7 +498,7 @@ export default function Home({ userData }) {
             <div className='w-full max-w-7xl grid grid-cols-2 gap-6 items-center justify-items-center mx-auto px-6'>
               <div className='cols-span-1'>
                 <div className='font-CS font-bold text-2xl md:text-3xl lg:text-4xl mt-10 flex justify-center'>
-                  text
+                  MWIT CHALLENGE และ MWIT SQUARE
                 </div>
                 <div>
                   <div className='w-[540px] h-[480px] w-full m-auto py-16 px-4 relative group'>
@@ -512,7 +513,7 @@ export default function Home({ userData }) {
                     </div>
                     {/* Right Arrow */}
                     <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
-                    <FontAwesomeIcon icon={faChevronRight} onClick={nextSlide1} size={30} />
+                      <FontAwesomeIcon icon={faChevronRight} onClick={nextSlide1} size={30} />
                     </div>
                     <div className='flex top-4 justify-center py-2'>
                       {slides1.map((slide, slideIndex) => (
@@ -521,7 +522,7 @@ export default function Home({ userData }) {
                           onClick={() => goToSlide1(slideIndex)}
                           className='text-2xl cursor-pointer px-2'
                         >
-                          <FontAwesomeIcon icon={faCircle} size = 'xs'/>
+                          <FontAwesomeIcon icon={faCircle} size='xs' />
                         </div>
                       ))}
                     </div>
@@ -530,7 +531,7 @@ export default function Home({ userData }) {
               </div>
               <div className='cols-span-1'>
                 <div className='font-CS font-bold text-2xl md:text-3xl lg:text-4xl mt-10 flex justify-center'>
-                  text
+                  กิจกรรมตามสาขาวิชา และ CLUB FESTIVAL
                 </div>
                 <div>
                   <div className='w-[560px] h-[480px] w-full m-auto py-16 px-4 relative group'>
@@ -545,7 +546,7 @@ export default function Home({ userData }) {
                     </div>
                     {/* Right Arrow */}
                     <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
-                    <FontAwesomeIcon icon={faChevronRight} onClick={nextSlide2} size={30} />
+                      <FontAwesomeIcon icon={faChevronRight} onClick={nextSlide2} size={30} />
                     </div>
                     <div className='flex top-4 justify-center py-2'>
                       {slides2.map((slide, slideIndex) => (
@@ -554,7 +555,7 @@ export default function Home({ userData }) {
                           onClick={() => goToSlide2(slideIndex)}
                           className='text-2xl cursor-pointer px-2'
                         >
-                          <FontAwesomeIcon icon={faCircle} size = 'xs'/>
+                          <FontAwesomeIcon icon={faCircle} size='xs' />
                         </div>
                       ))}
                     </div>
@@ -562,7 +563,7 @@ export default function Home({ userData }) {
                 </div>
               </div>
             </div>
-                  {/*<span className='font-CS font-bold text-2xl md:text-3xl lg:text-4xl mt-10'>
+            {/*<span className='font-CS font-bold text-2xl md:text-3xl lg:text-4xl mt-10'>
                     ONE DAY in MWIT
                   </span>
                   <iframe
@@ -572,13 +573,13 @@ export default function Home({ userData }) {
                     frameBorder='0'
                     allowFullScreen
                   />*/}
-                  {/*<span
+            {/*<span
                     className='font-CS font-bold text-2xl md:text-3xl lg:text-4xl pt-16'
                     //ref={actRef}
                   >
                     All Activities
                   </span>*/}
-                  {/*<div className='w-full flex flex-wrap justify-center gap-3 pb-8'>
+            {/*<div className='w-full flex flex-wrap justify-center gap-3 pb-8'>
                     {allAct.map((a, ai) => (
                       <ActCard
                         key={ai}
