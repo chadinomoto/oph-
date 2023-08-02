@@ -354,7 +354,7 @@ export default function Competition() {
                               </div>
                               <TextFormat
                               className='whitespace-pre-wrap'
-                              content={'แข่งวันที่ 25 สิงหาคม 2566 9.00-12.00'}
+                              content={'แข่งวันที่ 25 สิงหาคม 2566 8.00-12.00 น.'}
                               />
                               <div className='font-medium text-base md:text-lg text-black whitespace-nowrap'>
                                 สถานที่จัดแข่งขัน

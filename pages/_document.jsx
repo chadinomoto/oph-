@@ -7,10 +7,10 @@ export default function Document() {
         <link rel='manifest' href='/manifest.json' />
         <link
           rel='apple-touch-icon'
-          href='/favicon.ico'
+          href='https://openhouse.mwit.ac.th//favicon.ico'
         />
         <meta name='theme-color' content='#fcf4a0' />
-        <link rel='icon' href='/favicon.ico' />
+        <link rel='icon' href='https://openhouse.mwit.ac.th//favicon.ico' />
       </Head>
       <body>
         <Main />
