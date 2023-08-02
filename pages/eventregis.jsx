@@ -55,7 +55,7 @@ export default function eventregis() {
         <meta property='og:description' content={meta.description} />
         <meta
           property='og:image'
-          content={'img/ogimage.png'}
+          content='https://openhouse.mwit.ac.th/img/ogimage.png'
         />
 
         {/* <!-- Twitter Meta Tags --> */}
@@ -66,7 +66,7 @@ export default function eventregis() {
         <meta name='twitter:description' content={meta.description} />
         <meta
           name='twitter:image'
-          content={'img/ogimage.png'}
+          content='https://openhouse.mwit.ac.th/img/ogimage.png'
         />
     </Head>
         <main className='flex flex-col items-center w-full max-w-7xl px-8 py-6 gap-4 mx-auto bg-cover bg-bottom sm:bg-fixed min-h-screen space-y-2'>

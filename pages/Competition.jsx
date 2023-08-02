@@ -116,7 +116,7 @@ export default function Competition() {
         <meta property='og:description' content={meta.description} />
         <meta
           property='og:image'
-          content={'img/ogimage.png'}
+          content='https://openhouse.mwit.ac.th/img/ogimage.png'
         />
 
         {/* <!-- Twitter Meta Tags --> */}
@@ -127,7 +127,7 @@ export default function Competition() {
         <meta name='twitter:description' content={meta.description} />
         <meta
           name='twitter:image'
-          content={'img/ogimage.png'}
+          content='https://openhouse.mwit.ac.th/img/ogimage.png'
         />
         
       </Head>
