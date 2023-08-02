@@ -307,7 +307,7 @@ export default function Home({ userData }) {
           content='/img/ogimage.png'
         />
       </Head>
-      <div className='flex flex-col w-full'>
+      <div className='flex flex-col w-screen'>
         {/*<div
           style={{
             backgroundImage: `url(${process.env.CDN_URL + '/img/sky.webp'})`,
@@ -324,7 +324,7 @@ export default function Home({ userData }) {
         >
           <div className='w-full h-full py-6 flex items-center'>
             <div className='w-full max-w-7xl grid md:grid-cols-2 gap-6 items-center justify-items-center mx-auto px-6'>
-              <div className='max-w-[640px] max-h-[480px] w-[16rem] md:w-[32rem] h-screen m-auto py-16 px-4 relative group'>
+              <div className='max-w-[640px] max-h-[480px] w-[16rem] md:w-[32rem] m-auto py-16 px-4 relative group'>
                 <img src={slides[currentIndex].url} className='w-full h-full rounded-2xl bg-center bg-cover duration-300'/>
                 <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
                   <FontAwesomeIcon icon={faChevronLeft} onClick={prevSlide} size='sm' />
