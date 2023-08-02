@@ -318,7 +318,7 @@ export default function Home({ userData }) {
         >*/}
         <div
           style={{
-            backgroundImage: '/img/sky2023.png',
+            backgroundImage: '/img/sky.webp',
           }}
           className='w-full bg-cover bg-bottom flex items-end min-h-screen relative justify-self-center self-center space-y-2'
         >

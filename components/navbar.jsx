@@ -55,7 +55,7 @@ const footerLinkRight = [
     nt: false,
   },*/
   {
-    name: 'MWIT Square 15th',
+    name: 'MWIT Square 15 th',
     href: 'https://square.mwit.ac.th',
     nt: true,
   },
