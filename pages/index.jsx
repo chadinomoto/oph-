@@ -246,7 +246,7 @@ export default function Home({ userData }) {
 
   function nextSlide1() {
     const isLastSlide = currentIndex1 === slides1.length - 1
-    const newIndex = isLastSlide ? 0 : currentIndex2 + 1
+    const newIndex = isLastSlide ? 0 : currentIndex1 + 1
     setCurrentIndex1(newIndex)
   }
 
@@ -291,7 +291,7 @@ export default function Home({ userData }) {
         />
         <meta
           property='og:image'
-          content='/img/ogimage.png'
+          content='img/ogimage.png'
         />
 
         {/* <!-- Twitter Meta Tags --> */}
@@ -305,7 +305,7 @@ export default function Home({ userData }) {
         />
         <meta
           name='twitter:image'
-          content='/img/ogimage.png'
+          content='img/ogimage.png'
         />
       </Head>
       <div className='flex flex-col w-full'>
@@ -319,14 +319,18 @@ export default function Home({ userData }) {
         >*/}
         <div
           style={{
-            backgroundImage: '/img/sky.webp',
+            backgroundImage: `url(${'' + '/img/sky.webp'})`,
           }}
           className='w-full bg-cover bg-bottom flex items-end min-h-screen relative justify-self-center self-center space-y-2'
         >
           <div className='w-full h-full py-6 flex items-center'>
             <div className='w-full max-w-7xl grid md:grid-cols-2 gap-6 items-center justify-items-center mx-auto px-6'>
               <div className='max-w-[640px] max-h-[480px] min-w-max w-[16rem] md:w-[32rem] h-screen m-auto py-16 px-4 relative group'>
-                <img src={slides[currentIndex].url} className='w-full h-full rounded-2xl bg-center bg-cover duration-300'/>
+                <div
+                  style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
+                  className='w-full h-full rounded-2xl bg-center bg-cover duration-100'
+                >
+                </div>
                 <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
                   <FontAwesomeIcon icon={faChevronLeft} onClick={prevSlide} size='sm' />
                 </div>
@@ -471,7 +475,18 @@ export default function Home({ userData }) {
         </div>
 
         <div
-          className={'w-full flex bg-cover bg-bottom bg-no-repeat sm:bg-fixed relative justify-self-center self-center'}
+          // style={{
+          //   backgroundImage: `url(${
+          //     process.env.CDN_URL + '/img/projcover.jpg'
+          //   })`,
+          // }}
+
+
+          className={
+            'w-full flex bg-cover ' +
+            'bg-bottom' +
+            ' bg-no-repeat sm:bg-fixed relative justify-self-center self-center'
+          }
         >
           <div
             className='flex flex-col items-center w-full max-w-7xl px-8 py-6 gap-4 mx-auto'
@@ -487,7 +502,11 @@ export default function Home({ userData }) {
                 </div>
                 <div>
                   <div className='max-w-[640px] max-h-[480px] h-screen min-w-max w-[16rem] md:w-[32rem] m-auto py-16 px-4 relative group'>
-                    <img src={slides1[currentIndex1].url} className='w-full h-full rounded-2xl bg-center bg-cover duration-300'/>
+                    <div
+                      style={{ backgroundImage: `url(${slides1[currentIndex1].url})` }}
+                      className='w-full h-full rounded-2xl bg-center bg-cover duration-100'
+                    >
+                    </div>
                     {/* Left Arrow */}
                     <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
                       <FontAwesomeIcon icon={faChevronLeft} onClick={prevSlide1} size='sm' />
@@ -516,7 +535,11 @@ export default function Home({ userData }) {
                 </div>
                 <div>
                   <div className='max-w-[640px] max-h-[480px] h-screen min-w-max w-[16rem] md:w-[32rem] m-auto py-16 px-4 relative group'>
-                    <img src={slides2[currentIndex2].url} className='w-full h-full rounded-2xl bg-center bg-cover duration-300'/>
+                    <div
+                      style={{ backgroundImage: `url(${slides2[currentIndex2].url})` }}
+                      className='w-full h-full rounded-2xl bg-center bg-cover duration-100'
+                    >
+                    </div>
                     {/* Left Arrow */}
                     <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
                       <FontAwesomeIcon icon={faChevronLeft} onClick={prevSlide2} size='sm' />
@@ -662,7 +685,6 @@ export default function Home({ userData }) {
                 </div>
               </div>
             </div>*/}
-
           </div>
         </div>
       </div>
