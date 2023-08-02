@@ -121,7 +121,7 @@ export default function Competition() {
 
         {/* <!-- Twitter Meta Tags --> */}
         <meta name='twitter:card' content='summary_large_image' />
-        <meta property='twitter:domain' content='openhouse.mwit.ac.th' />
+        <meta property='twitter:domain' content=' openhouse.mwit.ac.th' />
         <meta property='twitter:url' content={meta.url} />
         <meta name='twitter:title' content={meta.title} />
         <meta name='twitter:description' content={meta.description} />
@@ -132,12 +132,7 @@ export default function Competition() {
         
       </Head>
       <div className='flex flex-col w-full'>
-        <div
-            style={{
-              backgroundImage: '/img/2023/yellowfade.webp',
-            }}
-            className='w-full bg-cover bg-repeat sm:bg-fixed min-h-[180vh] space-y-2 '
-        >
+        <div className='w-full bg-cover bg-[url(/img/2023/yellowfade.webp)] bg-repeat sm:bg-fixed min-h-[180vh] space-y-2 '>
           <span className='flex justify-center font-CS font-bold text-2xl md:text-3xl lg:text-4xl pt-16'>
               Competition
           </span>
@@ -484,14 +479,14 @@ export default function Competition() {
                               </div>
                               <TextFormat
                               className='whitespace-pre-wrap'
-                              content={'สถานที่จัดการแข่งขัน หอประชุมพระอุบาลี (ชั้นสองของโรงอาหาร) โรงเรียนมหิดลวิทยานุสรณ์'}
+                              content={'หอประชุมพระอุบาลี (ชั้นสองของโรงอาหาร) โรงเรียนมหิดลวิทยานุสรณ์'}
                               />
                               <div className='font-medium text-base md:text-lg text-black whitespace-nowrap'>
                               ข้อมูลเพิ่มเติม
                               </div>
                               <TextFormat
                               className='whitespace-pre-wrap'
-                              content={'รอติดตามรายละเอียดเพิ่มเติมได้เร็วๆนี้'}
+                              content={'รอติดตามรายละเอียดเพิ่มเติมได้เร็ว ๆ นี้'}
                               />
                             </span>
                           </div>

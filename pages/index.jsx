@@ -291,7 +291,7 @@ export default function Home({ userData }) {
         />
         <meta
           property='og:image'
-          content='img/ogimage.png'
+          content='https://openhouse.mwit.ac.th/img/ogimage.png'
         />
 
         {/* <!-- Twitter Meta Tags --> */}
@@ -305,7 +305,7 @@ export default function Home({ userData }) {
         />
         <meta
           name='twitter:image'
-          content='img/ogimage.png'
+          content='https://openhouse.mwit.ac.th/img/ogimage.png'
         />
       </Head>
       <div className='flex flex-col w-full'>
@@ -317,12 +317,7 @@ export default function Home({ userData }) {
             'w-full bg-cover bg-bottom sm:bg-fixed flex items-end min-h-screen relative justify-self-center self-center space-y-2'
           }
         >*/}
-        <div
-          style={{
-            backgroundImage: `url(${'' + '/img/sky.webp'})`,
-          }}
-          className='w-full bg-cover bg-bottom flex items-end min-h-screen relative justify-self-center self-center space-y-2'
-        >
+        <div className='w-full bg-[url(/img/sky.webp)] bg-cover bg-bottom flex items-end min-h-screen relative justify-self-center self-center space-y-2'>
           <div className='w-full h-full py-6 flex items-center'>
             <div className='w-full max-w-7xl grid md:grid-cols-2 gap-6 items-center justify-items-center mx-auto px-6'>
               <div className='max-w-[640px] max-h-[480px] min-w-max w-[16rem] md:w-[32rem] h-screen m-auto py-16 px-4 relative group'>
