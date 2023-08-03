@@ -34,9 +34,9 @@ readMoreBtn.addEventListener("click", (e) => {
 // This Code is for only the floating card in right bottom corner
 // **********************
 
-const touchButton = document.querySelector(".float-text");
-const card = document.querySelector(".float-card-info");
-const close = document.querySelector(".gg-close-r");
+const touchButton = document.querySelector("sdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsd");
+const card = document.querySelector("dsffffffffffffffffffffsdf");
+const close = document.querySelector("sdfsdddddddddddfsdfsdf");
 
 touchButton.addEventListener("click", moveCard);
 close.addEventListener("click", moveCard);
