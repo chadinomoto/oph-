@@ -10,7 +10,7 @@ export default function Document() {
           href='https://openhouse.mwit.ac.th//favicon.ico'
         />
         <meta name='theme-color' content='#fcf4a0' />
-        <link rel='icon' href='https://openhouse.mwit.ac.th//favicon.ico' />
+        <link rel='icon' href='https://openhouse.mwit.ac.th/2023/fav2023.ico' />
       </Head>
       <body>
         <Main />
