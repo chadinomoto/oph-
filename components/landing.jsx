@@ -82,7 +82,7 @@ export default function LandingPage({ homeRef, children, ...props }) {
             >
               <div className='flex pb-2'>
                 <div className='bg-ora text-white px-2 pt-1 pb-0.5 rounded-full text-xs md:text-sm lg:text-base'>
-                COMEBACK ON SITE!
+                COMEBACK ON-SITE!
                 </div>
               </div>
               <div className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl'>
