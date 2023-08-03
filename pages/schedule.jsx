@@ -18,6 +18,32 @@ import Head from 'next/head'
 import { Fragment } from 'react'
 import { motion } from 'framer-motion'
 import { faFacebook } from '@fortawesome/free-brands-svg-icons'
+const readMoreBtn = document.querySelector(".read-more-btn");
+const text = document.querySelector(".text");
+
+readMoreBtn.addEventListener("click", (e) => {
+  text.classList.toggle("show-more");
+  if (readMoreBtn.innerText === "Read More") {
+    readMoreBtn.innerText = "Read Less";
+  } else {
+    readMoreBtn.innerText = "Read More";
+  }
+});
+
+// *********************
+// This Code is for only the floating card in right bottom corner
+// **********************
+
+const touchButton = document.querySelector(".float-text");
+const card = document.querySelector(".float-card-info");
+const close = document.querySelector(".gg-close-r");
+
+touchButton.addEventListener("click", moveCard);
+close.addEventListener("click", moveCard);
+
+function moveCard() {
+  card.classList.toggle("active");
+}
 
 const meta = {
   title: 'Schedule | MWIT Open House 2023',
@@ -152,6 +178,7 @@ const timetb = [
           },
           {
             title: 'MWIT CURRICULUM DISCOVERY EXHIBITION',
+            
             desc: 'เป็นนิทรรศการที่จะทำให้ผู้เข้าชมได้เข้าใจในหลักสูตรการเรียนการสอนและกิจกรรมพัฒนาผู้เรียนได้มากขึ้น สามารถรับชมภาพรวมลักษณะของเนื้อหาการเรียนการสอนรวมไปถึงกิจกรรมต่างๆตลอด 3 ปีใน MWIT และยังมีเกมสนุกๆชิงของรางวัลบริเวณหน้านิทรรศการอีกด้วย (หลังจาก 10.30 น. เป็นต้นไป จะมีเกมให้เล่น)'
           },
         ],
