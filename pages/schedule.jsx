@@ -18,6 +18,16 @@ import Head from 'next/head'
 import { Fragment } from 'react'
 import { motion } from 'framer-motion'
 import { faFacebook } from '@fortawesome/free-brands-svg-icons'
+import {
+  Button,
+  Card,
+  CardHeader,
+  CardBody,
+  Collapse,
+  Container,
+  Row,
+  Col,
+} from "reactstrap";
 const readMoreBtn = document.querySelector(".read-more-btn");
 const text = document.querySelector(".text");
 
@@ -229,6 +239,239 @@ const motionProp = {
   transition: { duration: 0.8 },
 }
 
+import React from "react";
+
+// reactstrap components
+
+function Example() {
+  const [openedCollapse, setOpenedCollapse] = React.useState("collapseOne");
+  return (
+    <>
+      <div className=" accordion-1">
+        <Container>
+          <Row>
+            <Col className=" ml-auto" md="12">
+              <div className=" accordion my-3" id="accordionExample">
+                <Card>
+                  <CardHeader
+                    id="headingOne"
+                    aria-expanded={openedCollapse === "collapseOne"}
+                  >
+                    <h5 className=" mb-0">
+                      <Button
+                        onClick={() =>
+                          setOpenedCollapse(
+                            openedCollapse === "collapseOne"
+                              ? ""
+                              : "collapseOne"
+                          )
+                        }
+                        className=" w-100 text-primary text-left"
+                        color="link"
+                      >
+                        How do I order?{" "}
+                      </Button>
+                    </h5>
+                  </CardHeader>
+                  <Collapse
+                    isOpen={openedCollapse === "collapseOne"}
+                    aria-labelledby="headingOne"
+                    data-parent="#accordionExample"
+                    id="collapseOne"
+                  >
+                    <CardBody className=" opacity-8">
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life
+                      accusamus terry richardson ad squid. 3 wolf moon officia
+                      aute, non cupidatat skateboard dolor brunch. Food truck
+                      quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon
+                      tempor, sunt aliqua put a bird on it squid single-origin
+                      coffee nulla assumenda shoreditch et. Nihil anim keffiyeh
+                      helvetica, craft beer labore wes anderson cred nesciunt
+                      sapiente ea proident. Ad vegan excepteur butcher vice
+                      lomo. Leggings occaecat craft beer farm-to-table, raw
+                      denim aesthetic synth nesciunt you probably haven't heard
+                      of them accusamus labore sustainable VHS.
+                    </CardBody>
+                  </Collapse>
+                </Card>
+                <Card>
+                  <CardHeader
+                    id="headingTwo"
+                    aria-expanded={openedCollapse === "collapseTwo"}
+                  >
+                    <h5 className=" mb-0">
+                      <Button
+                        onClick={() =>
+                          setOpenedCollapse(
+                            openedCollapse === "collapseTwo"
+                              ? ""
+                              : "collapseTwo"
+                          )
+                        }
+                        className=" w-100 text-primary text-left collapsed"
+                        color="link"
+                      >
+                        How can i make the payment?{" "}
+                      </Button>
+                    </h5>
+                  </CardHeader>
+                  <Collapse
+                    isOpen={openedCollapse === "collapseTwo"}
+                    aria-labelledby="headingTwo"
+                    data-parent="#accordionExample"
+                    id="collapseTwo"
+                  >
+                    <CardBody className=" opacity-8">
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life
+                      accusamus terry richardson ad squid. 3 wolf moon officia
+                      aute, non cupidatat skateboard dolor brunch. Food truck
+                      quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon
+                      tempor, sunt aliqua put a bird on it squid single-origin
+                      coffee nulla assumenda shoreditch et. Nihil anim keffiyeh
+                      helvetica, craft beer labore wes anderson cred nesciunt
+                      sapiente ea proident. Ad vegan excepteur butcher vice
+                      lomo. Leggings occaecat craft beer farm-to-table, raw
+                      denim aesthetic synth nesciunt you probably haven't heard
+                      of them accusamus labore sustainable VHS.
+                    </CardBody>
+                  </Collapse>
+                </Card>
+                <Card>
+                  <CardHeader
+                    id="headingThree"
+                    aria-expanded={openedCollapse === "collapseThree"}
+                  >
+                    <h5 className=" mb-0">
+                      <Button
+                        onClick={() =>
+                          setOpenedCollapse(
+                            openedCollapse === "collapseThree"
+                              ? ""
+                              : "collapseThree"
+                          )
+                        }
+                        className=" w-100 text-primary text-left collapsed"
+                        color="link"
+                      >
+                        How much time does it take to receive the order?{" "}
+                      </Button>
+                    </h5>
+                  </CardHeader>
+                  <Collapse
+                    isOpen={openedCollapse === "collapseThree"}
+                    aria-labelledby="headingThree"
+                    data-parent="#accordionExample"
+                    id="collapseThree"
+                  >
+                    <CardBody className=" opacity-8">
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life
+                      accusamus terry richardson ad squid. 3 wolf moon officia
+                      aute, non cupidatat skateboard dolor brunch. Food truck
+                      quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon
+                      tempor, sunt aliqua put a bird on it squid single-origin
+                      coffee nulla assumenda shoreditch et. Nihil anim keffiyeh
+                      helvetica, craft beer labore wes anderson cred nesciunt
+                      sapiente ea proident. Ad vegan excepteur butcher vice
+                      lomo. Leggings occaecat craft beer farm-to-table, raw
+                      denim aesthetic synth nesciunt you probably haven't heard
+                      of them accusamus labore sustainable VHS.
+                    </CardBody>
+                  </Collapse>
+                </Card>
+                <Card>
+                  <CardHeader
+                    id="headingFour"
+                    aria-expanded={openedCollapse === "collapseFour"}
+                  >
+                    <h5 className=" mb-0">
+                      <Button
+                        onClick={() =>
+                          setOpenedCollapse(
+                            openedCollapse === "collapseFour"
+                              ? ""
+                              : "collapseFour"
+                          )
+                        }
+                        className=" w-100 text-primary text-left"
+                        color="link"
+                      >
+                        Can I resell the products?{" "}
+                      </Button>
+                    </h5>
+                  </CardHeader>
+                  <Collapse
+                    isOpen={openedCollapse === "collapseFour"}
+                    aria-labelledby="headingFour"
+                    data-parent="#accordionExample"
+                    id="collapseFour"
+                  >
+                    <CardBody className=" opacity-8">
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life
+                      accusamus terry richardson ad squid. 3 wolf moon officia
+                      aute, non cupidatat skateboard dolor brunch. Food truck
+                      quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon
+                      tempor, sunt aliqua put a bird on it squid single-origin
+                      coffee nulla assumenda shoreditch et. Nihil anim keffiyeh
+                      helvetica, craft beer labore wes anderson cred nesciunt
+                      sapiente ea proident. Ad vegan excepteur butcher vice
+                      lomo. Leggings occaecat craft beer farm-to-table, raw
+                      denim aesthetic synth nesciunt you probably haven't heard
+                      of them accusamus labore sustainable VHS.
+                    </CardBody>
+                  </Collapse>
+                </Card>
+                <Card>
+                  <CardHeader
+                    id="headingFifth"
+                    aria-expanded={openedCollapse === "collapseFifth"}
+                  >
+                    <h5 className=" mb-0">
+                      <Button
+                        onClick={() =>
+                          setOpenedCollapse(
+                            openedCollapse === "collapseFifth"
+                              ? ""
+                              : "collapseFifth"
+                          )
+                        }
+                        className=" w-100 text-primary text-left"
+                        color="link"
+                      >
+                        Where do I find the shipping details?{" "}
+                      </Button>
+                    </h5>
+                  </CardHeader>
+                  <Collapse
+                    isOpen={openedCollapse === "collapseFifth"}
+                    aria-labelledby="headingFifth"
+                    data-parent="#accordionExample"
+                    id="collapseFifth"
+                  >
+                    <CardBody className=" opacity-8">
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life
+                      accusamus terry richardson ad squid. 3 wolf moon officia
+                      aute, non cupidatat skateboard dolor brunch. Food truck
+                      quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon
+                      tempor, sunt aliqua put a bird on it squid single-origin
+                      coffee nulla assumenda shoreditch et. Nihil anim keffiyeh
+                      helvetica, craft beer labore wes anderson cred nesciunt
+                      sapiente ea proident. Ad vegan excepteur butcher vice
+                      lomo. Leggings occaecat craft beer farm-to-table, raw
+                      denim aesthetic synth nesciunt you probably haven't heard
+                      of them accusamus labore sustainable VHS.
+                    </CardBody>
+                  </Collapse>
+                </Card>
+              </div>
+            </Col>
+          </Row>
+        </Container>
+      </div>
+    </>
+  );
+}
+
+export default Example;
 export default function Schedule() {
   return (
     <>
@@ -261,76 +504,6 @@ export default function Schedule() {
           content={'img/ogimage.png'}
         />
       </Head>
-
-      <main className='w-full bg-sdbg/75'>
-        <div className='flex flex-col text-white gap-6 items-center mx-auto justify-self-center w-full max-w-6xl px-8 py-10'>
-          <span className='flex items-center justify-center font-CS font-bold text-3xl md:text-4xl lg:text-5xl'>
-            Schedule
-          </span>
-          <div className='flex flex-col sm:grid sm:grid-cols-fitc-2 md:grid-cols-fitc-3 gap-x-4 gap-y-4 font-IBMPlex font-medium text-lg lg:text-xl'>
-            {timetb.map((t, i) => (
-              <Fragment key={i}>
-                <motion.span
-                  className='text-center text-sddt text-xl md:text-lg lg:text-xl md:text-end font-bold col-span-2 md:col-span-1'
-                  {...motionProp}
-                >
-                  {t.date}
-                </motion.span>
-                {t.slot.map((s, id) => (
-                  <Fragment key={id}>
-                    <motion.span
-                      className='col-start-1 md:col-start-2 text-sdtm whitespace-nowrap'
-                      {...motionProp}
-                    >
-                      {s.time}
-                    </motion.span>
-                    <div
-                      className={
-                        (id === t.slot.length - 1 && 'mb-4') +
-                        ' flex flex-col gap-2 border-l-2 border-sdtt pl-3'
-                      }
-                    >
-                      {s.act.map((a, idx) => (
-                        <motion.div
-                          className='flex flex-col gap-1'
-                          key={idx}
-                          {...motionProp}
-                        >
-                          <div className='flex flex-col gap-2'>
-                            {/* <FontAwesomeIcon
-                              icon={a.icon}
-                              className='h-[0.8em] pt-1'
-                            /> */}
-                            {/*{a.live && (
-                              <div className='flex w-fit h-fit items-center gap-1 px-2 text-white bg-gradient-to-r from-sdf1 to-sdf2 rounded-md'>
-                                <FontAwesomeIcon
-                                  icon={faFacebook}
-                                  className='text-xs'
-                                />
-                                <span className='text-sm font-semibold'>
-                                  LIVE
-                                </span>
-                              </div>
-                            )}*/}
-                            <span className='text-lg lg:text-xl text-sdtt hover:text-sdth transition-colors duration-500'>
-                              {a.title}
-                            </span>
-                          </div>
-                          {a.desc && (
-                            <span className='font-IBMPlexLoop font-normal text-sm sm:text-base lg:text-lg'>
-                              {a.desc}
-                            </span>
-                          )}
-                        </motion.div>
-                      ))}
-                    </div>
-                  </Fragment>
-                ))}
-              </Fragment>
-            ))}
-          </div>
-        </div>
-      </main>
     </>
   )
 }
