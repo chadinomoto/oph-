@@ -465,7 +465,7 @@ export default function Competition() {
                               </div>
                               <TextFormat
                               className='whitespace-pre-wrap'
-                              content={'ลงทะเบียนหน้างาน - รอบละ 30 ทีม ทีมละไม่เกิน 3 คน (คละโรงเรียนได้)'}
+                              content={'ลงทะเบียนหน้างาน ทั้ง 4 รอบการแข่งขัน\nรอบละ 30 ทีม ทีมละไม่เกิน 3 คน (คละโรงเรียนได้)'}
                               />
                               <div className='font-medium text-base md:text-lg text-black whitespace-nowrap'>
                                 วันที่จัดแข่งขัน
@@ -485,8 +485,9 @@ export default function Competition() {
                               ข้อมูลเพิ่มเติม
                               </div>
                               <TextFormat
+                              
                               className='whitespace-pre-wrap'
-                              content={'รอติดตามรายละเอียดเพิ่มเติมได้เร็ว ๆ นี้'}
+                              content={'08.00 เป็นต้นไป เปิดให้ลงทะเบียน\n09.00-10.15      รอบที่ 1 : นาฬิกามีไว้จับเวลา\n10.30-12.00      รอบที่ 2 : สามขาแต่ไม่สามใจ\n13.00-14.15      รอบที่ 3 : เล็งให้ไว ยิงให้ไกล\n14.30-16.00      รอบที่ 4 : The Last Challenge'}
                               />
                             </span>
                           </div>
